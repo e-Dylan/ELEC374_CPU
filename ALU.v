@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 
-//Matt test comment
+//Matt test comment 2
 
 module alu(
 	input clk, clear, IncPC, branch_flag, 
