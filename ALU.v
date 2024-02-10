@@ -1,7 +1,9 @@
 `timescale 1ns/10ps
 
+//Matt test comment
+
 module alu(
-	input clk, clear, IncPC, branch_flag,
+	input clk, clear, IncPC, branch_flag, 
 	
 	input wire [31:0] A_reg,
 	input wire [31:0] B_reg,
