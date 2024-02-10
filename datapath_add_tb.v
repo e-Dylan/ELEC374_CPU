@@ -8,7 +8,7 @@ module datapath_add_tb;
 			R12in, R13in, R14in, R15in;
 
 	reg	HIin, LOin,
-			Yin, Zhighin, Zlowin,
+			Yin, Zin,
 			PCin, IRin, MARin, MDRin, Inportin, Cin;
 						
 	reg 	R0out, R1out, R2out, R3out,
@@ -78,7 +78,7 @@ module datapath_add_tb;
 			case (Present_state)
 				Default : begin
 					PCout <= 0; Zlowout <= 0; MDRout <=0;
-					R2out <= 0; R3out <= 0; MARin <= 0; Zin <= 0;
+					R2out <= 0; R3out <= 0; MARin <= 0; Zlowin <= 0;
 					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0;
 					IncPC <= 0; Read <= 0; opcode <= 0;
 					R1in <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'h0;
@@ -112,7 +112,7 @@ module datapath_add_tb;
 					#15 MDRout <= 0; R1in <= 0;
 				end
 				T0 : begin
-					PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
+					PCout <= 1; MARin <= 1; IncPC <= 1; Zlowin <= 1;
 				end
 				T1 : begin
 					Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
@@ -126,7 +126,7 @@ module datapath_add_tb;
 					R2out <= 1; Yin <= 1;
 				end
 				T4 : begin
-					R3out <= 1; opcode <= 5'b00011; Zin <= 1;
+					R3out <= 1; opcode <= 5'b00011; Zlowin <= 1;
 				end
 				T5 : begin
 					Zlowout <= 1; R1in <= 1;

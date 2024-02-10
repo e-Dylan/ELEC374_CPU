@@ -8,7 +8,7 @@ module datapath(
 					R12in, R13in, R14in, R15in,
 
 	input wire 	HIin, LOin,
-					Yin, Zhighin, Zlowin,
+					Yin, Zin, Zin,
 					PCin, IRin, MARin, MDRin, Inportin, Cin,
 					
 	input wire 	R0out, R1out, R2out, R3out,
@@ -58,11 +58,10 @@ module datapath(
 	register LO(clear, clock, LOin, BusMuxOut, BusMuxIn_LO);
 
 	// Y and Z registers
-	wire [31:0] BusMuxIn_Y, BusMuxIn_Zhigh, BusMuxIn_Zlow;
+	wire [31:0] Yregout, BusMuxIn_Zhigh, BusMuxIn_Zlow;
 	
-	register Y(clear, clock, Yin, BusMuxOut, BusMuxIn_Y);
-	register Zhigh(clear, clock, Zhighin, BusMuxOut, BusMuxIn_Zhigh);
-	register Zlow(clear, clock, Zlowin, BusMuxOut, BusMuxIn_Zlow);
+	register Y(clear, clock, Yin, BusMuxOut, Yregout);
+	register64 Zhigh(clear, clock, Zin, ALUout, BusMuxIn_Zhigh, BusMuxIn_Zlow);
 
 	// PC, IR, MAR, MDR, Inport, C sign extended
 	wire [31:0] BusMuxIn_PC, BusMuxIn_IR, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort, BusMuxIn_C;
@@ -94,5 +93,8 @@ module datapath(
 				
 				BusMuxOut);
 				
-	ALU ALU(
+					input clk, clear, IncPC, branch_flag, 
+	
+	wire [63:0] ALUout;
+	alu alu(Yregout, BusMuxOut, opcode, ALUout);
 endmodule

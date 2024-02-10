@@ -5,13 +5,12 @@
 module alu(
 	input clk, clear, IncPC, branch_flag, 
 	
-	input wire [31:0] A_reg,
-	input wire [31:0] B_reg,
-	input wire [31:0] Y_reg,
+	input wire [31:0] A,
+	input wire [31:0] B,
 
 	input wire [4:0] opcode,
 
-	output reg [63:0] C_reg 
+	output reg [63:0] C
 );
 	parameter Addition = 5'b00011, Subtraction = 5'b00100, Multiplication = 5'b01110, Division = 5'b01111, Shift_right = 5'b00101, Shift_left = 5'b00110, Rotate_right = 5'b00111, Rotate_left = 5'b01000, 
 				 Logical_AND = 5'b01001, Logical_OR = 5'b01010, Negate = 5'b10000, _Not = 5'b10001, load = 5'b00000, loadi = 5'b00001, store = 5'b00010,

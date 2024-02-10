@@ -9,7 +9,7 @@ module datapath_and_tb;
 			R12in, R13in, R14in, R15in;
 
 	reg	HIin, LOin,
-			Yin, Zhighin, Zlowin,
+			Yin, Zin,
 			PCin, IRin, MARin, MDRin, Inportin, Cin;
 						
 	reg 	R0out, R1out, R2out, R3out,
