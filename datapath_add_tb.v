@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module datapath_and_tb;	
+module datapath_add_tb;	
 	reg 	Clock, clear, Read, IncPC;
 	reg [4:0] opcode;
 	reg	R0in, R1in, R2in, R3in,
@@ -84,7 +84,7 @@ module datapath_and_tb;
 					R1in <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'h0;
 				end
 				Reg_load1a : begin
-					Mdatain <= 32'h0012;		// 18
+					Mdatain <= 32'h0008;		// 18
 					Read = 0; MDRin = 0;
 					#10 Read <= 1; MDRin <= 1;
 					#15 Read <= 0; MDRin <= 0;
@@ -94,7 +94,7 @@ module datapath_and_tb;
 					#15 MDRout <= 0; R2in <= 0;
 				end
 				Reg_load2a : begin
-					Mdatain <= 32'h0014;		// 20
+					Mdatain <= 32'h0009;		// 20
 					#10 Read <= 1; MDRin <= 1;
 					#15 Read <= 0; MDRin <= 0;
 				end
@@ -116,8 +116,8 @@ module datapath_and_tb;
 				end
 				T1 : begin
 					Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
-					Mdatain <= 32'h28918000; // opcode for "and R1, R2, R3"
-													 // 00101 0001 0010 0011 000000000000000
+					Mdatain <= 32'h18918000; // opcode for "add R1, R2, R3"
+													 // 00011 0001 0010 0011 000000000000000
 				end
 				T2 : begin
 					MDRout <= 1; IRin <=1;
@@ -126,7 +126,7 @@ module datapath_and_tb;
 					R2out <= 1; Yin <= 1;
 				end
 				T4 : begin
-					R3out <= 1; opcode <= 5'b00101; Zin <= 1;
+					R3out <= 1; opcode <= 5'b00011; Zin <= 1;
 				end
 				T5 : begin
 					Zlowout <= 1; R1in <= 1;

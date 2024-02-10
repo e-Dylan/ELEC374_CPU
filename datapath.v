@@ -1,6 +1,6 @@
 module datapath(
-	input wire 	clock, clear, opcode,
-	input wire	Read, IncPC,
+	input wire 	clock, clear, Read, IncPC,
+	input wire [4:0] opcode, 
 	
 	input wire	R0in, R1in, R2in, R3in,
 					R4in, R5in, R6in, R7in,

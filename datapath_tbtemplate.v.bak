@@ -1,7 +1,7 @@
+// datapath testbench template
 `timescale 1ns/10ps
 module datapath_and_tb;	
-	reg 	Clock, clear, Read, IncPC;
-	reg [4:0] opcode;
+	reg 	Clock, clear, opcode, Read, IncPC;
 	reg	R0in, R1in, R2in, R3in,
 			R4in, R5in, R6in, R7in,
 			R8in, R9in, R10in, R11in,
@@ -28,7 +28,7 @@ module datapath_and_tb;
 					T5=4'b1100;
 	reg [3:0] Present_state = Default;
 
-	datapath DUT(	Clock, clear, Read, IncPC, opcode
+	datapath DUT(	Clock, clear, opcode, Read, IncPC,
 						R0in, R1in, R2in, R3in,
 						R4in, R5in, R6in, R7in,
 						R8in, R9in, R10in, R11in,
@@ -77,59 +77,43 @@ module datapath_and_tb;
 		begin
 			case (Present_state)
 				Default : begin
-					PCout <= 0; Zlowout <= 0; MDRout <=0;
-					R2out <= 0; R3out <= 0; MARin <= 0; Zin <= 0;
-					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0;
-					IncPC <= 0; Read <= 0; opcode <= 0;
-					R1in <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'h0;
+				
 				end
 				Reg_load1a : begin
-					Mdatain <= 32'h0012;		// 18
-					Read = 0; MDRin = 0;
-					#10 Read <= 1; MDRin <= 1;
-					#15 Read <= 0; MDRin <= 0;
+				
 				end
 				Reg_load1b : begin
-					#10 MDRout <= 1; R2in <= 1;
-					#15 MDRout <= 0; R2in <= 0;
+				
 				end
 				Reg_load2a : begin
-					Mdatain <= 32'h0014;		// 20
-					#10 Read <= 1; MDRin <= 1;
-					#15 Read <= 0; MDRin <= 0;
+				
 				end
 				Reg_load2b : begin
-					#10 MDRout <= 1; R3in <= 1;
-					#15 MDRout <= 0; R3in <= 0;
+				
 				end
 				Reg_load3a : begin
-					Mdatain <= 32'h0018;		// 24
-					#10 Read <= 1; MDRin <= 1;
-					#15 Read <= 0; MDRin <= 0;
+				
 				end
 				Reg_load3b : begin
-					#10 MDRout <= 1; R1in <= 1;
-					#15 MDRout <= 0; R1in <= 0;
+				
 				end
 				T0 : begin
-					PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
+				
 				end
 				T1 : begin
-					Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
-					Mdatain <= 32'h28918000; // opcode for "and R1, R2, R3"
-													 // 00101 0001 0010 0011 000000000000000
+				
 				end
 				T2 : begin
-					MDRout <= 1; IRin <=1;
+				
 				end
 				T3 : begin
-					R2out <= 1; Yin <= 1;
+				
 				end
 				T4 : begin
-					R3out <= 1; opcode <= 5'b00101; Zin <= 1;
+				
 				end
 				T5 : begin
-					Zlowout <= 1; R1in <= 1;
+				
 				end
 			endcase
 		end
