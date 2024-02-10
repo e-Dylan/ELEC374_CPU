@@ -1,0 +1,49 @@
+module MDMux (BusMuxOut,Mdatain, read, MDMuxOut);
+      input [31:0] BusMuxOut;
+      input [31:0] Mdatain;
+      input read;
+      output [31:0] MDMuxOut;
+      
+      
+endmodule
+
+module MDR (d, reset_n, clk, enable, q);
+      input  [31:0] d;
+      input reset_n, clk, enable;
+      output[31:0] q;
+      reg[31:0] q;
+      
+      always @ (posedge clk or negedge reset_n) begin
+            if (!reset_n)
+                  q <= 32'b0;
+            else
+                  if (enable)
+                        q <= d;
+                  else
+                        q <= q;
+      end
+endmodule
+
+
+module MDR (BusMuxOut, Mdatain, read, clear, clock, MDRin, q);
+      input [31:0] BusMuxOut;
+      input [31:0] Mdatain;
+      input read;
+      input clear, clock, MDRin;
+      output[31:0] q;
+      reg[31:0] q;
+      
+      always @ (posedge clock or negedge clear) begin
+            if (!clear)
+                  q <= 32'b0;
+            else
+                  if (MDRin)
+                        if (!read)
+                              q <= BusMuxOut;
+                        else
+                              q <= Mdatain;
+                  else
+                        q <= q;
+      end
+      
+endmodule

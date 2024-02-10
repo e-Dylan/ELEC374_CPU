@@ -1,0 +1,121 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/20dds5/Desktop/374_CPU_Project/simulation/modelsim
+vadder
+Z1 !s110 1706551717
+!i10b 1
+!s100 dQKZ6gVAh_nU0SXT6:e7`3
+IkVjdf?fjgU?88NN]nZWQG2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1706550828
+8C:/Users/20dds5/Desktop/374_CPU_Project/adder.v
+FC:/Users/20dds5/Desktop/374_CPU_Project/adder.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1706551717.000000
+!s107 C:/Users/20dds5/Desktop/374_CPU_Project/adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20dds5/Desktop/374_CPU_Project|C:/Users/20dds5/Desktop/374_CPU_Project/adder.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/20dds5/Desktop/374_CPU_Project
+Z7 tCvgOpt 0
+vBus
+R1
+!i10b 1
+!s100 i3nIEjS9>N6@7l[d]iLMA2
+IR0^PWJ2GJK8c7e[WGMOcM2
+R2
+R0
+w1706548508
+8C:/Users/20dds5/Desktop/374_CPU_Project/bus.v
+FC:/Users/20dds5/Desktop/374_CPU_Project/bus.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/20dds5/Desktop/374_CPU_Project/bus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20dds5/Desktop/374_CPU_Project|C:/Users/20dds5/Desktop/374_CPU_Project/bus.v|
+!i113 1
+R5
+R6
+R7
+n@bus
+vdatapath
+R1
+!i10b 1
+!s100 m?[gI:_;Y:eWY`_@@9LUF0
+IDfGKZQ73Gi=bU]ilYgBdi0
+R2
+R0
+w1706550397
+8C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v
+FC:/Users/20dds5/Desktop/374_CPU_Project/datapath.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20dds5/Desktop/374_CPU_Project|C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v|
+!i113 1
+R5
+R6
+R7
+vdatapath_tb
+R1
+!i10b 1
+!s100 SSEZAAgFk6J>RPOaZo]RX3
+IA@`lm>a;1EI3C99XS1BJ_0
+R2
+R0
+w1706550955
+8C:/Users/20dds5/Desktop/374_CPU_Project/datapath_tb.v
+FC:/Users/20dds5/Desktop/374_CPU_Project/datapath_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/20dds5/Desktop/374_CPU_Project/datapath_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20dds5/Desktop/374_CPU_Project|C:/Users/20dds5/Desktop/374_CPU_Project/datapath_tb.v|
+!i113 1
+R5
+R6
+R7
+vregister
+R1
+!i10b 1
+!s100 bYNKiHSSo2]I9FH;b?Ci_0
+IkPH`a6AS=MFG[CMZ=o_AM2
+R2
+R0
+w1706548928
+8C:/Users/20dds5/Desktop/374_CPU_Project/register.v
+FC:/Users/20dds5/Desktop/374_CPU_Project/register.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/20dds5/Desktop/374_CPU_Project/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20dds5/Desktop/374_CPU_Project|C:/Users/20dds5/Desktop/374_CPU_Project/register.v|
+!i113 1
+R5
+R6
+R7
