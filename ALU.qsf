@@ -72,3 +72,4 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_
 set_global_assignment -name VERILOG_FILE not32.v
 set_global_assignment -name VERILOG_FILE negate32.v
 set_global_assignment -name VERILOG_FILE and32.v
+set_global_assignment -name VERILOG_FILE datapath_and_tb.v
