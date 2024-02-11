@@ -19,6 +19,7 @@ source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/rol.v
 source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/shiftleft32.v
 source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/shiftrightari32.v
 source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/ror.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/sub32.v
 source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/db/ALU.cbx.xml
 design_name = datapath
 instance = comp, \clock~input , clock~input, datapath, 1
