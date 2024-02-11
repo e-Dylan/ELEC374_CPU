@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Sun Feb 11 16:17:25 2024
+Sun Feb 11 17:01:55 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -39,33 +39,35 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  31. Parameter Settings for User Entity Instance: register:Inport
  32. Parameter Settings for User Entity Instance: register:C
  33. Parameter Settings for User Entity Instance: alu:alu
- 34. Port Connectivity Checks: "alu:alu|shiftrightari32:shra"
- 35. Port Connectivity Checks: "alu:alu|shiftright32:shr"
- 36. Port Connectivity Checks: "alu:alu|shiftleft32:shl"
- 37. Port Connectivity Checks: "alu:alu|rol:rol_op"
- 38. Port Connectivity Checks: "alu:alu|ror:ror_op"
- 39. Port Connectivity Checks: "alu:alu|sub32:subtractor|negate32:negate"
- 40. Port Connectivity Checks: "alu:alu|sub32:subtractor"
- 41. Port Connectivity Checks: "alu:alu|adder:adder"
- 42. Port Connectivity Checks: "alu:alu|not32:not_module"
- 43. Port Connectivity Checks: "alu:alu|negate32:neg|adder:add_op"
- 44. Port Connectivity Checks: "alu:alu|negate32:neg"
- 45. Port Connectivity Checks: "alu:alu|and32:land"
- 46. Port Connectivity Checks: "alu:alu|or32:lor"
- 47. Port Connectivity Checks: "alu:alu"
- 48. Port Connectivity Checks: "bus:bus"
- 49. Port Connectivity Checks: "register:C"
- 50. Port Connectivity Checks: "register:Inport"
- 51. Port Connectivity Checks: "MDR:MDR"
- 52. Port Connectivity Checks: "register:MAR"
- 53. Port Connectivity Checks: "register:IR"
- 54. Port Connectivity Checks: "register:PC"
- 55. Port Connectivity Checks: "register64:Zhigh"
- 56. Port Connectivity Checks: "register:Y"
- 57. Post-Synthesis Netlist Statistics for Top Partition
- 58. Elapsed Time Per Partition
- 59. Analysis & Synthesis Messages
- 60. Analysis & Synthesis Suppressed Messages
+ 34. Port Connectivity Checks: "alu:alu|mul32:mul"
+ 35. Port Connectivity Checks: "alu:alu|div32:div"
+ 36. Port Connectivity Checks: "alu:alu|shiftrightari32:shra"
+ 37. Port Connectivity Checks: "alu:alu|shiftright32:shr"
+ 38. Port Connectivity Checks: "alu:alu|shiftleft32:shl"
+ 39. Port Connectivity Checks: "alu:alu|rol:rol_op"
+ 40. Port Connectivity Checks: "alu:alu|ror:ror_op"
+ 41. Port Connectivity Checks: "alu:alu|sub32:subtractor|negate32:negate"
+ 42. Port Connectivity Checks: "alu:alu|sub32:subtractor"
+ 43. Port Connectivity Checks: "alu:alu|adder:adder"
+ 44. Port Connectivity Checks: "alu:alu|not32:not_module"
+ 45. Port Connectivity Checks: "alu:alu|negate32:neg|adder:add_op"
+ 46. Port Connectivity Checks: "alu:alu|negate32:neg"
+ 47. Port Connectivity Checks: "alu:alu|and32:land"
+ 48. Port Connectivity Checks: "alu:alu|or32:lor"
+ 49. Port Connectivity Checks: "alu:alu"
+ 50. Port Connectivity Checks: "bus:bus"
+ 51. Port Connectivity Checks: "register:C"
+ 52. Port Connectivity Checks: "register:Inport"
+ 53. Port Connectivity Checks: "MDR:MDR"
+ 54. Port Connectivity Checks: "register:MAR"
+ 55. Port Connectivity Checks: "register:IR"
+ 56. Port Connectivity Checks: "register:PC"
+ 57. Port Connectivity Checks: "register64:Zhigh"
+ 58. Port Connectivity Checks: "register:Y"
+ 59. Post-Synthesis Netlist Statistics for Top Partition
+ 60. Elapsed Time Per Partition
+ 61. Analysis & Synthesis Messages
+ 62. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -91,7 +93,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Feb 11 16:17:25 2024           ;
+; Analysis & Synthesis Status     ; Successful - Sun Feb 11 17:01:55 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; ALU                                             ;
 ; Top-level Entity Name           ; datapath                                        ;
@@ -236,6 +238,8 @@ refer to the applicable agreement for further details.
 ; shiftrightari32.v                ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/shiftrightari32.v ;         ;
 ; ror.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/ror.v             ;         ;
 ; sub32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/sub32.v           ;         ;
+; div32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/div32.v           ;         ;
+; mul32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/mul32.v           ;         ;
 +----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
 
 
@@ -615,6 +619,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|mul32:mul"                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                        ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; RegA ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "RegA[31..1]" will be connected to GND. ;
+; RegB ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "RegB[31..1]" will be connected to GND. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|div32:div"                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                        ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; RegA ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "RegA[31..1]" will be connected to GND. ;
+; RegB ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "RegB[31..1]" will be connected to GND. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "alu:alu|shiftrightari32:shra"                                                                                                                             ;
 +------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -882,7 +906,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sun Feb 11 16:17:13 2024
+    Info: Processing started: Sun Feb 11 17:01:44 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 374_CPU_Project -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -927,9 +951,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file ror.v
     Info (12023): Found entity 1: ror File: C:/Users/20dds5/Desktop/ELEC374_CPU/ror.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file sub32.v
     Info (12023): Found entity 1: sub32 File: C:/Users/20dds5/Desktop/ELEC374_CPU/sub32.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file div32.v
+    Info (12023): Found entity 1: div32 File: C:/Users/20dds5/Desktop/ELEC374_CPU/div32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mul32.v
+    Info (12023): Found entity 1: mul32 File: C:/Users/20dds5/Desktop/ELEC374_CPU/mul32.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at datapath.v(92): created implicit net for "InPortout" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 92
-Warning (10236): Verilog HDL Implicit Net warning at ALU.v(119): created implicit net for "Y_reg" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 119
-Warning (10236): Verilog HDL Implicit Net warning at ALU.v(119): created implicit net for "B_reg" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 119
+Warning (10236): Verilog HDL Implicit Net warning at ALU.v(125): created implicit net for "Y_reg" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 125
+Warning (10236): Verilog HDL Implicit Net warning at ALU.v(125): created implicit net for "B_reg" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 125
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 34
 Info (12128): Elaborating entity "register64" for hierarchy "register64:Zhigh" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 64
@@ -969,89 +997,98 @@ Info (10041): Inferred latch for "q[29]" at bus.v(28) File: C:/Users/20dds5/Desk
 Info (10041): Inferred latch for "q[30]" at bus.v(28) File: C:/Users/20dds5/Desktop/ELEC374_CPU/bus.v Line: 28
 Info (10041): Inferred latch for "q[31]" at bus.v(28) File: C:/Users/20dds5/Desktop/ELEC374_CPU/bus.v Line: 28
 Info (12128): Elaborating entity "alu" for hierarchy "alu:alu" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 97
-Warning (10858): Verilog HDL warning at ALU.v(21): object mul_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 21
-Warning (10858): Verilog HDL warning at ALU.v(21): object div_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 21
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(26): inferring latch(es) for variable "C_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Warning (10030): Net "mul_out" at ALU.v(21) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 21
-Warning (10030): Net "div_out" at ALU.v(21) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 21
-Info (10041): Inferred latch for "C_reg[0]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[1]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[2]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[3]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[4]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[5]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[6]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[7]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[8]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[9]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[10]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[11]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[12]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[13]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[14]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[15]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[16]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[17]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[18]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[19]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[20]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[21]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[22]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[23]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[24]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[25]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[26]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[27]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[28]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[29]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[30]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[31]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[32]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[33]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[34]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[35]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[36]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[37]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[38]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[39]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[40]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[41]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[42]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[43]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[44]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[45]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[46]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[47]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[48]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[49]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[50]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[51]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[52]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[53]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[54]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[55]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[56]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[57]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[58]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[59]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[60]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[61]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[62]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (10041): Inferred latch for "C_reg[63]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Info (12128): Elaborating entity "or32" for hierarchy "alu:alu|or32:lor" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 119
-Info (12128): Elaborating entity "and32" for hierarchy "alu:alu|and32:land" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 120
-Info (12128): Elaborating entity "negate32" for hierarchy "alu:alu|negate32:neg" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 121
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(32): inferring latch(es) for variable "C_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[0]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[1]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[2]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[3]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[4]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[5]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[6]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[7]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[8]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[9]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[10]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[11]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[12]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[13]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[14]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[15]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[16]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[17]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[18]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[19]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[20]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[21]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[22]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[23]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[24]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[25]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[26]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[27]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[28]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[29]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[30]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[31]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[32]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[33]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[34]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[35]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[36]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[37]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[38]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[39]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[40]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[41]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[42]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[43]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[44]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[45]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[46]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[47]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[48]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[49]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[50]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[51]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[52]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[53]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[54]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[55]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[56]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[57]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[58]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[59]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[60]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[61]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[62]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (10041): Inferred latch for "C_reg[63]" at ALU.v(32) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 32
+Info (12128): Elaborating entity "or32" for hierarchy "alu:alu|or32:lor" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 125
+Info (12128): Elaborating entity "and32" for hierarchy "alu:alu|and32:land" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 126
+Info (12128): Elaborating entity "negate32" for hierarchy "alu:alu|negate32:neg" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 127
 Info (12128): Elaborating entity "not32" for hierarchy "alu:alu|negate32:neg|not32:not_op" File: C:/Users/20dds5/Desktop/ELEC374_CPU/negate32.v Line: 9
 Info (12128): Elaborating entity "adder" for hierarchy "alu:alu|negate32:neg|adder:add_op" File: C:/Users/20dds5/Desktop/ELEC374_CPU/negate32.v Line: 10
-Info (12128): Elaborating entity "sub32" for hierarchy "alu:alu|sub32:subtractor" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 124
-Info (12128): Elaborating entity "ror" for hierarchy "alu:alu|ror:ror_op" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 125
-Info (12128): Elaborating entity "rol" for hierarchy "alu:alu|rol:rol_op" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 126
-Info (12128): Elaborating entity "shiftleft32" for hierarchy "alu:alu|shiftleft32:shl" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 127
-Info (12128): Elaborating entity "shiftright32" for hierarchy "alu:alu|shiftright32:shr" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 128
-Info (12128): Elaborating entity "shiftrightari32" for hierarchy "alu:alu|shiftrightari32:shra" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 129
+Info (12128): Elaborating entity "sub32" for hierarchy "alu:alu|sub32:subtractor" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 130
+Info (12128): Elaborating entity "ror" for hierarchy "alu:alu|ror:ror_op" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 131
+Info (12128): Elaborating entity "rol" for hierarchy "alu:alu|rol:rol_op" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 132
+Info (12128): Elaborating entity "shiftleft32" for hierarchy "alu:alu|shiftleft32:shl" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 133
+Info (12128): Elaborating entity "shiftright32" for hierarchy "alu:alu|shiftright32:shr" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 134
+Info (12128): Elaborating entity "shiftrightari32" for hierarchy "alu:alu|shiftrightari32:shra" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 135
+Info (12128): Elaborating entity "div32" for hierarchy "alu:alu|div32:div" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 136
+Warning (10855): Verilog HDL warning at div32.v(13): initial value for variable Q should be constant File: C:/Users/20dds5/Desktop/ELEC374_CPU/div32.v Line: 13
+Warning (10855): Verilog HDL warning at div32.v(13): initial value for variable M should be constant File: C:/Users/20dds5/Desktop/ELEC374_CPU/div32.v Line: 13
+Warning (10855): Verilog HDL warning at div32.v(13): initial value for variable A should be constant File: C:/Users/20dds5/Desktop/ELEC374_CPU/div32.v Line: 13
+Warning (10030): Net "A" at div32.v(8) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/div32.v Line: 8
+Warning (10030): Net "Q" at div32.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/div32.v Line: 9
+Info (12128): Elaborating entity "mul32" for hierarchy "alu:alu|mul32:mul" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 137
+Warning (10855): Verilog HDL warning at mul32.v(13): initial value for variable M should be constant File: C:/Users/20dds5/Desktop/ELEC374_CPU/mul32.v Line: 13
+Warning (10855): Verilog HDL warning at mul32.v(13): initial value for variable Q should be constant File: C:/Users/20dds5/Desktop/ELEC374_CPU/mul32.v Line: 13
+Warning (10855): Verilog HDL warning at mul32.v(13): initial value for variable A should be constant File: C:/Users/20dds5/Desktop/ELEC374_CPU/mul32.v Line: 13
+Warning (10855): Verilog HDL warning at mul32.v(13): initial value for variable q0 should be constant File: C:/Users/20dds5/Desktop/ELEC374_CPU/mul32.v Line: 13
+Warning (10030): Net "A" at mul32.v(8) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/mul32.v Line: 8
+Warning (10030): Net "Q" at mul32.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/mul32.v Line: 9
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "alu:alu|Y_reg" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 119
-    Warning (12110): Net "alu:alu|B_reg" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 119
+    Warning (12110): Net "alu:alu|Y_reg" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 125
+    Warning (12110): Net "alu:alu|B_reg" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 125
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "BusMuxIn_C[31]" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 67
     Warning (12110): Net "BusMuxIn_C[30]" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 67
@@ -4022,7 +4059,7 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "ALUout[2]" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 96
     Warning (12110): Net "ALUout[1]" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 96
     Warning (12110): Net "ALUout[0]" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 96
-Warning (12241): 18 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 20 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/20dds5/Desktop/ELEC374_CPU/output_files/ALU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -4124,11 +4161,11 @@ Warning (21074): Design contains 94 input pin(s) that do not drive logic
 Info (21057): Implemented 94 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 94 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3079 warnings
-    Info: Peak virtual memory: 4809 megabytes
-    Info: Processing ended: Sun Feb 11 16:17:25 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:12
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3086 warnings
+    Info: Peak virtual memory: 4812 megabytes
+    Info: Processing ended: Sun Feb 11 17:01:55 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +------------------------------------------+

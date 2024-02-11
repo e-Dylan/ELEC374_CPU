@@ -1,7 +1,5 @@
 `timescale 1ns/10ps
 
-//Matt test comment 3
-
 module alu(
 	input clk, clear, IncPC, branch_flag, 
 	
@@ -19,7 +17,6 @@ module alu(
 	
 	wire [31:0] IncPC_out, shr_out, shl_out, lor_out, land_out, neg_out, not_out, adder_sum, adder_cout, sub_sum, sub_cout, rol_out, ror_out;
 	wire [63:0] mul_out, div_out;
-
 	
 	always @(*)
 		begin
@@ -127,8 +124,8 @@ module alu(
 	shiftleft32 shl(Y_reg,B_reg,shl_out);
 	shiftright32 shr(Y_reg,B_reg,shr_out);
 	shiftrightari32 shra(Y_reg,B_reg,shr_out);
-//	div_32_bit div(Y_reg,B_reg, div_out);
-//	mul_32_bit mul(Y_reg,B_reg,mul_out);
+	div32 div(Y_reg,B_reg, div_out);
+	mul32 mul(Y_reg,B_reg,mul_out);
 //	IncPC_32_bit pc_inc(A_reg, IncPC, IncPC_out);
 
 endmodule
