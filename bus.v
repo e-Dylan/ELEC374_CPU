@@ -5,7 +5,7 @@ module bus (
 						BusMuxIn_R12, BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15,
 						
 	input				R0out, R1out, R2out, R3out,
-						R4outa R5out, R6out, R7out,
+						R4out, R5out, R6out, R7out,
 						R8out, R9out, R10out, R11out,
 						R12out, R13out, R14out, R15out,
 	
@@ -15,8 +15,8 @@ module bus (
 	input [31:0]	BusMuxIn_Y, BusMuxIn_Zhigh, BusMuxIn_Zlow,
 	input 			Yout, Zhighout, Zlowout,
 	
-	input [31:0]	BusMuxIn_PC, BusMuxIn_IR, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort, BusMuxIn_C
-	input 			PCout, IRout, MARout, MDRout, InPortout, Cout
+	input [31:0]	BusMuxIn_PC, BusMuxIn_IR, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort, BusMuxIn_C,
+	input 			PCout, IRout, MARout, MDRout, InPortout, Cout,
 	
 	output wire [31:0] BusMuxOut
 );
@@ -51,12 +51,12 @@ always @ (*) begin
 	else if (Zhighout) 	q = BusMuxIn_Zhigh;
 	else if (Zlowout) 	q = BusMuxIn_Zlow;
 	
-	else if (PCout) 		q = BusMuxIn_PCout;
-	else if (IRout)		q = BusMuxIn_IRout;
-	else if (MARout)		q = BusMuxIn_MARout;
-	else if (MDRout) 		q = BusMuxIn_MDRout;
-	else if (InPortout) 	q = BusMuxIn_Inportout;
-	else if (Cout) 		q = BusMuxIn_Cout;
+	else if (PCout) 		q = BusMuxIn_PC;
+	else if (IRout)		q = BusMuxIn_IR;
+	else if (MARout)		q = BusMuxIn_MAR;
+	else if (MDRout) 		q = BusMuxIn_MDR;
+	else if (InPortout) 	q = BusMuxIn_InPort;
+	else if (Cout) 		q = BusMuxIn_C;
 end
 
 assign BusMuxOut = q;

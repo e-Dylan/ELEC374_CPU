@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Sat Feb 10 15:56:19 2024
+Sat Feb 10 19:00:18 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -10,17 +10,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: register:RA
- 10. Parameter Settings for User Entity Instance: register:RB
- 11. Parameter Settings for User Entity Instance: register:RZ
- 12. Port Connectivity Checks: "MDR:mdr"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,27 +34,22 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Feb 10 15:56:19 2024           ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Revision Name                   ; ALU                                             ;
-; Top-level Entity Name           ; datapath                                        ;
-; Family                          ; Cyclone V                                       ;
-; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 0                                               ;
-; Total pins                      ; 74                                              ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 0                                               ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0                                               ;
-; Total DLLs                      ; 0                                               ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Sat Feb 10 19:00:18 2024               ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name               ; ALU                                             ;
+; Top-level Entity Name       ; datapath                                        ;
+; Family                      ; Cyclone V                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
+; Total registers             ; N/A until Partition Merge                       ;
+; Total pins                  ; N/A until Partition Merge                       ;
+; Total virtual pins          ; N/A until Partition Merge                       ;
+; Total block memory bits     ; N/A until Partition Merge                       ;
+; Total PLLs                  ; N/A until Partition Merge                       ;
+; Total DLLs                  ; N/A until Partition Merge                       ;
++-----------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -169,286 +155,61 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; bus.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/374_CPU_Project/bus.v      ;         ;
-; datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v ;         ;
-; register.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/374_CPU_Project/register.v ;         ;
-; adder.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/374_CPU_Project/adder.v    ;         ;
-; MDR.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/374_CPU_Project/MDR.v      ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 74    ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 74    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |datapath                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 74   ; 0            ; |datapath           ; datapath    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:RA            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
-; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:RB            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
-; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register:RZ            ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; DATA_WIDTH_IN  ; 32                               ; Signed Integer  ;
-; DATA_WIDTH_OUT ; 32                               ; Signed Integer  ;
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MDR:mdr"                                                                                                                                            ;
-+---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                           ;
-+---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Mdatain ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Mdatain[31..1]" will be connected to GND. ;
-+---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 74                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sat Feb 10 15:56:08 2024
+    Info: Processing started: Sat Feb 10 19:00:09 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 374_CPU_Project -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file bus.v
-    Info (12023): Found entity 1: Bus File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 1
+    Info (12023): Found entity 1: bus File: C:/Users/20dds5/Desktop/ELEC374_CPU/bus.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: datapath File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 1
+    Info (12023): Found entity 1: datapath File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: C:/Users/20dds5/Desktop/374_CPU_Project/register.v Line: 1
+    Info (12023): Found entity 1: register File: C:/Users/20dds5/Desktop/ELEC374_CPU/register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb.v
-    Info (12023): Found entity 1: datapath_tb File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath_tb.v Line: 2
+    Info (12023): Found entity 1: datapath_tb File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file adder.v
-    Info (12023): Found entity 1: adder File: C:/Users/20dds5/Desktop/374_CPU_Project/adder.v Line: 1
+    Info (12023): Found entity 1: adder File: C:/Users/20dds5/Desktop/ELEC374_CPU/adder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mdr.v
-    Info (12023): Found entity 1: MDR File: C:/Users/20dds5/Desktop/374_CPU_Project/MDR.v Line: 1
+    Info (12023): Found entity 1: MDR File: C:/Users/20dds5/Desktop/ELEC374_CPU/MDR.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: alu File: C:/Users/20dds5/Desktop/374_CPU_Project/ALU.v Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at datapath.v(16): created implicit net for "Mdatain" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at datapath.v(16): created implicit net for "read" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 16
-Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Info (12128): Elaborating entity "register" for hierarchy "register:RA" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 14
-Info (12128): Elaborating entity "MDR" for hierarchy "MDR:mdr" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 16
-Info (12128): Elaborating entity "adder" for hierarchy "adder:add" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 19
-Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 23
-Warning (10240): Verilog HDL Always Construct warning at bus.v(17): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 17
-Info (10041): Inferred latch for "q[0]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[1]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[2]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[3]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[4]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[5]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[6]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[7]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[8]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[9]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[10]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[11]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[12]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[13]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[14]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[15]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[16]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[17]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[18]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[19]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[20]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[21]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[22]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[23]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[24]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[25]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[26]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[27]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[28]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[29]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[30]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Info (10041): Inferred latch for "q[31]" at bus.v(20) File: C:/Users/20dds5/Desktop/374_CPU_Project/bus.v Line: 20
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 74 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 2
-    Warning (15610): No output dependent on input pin "clear" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 2
-    Warning (15610): No output dependent on input pin "A[0]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[1]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[2]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[3]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[4]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[5]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[6]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[7]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[8]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[9]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[10]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[11]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[12]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[13]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[14]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[15]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[16]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[17]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[18]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[19]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[20]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[21]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[22]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[23]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[24]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[25]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[26]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[27]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[28]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[29]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[30]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "A[31]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[0]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[1]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[2]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[3]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[4]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[5]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[6]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[7]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[8]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[9]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[10]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[11]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[12]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[13]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[14]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[15]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[16]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[17]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[18]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[19]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[20]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[21]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[22]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[23]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[24]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[25]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[26]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[27]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[28]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[29]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[30]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RegisterAImmediate[31]" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "RZout" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 5
-    Warning (15610): No output dependent on input pin "RAout" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 5
-    Warning (15610): No output dependent on input pin "RBout" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 5
-    Warning (15610): No output dependent on input pin "MDRout" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 5
-    Warning (15610): No output dependent on input pin "RAin" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 6
-    Warning (15610): No output dependent on input pin "RBin" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 6
-    Warning (15610): No output dependent on input pin "RZin" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 6
-    Warning (15610): No output dependent on input pin "MDRin" File: C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v Line: 7
-Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 74 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 4809 megabytes
-    Info: Processing ended: Sat Feb 10 15:56:19 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:10
+    Info (12023): Found entity 1: alu File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file not32.v
+    Info (12023): Found entity 1: not32 File: C:/Users/20dds5/Desktop/ELEC374_CPU/not32.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file negate32.v
+    Info (12023): Found entity 1: negate32 File: C:/Users/20dds5/Desktop/ELEC374_CPU/negate32.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file and32.v
+    Info (12023): Found entity 1: and32 File: C:/Users/20dds5/Desktop/ELEC374_CPU/and32.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_and_tb.v
+    Info (12023): Found entity 1: datapath_and_tb File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_add_tb.v
+    Info (12023): Found entity 1: datapath_add_tb File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_add_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file register64.v
+    Info (12023): Found entity 1: register64 File: C:/Users/20dds5/Desktop/ELEC374_CPU/register64.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(92): created implicit net for "InPortout" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 92
+Warning (10236): Verilog HDL Implicit Net warning at datapath_and_tb.v(38): created implicit net for "Zhighin" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at datapath_and_tb.v(38): created implicit net for "Zlowin" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at datapath_add_tb.v(38): created implicit net for "Zhighin" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_add_tb.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at datapath_add_tb.v(38): created implicit net for "Zlowin" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_add_tb.v Line: 38
+Error (10161): Verilog HDL error at datapath_and_tb.v(62): object "Reg_load1b" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 62
+Error (10161): Verilog HDL error at datapath_and_tb.v(63): object "Reg_load1b" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 63
+Error (10161): Verilog HDL error at datapath_and_tb.v(92): object "Reg_load1b" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 92
+Info (144001): Generated suppressed messages file C:/Users/20dds5/Desktop/ELEC374_CPU/output_files/ALU.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 6 warnings
+    Error: Peak virtual memory: 4776 megabytes
+    Error: Processing ended: Sat Feb 10 19:00:18 2024
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:09
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/20dds5/Desktop/ELEC374_CPU/output_files/ALU.map.smsg.
 
 

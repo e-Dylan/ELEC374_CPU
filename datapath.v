@@ -8,7 +8,7 @@ module datapath(
 					R12in, R13in, R14in, R15in,
 
 	input wire 	HIin, LOin,
-					Yin, Zin, Zin,
+					Yin, Zin,
 					PCin, IRin, MARin, MDRin, Inportin, Cin,
 					
 	input wire 	R0out, R1out, R2out, R3out,
@@ -23,7 +23,7 @@ module datapath(
 	input wire [31:0] Mdatain
 );
 
-	output reg [31:0] BusMuxOut;
+	reg [31:0] BusMuxOut;
 
 	// R0-R15 registers
 	wire [31:0] BusMuxIn_R0, BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3,
@@ -88,12 +88,10 @@ module datapath(
 
 				BusMuxIn_Zhigh, BusMuxIn_Zlow, Zhighout, Zlowout,
 				
-				BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_InPort, BusMuxIn_C
+				BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_InPort, BusMuxIn_C,
 				PCout, MDRout, InPortout, Cout,
 				
-				BusMuxOut);
-				
-					input clk, clear, IncPC, branch_flag, 
+				BusMuxOut); 
 	
 	wire [63:0] ALUout;
 	alu alu(Yregout, BusMuxOut, opcode, ALUout);

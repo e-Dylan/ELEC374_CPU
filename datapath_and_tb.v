@@ -28,7 +28,7 @@ module datapath_and_tb;
 					T5=4'b1100;
 	reg [3:0] Present_state = Default;
 
-	datapath DUT(	Clock, clear, Read, IncPC, opcode
+	datapath DUT(	Clock, clear, Read, IncPC, opcode,
 						R0in, R1in, R2in, R3in,
 						R4in, R5in, R6in, R7in,
 						R8in, R9in, R10in, R11in,

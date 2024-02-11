@@ -2,7 +2,7 @@
 
 module not32(
 	input wire [31:0] Ra,
-	output wire [31:0] Rz
+	output reg [31:0] Rz
 	);
 	always @(*)
 		assign Rz = !Ra;
