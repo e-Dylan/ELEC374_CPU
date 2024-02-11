@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Sat Feb 10 19:00:18 2024
+Sun Feb 11 13:18:28 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sat Feb 10 19:00:18 2024               ;
+; Analysis & Synthesis Status ; Failed - Sun Feb 11 13:18:28 2024               ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name               ; ALU                                             ;
 ; Top-level Entity Name       ; datapath                                        ;
@@ -161,7 +161,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sat Feb 10 19:00:09 2024
+    Info: Processing started: Sun Feb 11 13:18:18 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 374_CPU_Project -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -196,15 +196,15 @@ Warning (10236): Verilog HDL Implicit Net warning at datapath_and_tb.v(38): crea
 Warning (10236): Verilog HDL Implicit Net warning at datapath_and_tb.v(38): created implicit net for "Zlowin" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 38
 Warning (10236): Verilog HDL Implicit Net warning at datapath_add_tb.v(38): created implicit net for "Zhighin" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_add_tb.v Line: 38
 Warning (10236): Verilog HDL Implicit Net warning at datapath_add_tb.v(38): created implicit net for "Zlowin" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_add_tb.v Line: 38
-Error (10161): Verilog HDL error at datapath_and_tb.v(62): object "Reg_load1b" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 62
-Error (10161): Verilog HDL error at datapath_and_tb.v(63): object "Reg_load1b" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 63
-Error (10161): Verilog HDL error at datapath_and_tb.v(92): object "Reg_load1b" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 92
+Error (10137): Verilog HDL Procedural Assignment error at datapath_add_tb.v(81): object "Zlowin" on left-hand side of assignment must have a variable data type File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_add_tb.v Line: 81
+Error (10137): Verilog HDL Procedural Assignment error at datapath_add_tb.v(115): object "Zlowin" on left-hand side of assignment must have a variable data type File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_add_tb.v Line: 115
+Error (10137): Verilog HDL Procedural Assignment error at datapath_add_tb.v(129): object "Zlowin" on left-hand side of assignment must have a variable data type File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_add_tb.v Line: 129
 Info (144001): Generated suppressed messages file C:/Users/20dds5/Desktop/ELEC374_CPU/output_files/ALU.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 6 warnings
-    Error: Peak virtual memory: 4776 megabytes
-    Error: Processing ended: Sat Feb 10 19:00:18 2024
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:09
+    Error: Peak virtual memory: 4777 megabytes
+    Error: Processing ended: Sun Feb 11 13:18:28 2024
+    Error: Elapsed time: 00:00:10
+    Error: Total CPU time (on all processors): 00:00:08
 
 
 +------------------------------------------+

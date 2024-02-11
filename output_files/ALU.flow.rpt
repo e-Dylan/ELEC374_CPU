@@ -1,5 +1,5 @@
 Flow report for ALU
-Sat Feb 10 19:00:18 2024
+Sun Feb 11 13:18:28 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +-----------------------------+-------------------------------------------------+
-; Flow Status                 ; Flow Failed - Sat Feb 10 19:00:18 2024          ;
+; Flow Status                 ; Flow Failed - Sun Feb 11 13:18:28 2024          ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name               ; ALU                                             ;
 ; Top-level Entity Name       ; datapath                                        ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/10/2024 19:00:09 ;
+; Start date & time ; 02/11/2024 13:18:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU                 ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 26830026781138.170760960910696         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 26830026781955.170767549811856         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; datapath_tb    ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; datapath_tb                            ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -101,8 +101,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4776 MB             ; 00:00:09                           ;
-; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4777 MB             ; 00:00:08                           ;
+; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:08                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,7 +111,7 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; BMH-212-08       ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; BMH-212-07       ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
