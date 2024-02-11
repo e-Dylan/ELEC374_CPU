@@ -8,6 +8,6 @@ module negate32(
 	wire [31:0] temp; 
 	wire cout;
 	not32 not_op(.Ra(Ra),.Rz(temp));
-	add32 add_op(.A(temp), .B(32'd1),.Result(Rz));
+	adder add_op(.A(temp), .B(32'd1),.Result(Rz));
 	
 endmodule

@@ -116,16 +116,16 @@ module alu(
 	end
 	
 	//ALU Operations
-//	or_32_bit lor(Y_reg,B_reg,lor_out);
-//	and_32_bit land(Y_reg,B_reg,land_out);
-//	negate_32_bit neg(B_reg,neg_out);
-//	not_32_bit not_module(B_reg,not_out);
+	or32 lor(Y_reg,B_reg,lor_out);
+	and32 land(Y_reg,B_reg,land_out);
+	negate32 neg(B_reg,neg_out);
+	not32 not_module(B_reg,not_out);
 //	add_32_bit adder(.Ra(Y_reg), .Rb(B_reg),.cin({1'd0}),.sum(adder_sum),.cout(adder_cout));
 //	sub_32_bit subtractor(.Ra(Y_reg), .Rb(B_reg),.cin({1'd0}),.sum(sub_sum),.cout(sub_cout));
-//	ror_32_bit ror_op(Y_reg,B_reg,ror_out);
-//	rol_32_bit rol_op(Y_reg,B_reg,rol_out);
+	ror ror_op(Y_reg,B_reg,ror_out);
+	rol rol_op(Y_reg,B_reg,rol_out);
 //	shl_32_bit shl(Y_reg,B_reg,shl_out);
-//	shr_32_bit shr(Y_reg,B_reg,shr_out);
+	shiftright32 shr(Y_reg,B_reg,shr_out);
 //	div_32_bit div(Y_reg,B_reg, div_out);
 //	mul_32_bit mul(Y_reg,B_reg,mul_out);
 //	IncPC_32_bit pc_inc(A_reg, IncPC, IncPC_out);

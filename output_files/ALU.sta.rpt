@@ -1,5 +1,5 @@
 Timing Analyzer report for ALU
-Sat Feb 10 15:56:53 2024
+Sun Feb 11 13:49:41 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -98,7 +98,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
+;     Processors 2-4         ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -287,86 +287,106 @@ No synchronizer chains to report.
 +-----+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+---------------------------------------------------------------------------+
-; Input Transition Times                                                    ;
-+------------------------+--------------+-----------------+-----------------+
-; Pin                    ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+------------------------+--------------+-----------------+-----------------+
-; clock                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clear                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[2]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[3]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[4]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[5]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[6]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[7]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[8]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[9]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[10]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[11]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[12]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[13]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[14]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[15]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[16]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[17]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[18]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[19]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[20]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[21]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[22]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[23]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[24]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[25]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[26]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[27]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[28]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[29]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[30]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[31]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[4]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[5]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[6]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[7]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[8]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[9]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[10] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[11] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[12] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[13] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[14] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[15] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[16] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[17] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[18] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[19] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[20] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[21] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[22] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[23] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[24] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[25] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[26] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[27] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[28] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[29] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[30] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[31] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RZout                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RAout                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RBout                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MDRout                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RAin                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RBin                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RZin                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MDRin                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+------------------------+--------------+-----------------+-----------------+
++----------------------------------------------------------------+
+; Input Transition Times                                         ;
++-------------+--------------+-----------------+-----------------+
+; Pin         ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------+--------------+-----------------+-----------------+
+; clock       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clear       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Read        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IncPC       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; opcode[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; opcode[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; opcode[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; opcode[3]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; opcode[4]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R0in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R1in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R2in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R3in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R4in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R5in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R6in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R7in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R8in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R9in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R10in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R11in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R12in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R13in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R14in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R15in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; HIin        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; LOin        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Yin         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Zin         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; PCin        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRin        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; MARin       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; MDRin       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Inportin    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Cin         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R0out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R1out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R2out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R3out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R4out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R5out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R6out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R7out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R8out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R9out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R10out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R11out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R12out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R13out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R14out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R15out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; HIout       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; LOout       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Yout        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Zhighout    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Zlowout     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; PCout       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; MARout      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; MDRout      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Inportout   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Cout        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[4]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[5]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[6]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[7]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[8]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[9]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[10] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[11] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[12] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[13] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[14] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[15] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[16] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[17] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[18] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[19] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[20] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[21] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[22] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[23] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[24] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[25] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[26] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[27] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[28] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[29] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[30] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[31] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------+--------------+-----------------+-----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -435,7 +455,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sat Feb 10 15:56:49 2024
+    Info: Processing started: Sun Feb 11 13:49:36 2024
 Info: Command: quartus_sta 374_CPU_Project -c ALU
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -495,9 +515,9 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5038 megabytes
-    Info: Processing ended: Sat Feb 10 15:56:53 2024
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 5041 megabytes
+    Info: Processing ended: Sun Feb 11 13:49:41 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module RotateRight32Bit(
+module ror(
     input [31:0] data_in,
     input [4:0]  rotate_amount,
     output [31:0] data_out

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Sun Feb 11 13:42:21 2024
+Sun Feb 11 14:48:02 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -39,20 +39,28 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  31. Parameter Settings for User Entity Instance: register:Inport
  32. Parameter Settings for User Entity Instance: register:C
  33. Parameter Settings for User Entity Instance: alu:alu
- 34. Port Connectivity Checks: "alu:alu"
- 35. Port Connectivity Checks: "bus:bus"
- 36. Port Connectivity Checks: "register:C"
- 37. Port Connectivity Checks: "register:Inport"
- 38. Port Connectivity Checks: "MDR:MDR"
- 39. Port Connectivity Checks: "register:MAR"
- 40. Port Connectivity Checks: "register:IR"
- 41. Port Connectivity Checks: "register:PC"
- 42. Port Connectivity Checks: "register64:Zhigh"
- 43. Port Connectivity Checks: "register:Y"
- 44. Post-Synthesis Netlist Statistics for Top Partition
- 45. Elapsed Time Per Partition
- 46. Analysis & Synthesis Messages
- 47. Analysis & Synthesis Suppressed Messages
+ 34. Port Connectivity Checks: "alu:alu|shiftright32:shr"
+ 35. Port Connectivity Checks: "alu:alu|rol:rol_op"
+ 36. Port Connectivity Checks: "alu:alu|ror:ror_op"
+ 37. Port Connectivity Checks: "alu:alu|not32:not_module"
+ 38. Port Connectivity Checks: "alu:alu|negate32:neg|adder:add_op"
+ 39. Port Connectivity Checks: "alu:alu|negate32:neg"
+ 40. Port Connectivity Checks: "alu:alu|and32:land"
+ 41. Port Connectivity Checks: "alu:alu|or32:lor"
+ 42. Port Connectivity Checks: "alu:alu"
+ 43. Port Connectivity Checks: "bus:bus"
+ 44. Port Connectivity Checks: "register:C"
+ 45. Port Connectivity Checks: "register:Inport"
+ 46. Port Connectivity Checks: "MDR:MDR"
+ 47. Port Connectivity Checks: "register:MAR"
+ 48. Port Connectivity Checks: "register:IR"
+ 49. Port Connectivity Checks: "register:PC"
+ 50. Port Connectivity Checks: "register64:Zhigh"
+ 51. Port Connectivity Checks: "register:Y"
+ 52. Post-Synthesis Netlist Statistics for Top Partition
+ 53. Elapsed Time Per Partition
+ 54. Analysis & Synthesis Messages
+ 55. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -78,7 +86,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Feb 11 13:42:21 2024           ;
+; Analysis & Synthesis Status     ; Successful - Sun Feb 11 14:48:02 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; ALU                                             ;
 ; Top-level Entity Name           ; datapath                                        ;
@@ -201,18 +209,26 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                   ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
-; bus.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/bus.v        ;         ;
-; datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v   ;         ;
-; register.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/register.v   ;         ;
-; MDR.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/MDR.v        ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v        ;         ;
-; register64.v                     ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/register64.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; bus.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/bus.v          ;         ;
+; datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v     ;         ;
+; register.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/register.v     ;         ;
+; adder.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/adder.v        ;         ;
+; MDR.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/MDR.v          ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v          ;         ;
+; not32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/not32.v        ;         ;
+; negate32.v                       ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/negate32.v     ;         ;
+; and32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/and32.v        ;         ;
+; register64.v                     ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/register64.v   ;         ;
+; or32.v                           ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/or32.v         ;         ;
+; shiftright32.v                   ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/shiftright32.v ;         ;
+; ror.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/ror.v          ;         ;
+; rol.v                            ; yes             ; User Verilog HDL File  ; C:/Users/20dds5/Desktop/ELEC374_CPU/rol.v          ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -591,6 +607,84 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|shiftright32:shr"                                                                                                                                 ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                              ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data_in    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "data_in[31..1]" will be connected to GND.    ;
+; num_shifts ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "num_shifts[31..1]" will be connected to GND. ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|rol:rol_op"                                                                                                                                           ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                               ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data_in       ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "data_in[31..1]" will be connected to GND.     ;
+; rotate_amount ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "rotate_amount[4..1]" will be connected to GND. ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|ror:ror_op"                                                                                                                                           ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                               ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; data_in       ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "data_in[31..1]" will be connected to GND.     ;
+; rotate_amount ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "rotate_amount[4..1]" will be connected to GND. ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|not32:not_module"                                                                                                                   ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Ra   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Ra[31..1]" will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|negate32:neg|adder:add_op" ;
++----------+-------+----------+---------------------------------+
+; Port     ; Type  ; Severity ; Details                         ;
++----------+-------+----------+---------------------------------+
+; B[31..1] ; Input ; Info     ; Stuck at GND                    ;
+; B[0]     ; Input ; Info     ; Stuck at VCC                    ;
++----------+-------+----------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|negate32:neg"                                                                                                                       ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Ra   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Ra[31..1]" will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|and32:land"                                                                                                                         ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Ra   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Ra[31..1]" will be connected to GND. ;
+; Rb   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Rb[31..1]" will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|or32:lor"                                                                                                                           ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Ra   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Ra[31..1]" will be connected to GND. ;
+; Rb   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Rb[31..1]" will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "alu:alu"                                                                                                                                                                                  ;
 +-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -731,7 +825,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sun Feb 11 13:42:09 2024
+    Info: Processing started: Sun Feb 11 14:47:51 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 374_CPU_Project -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -757,13 +851,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file and32.v
     Info (12023): Found entity 1: and32 File: C:/Users/20dds5/Desktop/ELEC374_CPU/and32.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_and_tb.v
     Info (12023): Found entity 1: datapath_and_tb File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file datapath_add_tb.v
-    Info (12023): Found entity 1: datapath_add_tb File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_add_tb.v Line: 2
+Info (12021): Found 0 design units, including 0 entities, in source file datapath_add_tb.v
 Info (12021): Found 1 design units, including 1 entities, in source file register64.v
     Info (12023): Found entity 1: register64 File: C:/Users/20dds5/Desktop/ELEC374_CPU/register64.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_tbtemplate.v
     Info (12023): Found entity 1: datapath_tbtemplate File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_tbtemplate.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file or32.v
+    Info (12023): Found entity 1: or32 File: C:/Users/20dds5/Desktop/ELEC374_CPU/or32.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file shiftright32.v
+    Info (12023): Found entity 1: shiftright32 File: C:/Users/20dds5/Desktop/ELEC374_CPU/shiftright32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ror.v
+    Info (12023): Found entity 1: ror File: C:/Users/20dds5/Desktop/ELEC374_CPU/ror.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file rol.v
+    Info (12023): Found entity 1: rol File: C:/Users/20dds5/Desktop/ELEC374_CPU/rol.v Line: 3
 Warning (10236): Verilog HDL Implicit Net warning at datapath.v(92): created implicit net for "InPortout" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 92
+Warning (10236): Verilog HDL Implicit Net warning at ALU.v(119): created implicit net for "Y_reg" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 119
+Warning (10236): Verilog HDL Implicit Net warning at ALU.v(119): created implicit net for "B_reg" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 119
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 34
 Info (12128): Elaborating entity "register64" for hierarchy "register64:Zhigh" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 64
@@ -803,29 +906,15 @@ Info (10041): Inferred latch for "q[29]" at bus.v(28) File: C:/Users/20dds5/Desk
 Info (10041): Inferred latch for "q[30]" at bus.v(28) File: C:/Users/20dds5/Desktop/ELEC374_CPU/bus.v Line: 28
 Info (10041): Inferred latch for "q[31]" at bus.v(28) File: C:/Users/20dds5/Desktop/ELEC374_CPU/bus.v Line: 28
 Info (12128): Elaborating entity "alu" for hierarchy "alu:alu" File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 97
-Warning (10858): Verilog HDL warning at ALU.v(20): object shr_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
 Warning (10858): Verilog HDL warning at ALU.v(20): object shl_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10858): Verilog HDL warning at ALU.v(20): object lor_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10858): Verilog HDL warning at ALU.v(20): object land_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10858): Verilog HDL warning at ALU.v(20): object neg_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10858): Verilog HDL warning at ALU.v(20): object not_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
 Warning (10858): Verilog HDL warning at ALU.v(20): object adder_sum used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
 Warning (10858): Verilog HDL warning at ALU.v(20): object sub_sum used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10858): Verilog HDL warning at ALU.v(20): object rol_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10858): Verilog HDL warning at ALU.v(20): object ror_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
 Warning (10858): Verilog HDL warning at ALU.v(21): object mul_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 21
 Warning (10858): Verilog HDL warning at ALU.v(21): object div_out used but never assigned File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 21
 Warning (10240): Verilog HDL Always Construct warning at ALU.v(26): inferring latch(es) for variable "C_reg", which holds its previous value in one or more paths through the always construct File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
-Warning (10030): Net "shr_out" at ALU.v(20) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
 Warning (10030): Net "shl_out" at ALU.v(20) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10030): Net "lor_out" at ALU.v(20) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10030): Net "land_out" at ALU.v(20) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10030): Net "neg_out" at ALU.v(20) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10030): Net "not_out" at ALU.v(20) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
 Warning (10030): Net "adder_sum" at ALU.v(20) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
 Warning (10030): Net "sub_sum" at ALU.v(20) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10030): Net "rol_out" at ALU.v(20) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
-Warning (10030): Net "ror_out" at ALU.v(20) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 20
 Warning (10030): Net "mul_out" at ALU.v(21) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 21
 Warning (10030): Net "div_out" at ALU.v(21) has no driver or initial value, using a default initial value '0' File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 21
 Info (10041): Inferred latch for "C_reg[0]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
@@ -892,6 +981,17 @@ Info (10041): Inferred latch for "C_reg[60]" at ALU.v(26) File: C:/Users/20dds5/
 Info (10041): Inferred latch for "C_reg[61]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
 Info (10041): Inferred latch for "C_reg[62]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
 Info (10041): Inferred latch for "C_reg[63]" at ALU.v(26) File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 26
+Info (12128): Elaborating entity "or32" for hierarchy "alu:alu|or32:lor" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 119
+Info (12128): Elaborating entity "and32" for hierarchy "alu:alu|and32:land" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 120
+Info (12128): Elaborating entity "negate32" for hierarchy "alu:alu|negate32:neg" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 121
+Info (12128): Elaborating entity "not32" for hierarchy "alu:alu|negate32:neg|not32:not_op" File: C:/Users/20dds5/Desktop/ELEC374_CPU/negate32.v Line: 10
+Info (12128): Elaborating entity "adder" for hierarchy "alu:alu|negate32:neg|adder:add_op" File: C:/Users/20dds5/Desktop/ELEC374_CPU/negate32.v Line: 11
+Info (12128): Elaborating entity "ror" for hierarchy "alu:alu|ror:ror_op" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 125
+Info (12128): Elaborating entity "rol" for hierarchy "alu:alu|rol:rol_op" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 126
+Info (12128): Elaborating entity "shiftright32" for hierarchy "alu:alu|shiftright32:shr" File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 128
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "alu:alu|Y_reg" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 119
+    Warning (12110): Net "alu:alu|B_reg" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v Line: 119
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "BusMuxIn_C[31]" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 67
     Warning (12110): Net "BusMuxIn_C[30]" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 67
@@ -3862,7 +3962,7 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "ALUout[2]" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 96
     Warning (12110): Net "ALUout[1]" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 96
     Warning (12110): Net "ALUout[0]" is missing source, defaulting to GND File: C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v Line: 96
-Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 13 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/20dds5/Desktop/ELEC374_CPU/output_files/ALU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -3964,11 +4064,11 @@ Warning (21074): Design contains 94 input pin(s) that do not drive logic
 Info (21057): Implemented 94 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 94 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3094 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Sun Feb 11 13:42:21 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3085 warnings
+    Info: Peak virtual memory: 4810 megabytes
+    Info: Processing ended: Sun Feb 11 14:48:02 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +------------------------------------------+
