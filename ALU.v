@@ -120,8 +120,8 @@ module alu(
 	and32 land(Y_reg,B_reg,land_out);
 	negate32 neg(B_reg,neg_out);
 	not32 not_module(B_reg,not_out);
-	adder adder_op(Y_reg, B_reg,adder_sum);
-//	sub_32_bit subtractor(.Ra(Y_reg), .Rb(B_reg),.cin({1'd0}),.sum(sub_sum),.cout(sub_cout));
+	adder adder(Y_reg, B_reg,adder_sum);
+	sub32 subtractor(Y_reg, B_reg, sub_sum);
 	ror ror_op(Y_reg,B_reg,ror_out);
 	rol rol_op(Y_reg,B_reg,rol_out);
 	shiftleft32 shl(Y_reg,B_reg,shl_out);
