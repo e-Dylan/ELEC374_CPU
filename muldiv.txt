@@ -1,0 +1,50 @@
+input [31:0] regA, regB;
+output [63:0] Z;
+
+
+integer i;
+reg [31:0] A;
+reg [31:0] Q;
+reg [31:0] M;
+reg q0;
+
+// MULTIPLY
+	M = regA;
+	Q = regB;
+	A = 32'b0;
+	q0 = 0;
+
+	for (i = 0; i < 32; i = i + 1) begin
+		if (Q[0] == 1'b1 && q0 == 1'b0) begin
+			A = A - M;
+		end
+		else if (Q[0] == 1'b0 && q0 == 1'b1) begin
+			A = A + M;
+		end
+		q0 = Q[0];
+		Q = Q >> 1;
+		Q[31] = A[0];
+		A = A >> 1;
+		A[31] = A[30];
+	end
+
+	Z = {A, Q};
+			
+// DIVIDE
+	Q = regA;
+	M = regB;
+	A = 32'b0;
+	
+	for (i = 0; i < 32; i = i + 1) begin
+		{A,Q} = {A,Q} << 1;
+		A = A - M;
+		if (A[31] == 1'b0) begin
+			Q[0] = 1;
+		end
+		else if (A[31] == 1'b1) begin
+			Q[0] = 0;
+			A = A + M;
+		end
+	end
+	
+	Z = {A, Q};
