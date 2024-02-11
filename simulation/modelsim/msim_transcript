@@ -1,20 +1,109 @@
 # Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
-# ** Error: (vish-42) Unsupported ModelSim library format for "C:/Users/jimmy/Desktop/ELEC374_CPU/simulation/modelsim/rtl_work". (Format: 4)
 # do ALU_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
-# ** Error: (vdel-42) Unsupported ModelSim library format for "C:/Users/jimmy/Desktop/ELEC374_CPU/simulation/modelsim/rtl_work". (Format: 4)
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
 # 
-# ** Warning: (vdel-57) Library 'C:/Users/jimmy/Desktop/ELEC374_CPU/simulation/modelsim/rtl_work' is missing or is not a valid ModelSim library.
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/bus.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bus
+# -- Compiling module bus_32to5_encoder
 # 
-# ** Error: C:/altera/13.1/modelsim_ase/win32aloem/vdel failed.
-# Error in macro ./ALU_run_msim_rtl_verilog.do line 4
-# C:/altera/13.1/modelsim_ase/win32aloem/vdel failed.
-#     while executing
-# "vdel -lib rtl_work -all"
-#     invoked from within
-# "if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }"
-# ** Error: (vish-42) Unsupported ModelSim library format for "C:/Users/jimmy/Desktop/ELEC374_CPU/simulation/modelsim/rtl_work". (Format: 4)
+# Top level modules:
+# 	bus
+# 	bus_32to5_encoder
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/register.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register
+# 
+# Top level modules:
+# 	register
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/MDR.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MDR
+# 
+# Top level modules:
+# 	MDR
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register64
+# 
+# Top level modules:
+# 	register64
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_add_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module datapath_add_tb
+# 
+# Top level modules:
+# 	datapath_add_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_add_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_add_tb 
+# Loading work.datapath_add_tb
+# Loading work.datapath
+# Loading work.register
+# Loading work.register64
+# Loading work.MDR
+# Loading work.bus
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(65): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'd'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v(2).
+# 
+#         Region: /datapath_add_tb/DUT/Zhigh
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(65): [PCDPC] - Port size (1 or 1) does not match connection size (64) for port 'enable'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v(3).
+# 
+#         Region: /datapath_add_tb/DUT/Zhigh
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /datapath_add_tb/DUT/InPort
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Missing connection for port 'BusMuxIn'.
+# 
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /datapath_add_tb/DUT/C
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Missing connection for port 'BusMuxIn'.
+# 
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 500 ns
+add wave -position insertpoint  \
+sim:/datapath_add_tb/DUT/bus/BusMuxOut
+add wave -position insertpoint  \
+sim:/datapath_add_tb/DUT/bus/q
+add wave -position insertpoint sim:/datapath_add_tb/DUT/MDR/*
+add wave -position insertpoint sim:/datapath_add_tb/DUT/R1/*
+add wave -position insertpoint sim:/datapath_add_tb/DUT/R2/*
+add wave -position insertpoint sim:/datapath_add_tb/DUT/R3/*
+restart
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(65): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'd'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v(2).
+# 
+#         Region: /datapath_add_tb/DUT/Zhigh
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(65): [PCDPC] - Port size (1 or 1) does not match connection size (64) for port 'enable'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v(3).
+# 
+#         Region: /datapath_add_tb/DUT/Zhigh
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /datapath_add_tb/DUT/InPort
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Missing connection for port 'BusMuxIn'.
+# 
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /datapath_add_tb/DUT/C
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Missing connection for port 'BusMuxIn'.
+# 
+run 500 ns

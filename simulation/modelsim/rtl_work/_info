@@ -1,121 +1,146 @@
 m255
-K4
-z2
+K3
 13
-!s112 1.1
-!i10d 8192
-!i10e 25
-!i10f 100
 cModel Technology
-Z0 dC:/Users/20dds5/Desktop/374_CPU_Project/simulation/modelsim
-vadder
-Z1 !s110 1706551717
-!i10b 1
-!s100 dQKZ6gVAh_nU0SXT6:e7`3
-IkVjdf?fjgU?88NN]nZWQG2
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1706550828
-8C:/Users/20dds5/Desktop/374_CPU_Project/adder.v
-FC:/Users/20dds5/Desktop/374_CPU_Project/adder.v
+Z0 dC:\Users\jimmy\Desktop\ELEC374_CPU\simulation\modelsim
+vbus
+IgofiK^72Ye]Eccd9k6Z9;2
+VK;ZnnHh5KXgdoXn2llkM`1
+Z1 dC:\Users\jimmy\Desktop\ELEC374_CPU\simulation\modelsim
+Z2 w1707688045
+Z3 8C:/Users/jimmy/Desktop/ELEC374_CPU/bus.v
+Z4 FC:/Users/jimmy/Desktop/ELEC374_CPU/bus.v
 L0 1
-Z3 OV;L;10.5b;63
+Z5 OV;L;10.1d;51
 r1
-!s85 0
 31
-Z4 !s108 1706551717.000000
-!s107 C:/Users/20dds5/Desktop/374_CPU_Project/adder.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20dds5/Desktop/374_CPU_Project|C:/Users/20dds5/Desktop/374_CPU_Project/adder.v|
-!i113 1
-Z5 o-vlog01compat -work work
-Z6 !s92 -vlog01compat -work work +incdir+C:/Users/20dds5/Desktop/374_CPU_Project
-Z7 tCvgOpt 0
-vBus
+Z6 !s108 1707688221.022000
+Z7 !s107 C:/Users/jimmy/Desktop/ELEC374_CPU/bus.v|
+Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jimmy/Desktop/ELEC374_CPU|C:/Users/jimmy/Desktop/ELEC374_CPU/bus.v|
+Z9 o-vlog01compat -work work -O0
+Z10 !s92 -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU -O0
+!i10b 1
+!s100 UT>><jNdS2X25^VlS0Q4K1
+!s85 0
+!s101 -O0
+vbus_32to5_encoder
+I]IimSXUce5V<zLBjG7D;R0
+V;8kWCNJQ0YXi5fBU0B55T0
 R1
-!i10b 1
-!s100 i3nIEjS9>N6@7l[d]iLMA2
-IR0^PWJ2GJK8c7e[WGMOcM2
 R2
-R0
-w1706548508
-8C:/Users/20dds5/Desktop/374_CPU_Project/bus.v
-FC:/Users/20dds5/Desktop/374_CPU_Project/bus.v
-L0 1
 R3
-r1
-!s85 0
-31
 R4
-!s107 C:/Users/20dds5/Desktop/374_CPU_Project/bus.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20dds5/Desktop/374_CPU_Project|C:/Users/20dds5/Desktop/374_CPU_Project/bus.v|
-!i113 1
+L0 65
 R5
+r1
+31
 R6
 R7
-n@bus
+R8
+R9
+R10
+!i10b 1
+!s100 cZKG^OFPALQC_2BiCGki>0
+!s85 0
+!s101 -O0
 vdatapath
+I<B8;XRCK5cJ]@zJiH>SOn3
+V9_U69EObYK<cJ65hc2b>[1
 R1
-!i10b 1
-!s100 m?[gI:_;Y:eWY`_@@9LUF0
-IDfGKZQ73Gi=bU]ilYgBdi0
-R2
-R0
-w1706550397
-8C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v
-FC:/Users/20dds5/Desktop/374_CPU_Project/datapath.v
+w1707688196
+8C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v
+FC:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v
 L0 1
-R3
-r1
-!s85 0
-31
-R4
-!s107 C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20dds5/Desktop/374_CPU_Project|C:/Users/20dds5/Desktop/374_CPU_Project/datapath.v|
-!i113 1
 R5
-R6
-R7
-vdatapath_tb
-R1
+r1
+31
+R9
+R10
 !i10b 1
-!s100 SSEZAAgFk6J>RPOaZo]RX3
-IA@`lm>a;1EI3C99XS1BJ_0
-R2
-R0
-w1706550955
-8C:/Users/20dds5/Desktop/374_CPU_Project/datapath_tb.v
-FC:/Users/20dds5/Desktop/374_CPU_Project/datapath_tb.v
+!s100 @el@oeGBMcUZS<=kfn_9]1
+!s85 0
+!s108 1707688221.184000
+!s107 C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jimmy/Desktop/ELEC374_CPU|C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v|
+!s101 -O0
+vdatapath_add_tb
+!i10b 1
+!s100 T9Q0T6]=Id[h=f5P5UD@I1
+I;M:C>2l1?UN_ankQS0DQT0
+VJAoTkLUa9P>c8RiehnPGL2
+R1
+w1707685797
+8C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_add_tb.v
+FC:/Users/jimmy/Desktop/ELEC374_CPU/datapath_add_tb.v
 L0 2
-R3
+R5
 r1
 !s85 0
 31
-R4
-!s107 C:/Users/20dds5/Desktop/374_CPU_Project/datapath_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20dds5/Desktop/374_CPU_Project|C:/Users/20dds5/Desktop/374_CPU_Project/datapath_tb.v|
-!i113 1
-R5
-R6
-R7
-vregister
+!s108 1707688221.735000
+!s107 C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_add_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jimmy/Desktop/ELEC374_CPU|C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_add_tb.v|
+!s101 -O0
+R9
+R10
+vMDR
+IL9H>nB581?Ub^>0b=eO?S0
+V<2AAIYBk?7<ahmeS[08:U3
 R1
-!i10b 1
-!s100 bYNKiHSSo2]I9FH;b?Ci_0
-IkPH`a6AS=MFG[CMZ=o_AM2
-R2
-R0
-w1706548928
-8C:/Users/20dds5/Desktop/374_CPU_Project/register.v
-FC:/Users/20dds5/Desktop/374_CPU_Project/register.v
+w1707685956
+8C:/Users/jimmy/Desktop/ELEC374_CPU/MDR.v
+FC:/Users/jimmy/Desktop/ELEC374_CPU/MDR.v
 L0 1
-R3
-r1
-!s85 0
-31
-R4
-!s107 C:/Users/20dds5/Desktop/374_CPU_Project/register.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/20dds5/Desktop/374_CPU_Project|C:/Users/20dds5/Desktop/374_CPU_Project/register.v|
-!i113 1
 R5
-R6
-R7
+r1
+31
+R9
+R10
+n@m@d@r
+!i10b 1
+!s100 4BY02SJM?DLbIj:z@D<K22
+!s85 0
+!s108 1707688221.460000
+!s107 C:/Users/jimmy/Desktop/ELEC374_CPU/MDR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jimmy/Desktop/ELEC374_CPU|C:/Users/jimmy/Desktop/ELEC374_CPU/MDR.v|
+!s101 -O0
+vregister
+IAH1mGL>Y5F2^:O=6b`W`j0
+VBPeHYHZif5H92zM7?Oj;73
+R1
+Z11 w1707676014
+8C:/Users/jimmy/Desktop/ELEC374_CPU/register.v
+FC:/Users/jimmy/Desktop/ELEC374_CPU/register.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 b5l6aQiVHDk5h9RST^[J;3
+!s85 0
+!s108 1707688221.320000
+!s107 C:/Users/jimmy/Desktop/ELEC374_CPU/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jimmy/Desktop/ELEC374_CPU|C:/Users/jimmy/Desktop/ELEC374_CPU/register.v|
+!s101 -O0
+vregister64
+I[Y9mJiDPgg?enXOSg2bSW0
+VTGzPi7]nZmlGEAKW6WLI;1
+R1
+R11
+8C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v
+FC:/Users/jimmy/Desktop/ELEC374_CPU/register64.v
+L0 1
+R5
+r1
+31
+R9
+R10
+!i10b 1
+!s100 l4jRczX=TG=<?9P_;?A8j3
+!s85 0
+!s108 1707688221.596000
+!s107 C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jimmy/Desktop/ELEC374_CPU|C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v|
+!s101 -O0

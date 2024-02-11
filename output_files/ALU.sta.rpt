@@ -1,13 +1,13 @@
-Timing Analyzer report for ALU
-Sat Feb 10 15:56:53 2024
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+TimeQuest Timing Analyzer report for ALU
+Sun Feb 11 14:20:39 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Timing Analyzer Summary
+  2. TimeQuest Timing Analyzer Summary
   3. Parallel Compilation
   4. Clocks
   5. Slow 1100mV 85C Model Fmax Summary
@@ -17,72 +17,75 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
   9. Slow 1100mV 85C Model Recovery Summary
  10. Slow 1100mV 85C Model Removal Summary
  11. Slow 1100mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1100mV 85C Model Metastability Summary
- 13. Slow 1100mV 0C Model Fmax Summary
- 14. Slow 1100mV 0C Model Setup Summary
- 15. Slow 1100mV 0C Model Hold Summary
- 16. Slow 1100mV 0C Model Recovery Summary
- 17. Slow 1100mV 0C Model Removal Summary
- 18. Slow 1100mV 0C Model Minimum Pulse Width Summary
- 19. Slow 1100mV 0C Model Metastability Summary
- 20. Fast 1100mV 85C Model Setup Summary
- 21. Fast 1100mV 85C Model Hold Summary
- 22. Fast 1100mV 85C Model Recovery Summary
- 23. Fast 1100mV 85C Model Removal Summary
- 24. Fast 1100mV 85C Model Minimum Pulse Width Summary
- 25. Fast 1100mV 85C Model Metastability Summary
- 26. Fast 1100mV 0C Model Setup Summary
- 27. Fast 1100mV 0C Model Hold Summary
- 28. Fast 1100mV 0C Model Recovery Summary
- 29. Fast 1100mV 0C Model Removal Summary
- 30. Fast 1100mV 0C Model Minimum Pulse Width Summary
- 31. Fast 1100mV 0C Model Metastability Summary
- 32. Multicorner Timing Analysis Summary
- 33. Board Trace Model Assignments
- 34. Input Transition Times
- 35. Signal Integrity Metrics (Slow 1100mv 0c Model)
- 36. Signal Integrity Metrics (Slow 1100mv 85c Model)
- 37. Signal Integrity Metrics (Fast 1100mv 0c Model)
- 38. Signal Integrity Metrics (Fast 1100mv 85c Model)
- 39. Clock Transfers
- 40. Report TCCS
- 41. Report RSKM
- 42. Unconstrained Paths Summary
- 43. Timing Analyzer Messages
+ 12. Slow 1100mV 85C Model Datasheet Report
+ 13. Slow 1100mV 85C Model Metastability Report
+ 14. Slow 1100mV 0C Model Fmax Summary
+ 15. Slow 1100mV 0C Model Setup Summary
+ 16. Slow 1100mV 0C Model Hold Summary
+ 17. Slow 1100mV 0C Model Recovery Summary
+ 18. Slow 1100mV 0C Model Removal Summary
+ 19. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 20. Slow 1100mV 0C Model Datasheet Report
+ 21. Slow 1100mV 0C Model Metastability Report
+ 22. Fast 1100mV 85C Model Setup Summary
+ 23. Fast 1100mV 85C Model Hold Summary
+ 24. Fast 1100mV 85C Model Recovery Summary
+ 25. Fast 1100mV 85C Model Removal Summary
+ 26. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 27. Fast 1100mV 85C Model Datasheet Report
+ 28. Fast 1100mV 85C Model Metastability Report
+ 29. Fast 1100mV 0C Model Setup Summary
+ 30. Fast 1100mV 0C Model Hold Summary
+ 31. Fast 1100mV 0C Model Recovery Summary
+ 32. Fast 1100mV 0C Model Removal Summary
+ 33. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 34. Fast 1100mV 0C Model Datasheet Report
+ 35. Fast 1100mV 0C Model Metastability Report
+ 36. Multicorner Timing Analysis Summary
+ 37. Board Trace Model Assignments
+ 38. Input Transition Times
+ 39. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 40. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 41. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 42. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 43. Clock Transfers
+ 44. Report TCCS
+ 45. Report RSKM
+ 46. Unconstrained Paths
+ 47. TimeQuest Timing Analyzer Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
-Your use of Intel Corporation's design tools, logic functions 
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                         ;
-+-----------------------+---------------------------------------------------------+
-; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                                  ;
-; Revision Name         ; ALU                                                     ;
-; Device Family         ; Cyclone V                                               ;
-; Device Name           ; 5CEBA4F23C7                                             ;
-; Timing Models         ; Final                                                   ;
-; Delay Model           ; Combined                                                ;
-; Rise/Fall Delays      ; Enabled                                                 ;
-+-----------------------+---------------------------------------------------------+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name      ; ALU                                                ;
+; Device Family      ; Cyclone V                                          ;
+; Device Name        ; 5CEBA4F23C7                                        ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
 
 
 +------------------------------------------+
@@ -98,7 +101,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -150,9 +154,15 @@ No paths to report.
 No paths to report.
 
 
------------------------------------------------
-; Slow 1100mV 85C Model Metastability Summary ;
------------------------------------------------
+------------------------------------------
+; Slow 1100mV 85C Model Datasheet Report ;
+------------------------------------------
+Nothing to report.
+
+
+----------------------------------------------
+; Slow 1100mV 85C Model Metastability Report ;
+----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -192,9 +202,15 @@ No paths to report.
 No paths to report.
 
 
-----------------------------------------------
-; Slow 1100mV 0C Model Metastability Summary ;
-----------------------------------------------
+-----------------------------------------
+; Slow 1100mV 0C Model Datasheet Report ;
+-----------------------------------------
+Nothing to report.
+
+
+---------------------------------------------
+; Slow 1100mV 0C Model Metastability Report ;
+---------------------------------------------
 No synchronizer chains to report.
 
 
@@ -228,9 +244,15 @@ No paths to report.
 No paths to report.
 
 
------------------------------------------------
-; Fast 1100mV 85C Model Metastability Summary ;
------------------------------------------------
+------------------------------------------
+; Fast 1100mV 85C Model Datasheet Report ;
+------------------------------------------
+Nothing to report.
+
+
+----------------------------------------------
+; Fast 1100mV 85C Model Metastability Report ;
+----------------------------------------------
 No synchronizer chains to report.
 
 
@@ -264,9 +286,15 @@ No paths to report.
 No paths to report.
 
 
-----------------------------------------------
-; Fast 1100mV 0C Model Metastability Summary ;
-----------------------------------------------
+-----------------------------------------
+; Fast 1100mV 0C Model Datasheet Report ;
+-----------------------------------------
+Nothing to report.
+
+
+---------------------------------------------
+; Fast 1100mV 0C Model Metastability Report ;
+---------------------------------------------
 No synchronizer chains to report.
 
 
@@ -287,86 +315,106 @@ No synchronizer chains to report.
 +-----+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
-+---------------------------------------------------------------------------+
-; Input Transition Times                                                    ;
-+------------------------+--------------+-----------------+-----------------+
-; Pin                    ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
-+------------------------+--------------+-----------------+-----------------+
-; clock                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; clear                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[2]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[3]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[4]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[5]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[6]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[7]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[8]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[9]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[10]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[11]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[12]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[13]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[14]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[15]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[16]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[17]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[18]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[19]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[20]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[21]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[22]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[23]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[24]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[25]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[26]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[27]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[28]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[29]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[30]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; A[31]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[4]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[5]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[6]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[7]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[8]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[9]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[10] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[11] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[12] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[13] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[14] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[15] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[16] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[17] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[18] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[19] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[20] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[21] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[22] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[23] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[24] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[25] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[26] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[27] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[28] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[29] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[30] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RegisterAImmediate[31] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RZout                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RAout                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RBout                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MDRout                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RAin                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RBin                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; RZin                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; MDRin                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-+------------------------+--------------+-----------------+-----------------+
++----------------------------------------------------------------+
+; Input Transition Times                                         ;
++-------------+--------------+-----------------+-----------------+
+; Pin         ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------+--------------+-----------------+-----------------+
+; clock       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clear       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Read        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IncPC       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; opcode[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; opcode[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; opcode[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; opcode[3]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; opcode[4]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R0in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R1in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R2in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R3in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R4in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R5in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R6in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R7in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R8in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R9in        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R10in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R11in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R12in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R13in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R14in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R15in       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; HIin        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; LOin        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Yin         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Zin         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; PCin        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRin        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; MARin       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; MDRin       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Inportin    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Cin         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R0out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R1out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R2out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R3out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R4out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R5out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R6out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R7out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R8out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R9out       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R10out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R11out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R12out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R13out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R14out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; R15out      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; HIout       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; LOout       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Yout        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Zhighout    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Zlowout     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; PCout       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; IRout       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; MARout      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; MDRout      ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Inportout   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Cout        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[0]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[1]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[2]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[3]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[4]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[5]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[6]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[7]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[8]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[9]  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[10] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[11] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[12] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[13] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[14] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[15] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[16] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[17] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[18] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[19] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[20] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[21] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[22] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[23] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[24] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[25] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[26] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[27] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[28] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[29] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[30] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Mdatain[31] ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------+--------------+-----------------+-----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -416,7 +464,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 
 
 +------------------------------------------------+
-; Unconstrained Paths Summary                    ;
+; Unconstrained Paths                            ;
 +---------------------------------+-------+------+
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
@@ -429,26 +477,25 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 
 
-+--------------------------+
-; Timing Analyzer Messages ;
-+--------------------------+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Timing Analyzer
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Sat Feb 10 15:56:49 2024
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Sun Feb 11 14:20:32 2024
 Info: Command: quartus_sta 374_CPU_Project -c ALU
 Info: qsta_default_script.tcl version: #1
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'ALU.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'ALU.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
 Warning (332068): No clocks defined in design.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info (332159): No clocks to report
 Info: Analyzing Slow 1100mV 85C Model
 Info (332140): No fmax paths to report
@@ -494,10 +541,10 @@ Info (332140): No Removal paths to report
 Info (332140): No Minimum Pulse Width paths to report
 Info (332101): Design is fully constrained for setup requirements
 Info (332101): Design is fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5038 megabytes
-    Info: Processing ended: Sat Feb 10 15:56:53 2024
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Sun Feb 11 14:20:39 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -3,7 +3,7 @@
 //Matt test comment 3
 
 module alu(
-	input clk, clear, IncPC, branch_flag, 
+	input IncPC, branch_flag, 
 	
 	input wire [31:0] A,
 	input wire [31:0] B,

@@ -2,3 +2,5 @@ db/
 incremental_db/
 *.qsf
 *.v.bak
+simulation/
+output_files/
