@@ -22,10 +22,11 @@ module datapath_and_tb;
 			
 	reg [31:0] Mdatain;
 	
-	parameter 	Default=4'b0000, Reg_load1a=4'b0001, Reg_load1b=4'b0010, Reg_load2a=4'b0011,
-					Reg_load2b=4'b0100, Reg_load3a=4'b0101, Reg_load3b=4'b0110,
-					T0=4'b0111, T1=4'b1000, T2=4'b1010, T3=4'b1010, T4=4'b1011,
-					T5=4'b1100;
+	parameter 	Default=4'b0000, Reg_load1a=4'b0001, Reg_load1b=4'b0010, 
+					Reg_load2a=4'b0011, Reg_load2b=4'b0100,
+					Reg_load3a=4'b0101, Reg_load3b=4'b0110,
+					T0=4'b0111, T1=4'b1000, T2=4'b1010,
+					T3=4'b1010, T4=4'b1011, T5=4'b1100;
 	reg [3:0] Present_state = Default;
 
 	datapath DUT(	Clock, clear, Read, IncPC, opcode,
@@ -35,7 +36,7 @@ module datapath_and_tb;
 						R12in, R13in, R14in, R15in,
 						
 						HIin, LOin,
-						Yin, Zhighin, Zlowin,
+						Yin, Zin,
 						PCin, IRin, MARin, MDRin, Inportin, Cin,
 						
 						R0out, R1out, R2out, R3out,
