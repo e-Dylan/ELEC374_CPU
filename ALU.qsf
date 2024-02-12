@@ -81,10 +81,17 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_add_tb -section_
 set_global_assignment -name VERILOG_FILE datapath_mul_tb.v
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb.v -section_id datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_add_tb.v -section_id datapath_add_tb
+<<<<<<< HEAD
 set_global_assignment -name EDA_TEST_BENCH_NAME datapath_mul_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_mul_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_mul_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_mul_tb -section_id datapath_mul_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_mul_tb.v -section_id datapath_mul_tb
 set_global_assignment -name VERILOG_FILE mul32.v
+=======
+set_global_assignment -name VERILOG_FILE datapath_or_tb.v
+set_global_assignment -name VERILOG_FILE datapath_neg_tb.v
+set_global_assignment -name VERILOG_FILE datapath_not_tb.v
+set_global_assignment -name VERILOG_FILE or32.v
+>>>>>>> 0e36cb91b6bf17311d509efe5af9c6c5c23cd1ff
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
