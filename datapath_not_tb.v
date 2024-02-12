@@ -131,7 +131,7 @@ module datapath_not_tb;
 					#25 R2out <= 0; Yin <= 0;
 				end
 				T4 : begin
-					R3out <= 1; opcode <= 5'b10001; Zin <= 1; // opcode for not
+					R3out <= 1; opcode <= 5'b10010; Zin <= 1; // opcode for not
 					#25 R3out <= 0; Zin <= 0;
 				end
 				T5 : begin

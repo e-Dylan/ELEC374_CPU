@@ -131,7 +131,7 @@ module datapath_shl_tb;
 					#25 R2out <= 0; Yin <= 0;
 				end
 				T4 : begin
-					R3out <= 1; opcode <= 5'b00110; Zin <= 1; // opcode for shl
+					R3out <= 1; opcode <= 5'b00111; Zin <= 1; // opcode for shl
 					#25 R3out <= 0; Zin <= 0;
 				end
 				T5 : begin
