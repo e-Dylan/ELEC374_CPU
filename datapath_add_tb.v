@@ -118,7 +118,7 @@ module datapath_add_tb;
 				end
 				T1 : begin
 					Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
-					Mdatain <= 32'b00011000100100011000000000000000; // opcode for "add R1, R2, R3"
+					Mdatain <= 32'b00011_0001_0010_0011_000000000000000; // opcode for "add R1, R2, R3"
 													 // 00011 0001 0010 0011 000000000000000
 					#25 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 				end
