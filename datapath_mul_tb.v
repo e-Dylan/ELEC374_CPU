@@ -71,6 +71,7 @@ module datapath_mul_tb;
 				T2				:	#40 Present_state = T3;
 				T3				:	#40 Present_state = T4;
 				T4				:	#40 Present_state = T5;
+				T5				:  #40 Present_state = T6;
 			endcase
 		end
 		
@@ -82,7 +83,7 @@ module datapath_mul_tb;
 					R2out <= 0; R3out <= 0; MARin <= 0; Zin <= 0;
 					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0;
 					IncPC <= 0; Read <= 0; opcode <= 0;
-					R1in <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'b0;
+					LOin <= 0; HIin <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'b0;
 					Read = 0; MDRin = 0; clear = 0;
 				end
 				Reg_load1a : begin
@@ -118,7 +119,7 @@ module datapath_mul_tb;
 				end
 				T1 : begin
 					Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
-					Mdatain <= 32'b01111_0010_0011_0000_000000000000000; // opcode for "mul R1, R2, R3"
+					Mdatain <= 32'b01111_0010_0011_0000_000000000000000; // opcode for "mul R2, R3"
 					#25 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 				end
 				T2 : begin
@@ -138,8 +139,8 @@ module datapath_mul_tb;
 					#25 Zlowout <= 0; LOin <= 0;
 				end
 				T6 : begin
-					Zlowout <= 1; HIin <= 1;
-					#25 Zlowout <= 0; HIin <= 0;
+					Zhighout <= 1; HIin <= 1;
+					#25 Zhighout <= 0; HIin <= 0;
 				end
 			endcase
 		end

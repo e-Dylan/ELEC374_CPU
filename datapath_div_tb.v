@@ -71,6 +71,7 @@ module datapath_div_tb;
 				T2				:	#40 Present_state = T3;
 				T3				:	#40 Present_state = T4;
 				T4				:	#40 Present_state = T5;
+				T5				:  #40 Present_state = T6;
 			endcase
 		end
 		
@@ -82,7 +83,7 @@ module datapath_div_tb;
 					R2out <= 0; R3out <= 0; MARin <= 0; Zin <= 0;
 					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0;
 					IncPC <= 0; Read <= 0; opcode <= 0;
-					R1in <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'b0;
+					LOin <= 0; HIin <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'b0;
 					Read = 0; MDRin = 0; clear = 0;
 				end
 				Reg_load1a : begin
@@ -138,8 +139,8 @@ module datapath_div_tb;
 					#25 Zlowout <= 0; LOin <= 0;
 				end
 				T6 : begin
-					Zlowout <= 1; HIin <= 1;
-					#25 Zlowout <= 0; HIin <= 0;
+					Zhighout <= 1; HIin <= 1;
+					#25 Zhighout <= 0; HIin <= 0;
 				end
 			endcase
 		end
