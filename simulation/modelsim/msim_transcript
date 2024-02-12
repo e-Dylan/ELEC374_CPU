@@ -185,6 +185,8 @@
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
 add wave -position insertpoint sim:/datapath_add_tb/DUT/R1/*
+add wave -position insertpoint sim:/datapath_add_tb/DUT/R2/*
+add wave -position insertpoint sim:/datapath_add_tb/DUT/R3/*
 restart
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Too few port connections. Expected 5, found 4.
 # 

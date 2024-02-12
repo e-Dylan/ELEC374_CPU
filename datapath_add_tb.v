@@ -86,7 +86,7 @@ module datapath_add_tb;
 					Read = 0; MDRin = 0; clear = 0;
 				end
 				Reg_load1a : begin
-					Mdatain <= 32'b0100;		// 4
+					Mdatain <= 32'b11111111_11111111_11111111_11111010;		// 4
 					Read <= 1; MDRin <= 1;
 					#25 Read <= 0; MDRin <= 0;
 				end
@@ -95,7 +95,7 @@ module datapath_add_tb;
 					#25 MDRout <= 0; R2in <= 0;
 				end
 				Reg_load2a : begin
-					Mdatain <= 32'b0101;		// 5
+					Mdatain <= 32'b11111111_11111111_11111111_11111011;		// 5
 					Read <= 1; MDRin <= 1;
 					#25 Read <= 0; MDRin <= 0;
 				end
