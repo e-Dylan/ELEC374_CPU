@@ -1,2 +1,0 @@
-Warning (10268): Verilog HDL information at datapath_and_tb.v(77): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at datapath_add_tb.v(77): always construct contains both blocking and non-blocking assignments

@@ -94,5 +94,5 @@ module datapath(
 				
 				BusMuxOut); 
 	
-	//alu alu(Yregout, BusMuxOut, opcode, ALUout);
+	alu alu(Yregout, BusMuxOut, opcode, ALUout);
 endmodule

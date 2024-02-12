@@ -1,11 +1,11 @@
 module register64(
+	input wire clr, clk, enable,
 	input wire [63:0] d,
-	input wire clk, clr, enable,
 	output reg [31:0] q_high,
 	output reg [31:0] q_low
 );
 
-	always @ (posedge clk, posedge clr) begin
+	always @ (posedge clk) begin
 		if (clr) begin
 			q_high <= 0;
 			q_low <= 0;

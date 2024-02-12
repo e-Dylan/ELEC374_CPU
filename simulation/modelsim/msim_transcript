@@ -30,18 +30,102 @@
 # 
 # Top level modules:
 # 	register
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/adder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
 # vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/MDR.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module MDR
 # 
 # Top level modules:
 # 	MDR
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/not32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module not32
+# 
+# Top level modules:
+# 	not32
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/negate32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module negate32
+# 
+# Top level modules:
+# 	negate32
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/and32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module and32
+# 
+# Top level modules:
+# 	and32
 # vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module register64
 # 
 # Top level modules:
 # 	register64
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/or32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module or32
+# 
+# Top level modules:
+# 	or32
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/sub32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sub32
+# 
+# Top level modules:
+# 	sub32
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/ror.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ror
+# 
+# Top level modules:
+# 	ror
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/rol.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rol
+# 
+# Top level modules:
+# 	rol
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/shiftleft32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module shiftleft32
+# 
+# Top level modules:
+# 	shiftleft32
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/shiftright32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module shiftright32
+# 
+# Top level modules:
+# 	shiftright32
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/shiftrightari32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module shiftrightari32
+# 
+# Top level modules:
+# 	shiftrightari32
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/div32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module div32
+# 
+# Top level modules:
+# 	div32
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/mul32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mul32
+# 
+# Top level modules:
+# 	mul32
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_add_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -58,12 +142,20 @@
 # Loading work.register64
 # Loading work.MDR
 # Loading work.bus
-# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(65): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'd'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v(2).
-# 
-#         Region: /datapath_add_tb/DUT/Zhigh
-# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(65): [PCDPC] - Port size (1 or 1) does not match connection size (64) for port 'enable'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v(3).
-# 
-#         Region: /datapath_add_tb/DUT/Zhigh
+# Loading work.alu
+# Loading work.or32
+# Loading work.and32
+# Loading work.negate32
+# Loading work.not32
+# Loading work.adder
+# Loading work.sub32
+# Loading work.ror
+# Loading work.rol
+# Loading work.shiftleft32
+# Loading work.shiftright32
+# Loading work.shiftrightari32
+# Loading work.div32
+# Loading work.mul32
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Too few port connections. Expected 5, found 4.
 # 
 #         Region: /datapath_add_tb/DUT/InPort
@@ -74,28 +166,26 @@
 #         Region: /datapath_add_tb/DUT/C
 # ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Missing connection for port 'BusMuxIn'.
 # 
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/sub32.v(10): [TFMPC] - Too few port connections. Expected 2, found 1.
+# 
+#         Region: /datapath_add_tb/DUT/alu/subtractor/negate
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/sub32.v(10): [TFMPC] - Missing connection for port 'Rz'.
+# 
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/ALU.v(120): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'rotate_amount'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/ror.v(5).
+# 
+#         Region: /datapath_add_tb/DUT/alu/ror_op
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/ALU.v(121): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'rotate_amount'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/rol.v(5).
+# 
+#         Region: /datapath_add_tb/DUT/alu/rol_op
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 500 ns
-add wave -position insertpoint  \
-sim:/datapath_add_tb/DUT/bus/BusMuxOut
-add wave -position insertpoint  \
-sim:/datapath_add_tb/DUT/bus/q
-add wave -position insertpoint sim:/datapath_add_tb/DUT/MDR/*
+# run 1000 ns
 add wave -position insertpoint sim:/datapath_add_tb/DUT/R1/*
-add wave -position insertpoint sim:/datapath_add_tb/DUT/R2/*
-add wave -position insertpoint sim:/datapath_add_tb/DUT/R3/*
 restart
-# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(65): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'd'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v(2).
-# 
-#         Region: /datapath_add_tb/DUT/Zhigh
-# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(65): [PCDPC] - Port size (1 or 1) does not match connection size (64) for port 'enable'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v(3).
-# 
-#         Region: /datapath_add_tb/DUT/Zhigh
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Too few port connections. Expected 5, found 4.
 # 
 #         Region: /datapath_add_tb/DUT/InPort
@@ -106,4 +196,15 @@ restart
 #         Region: /datapath_add_tb/DUT/C
 # ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Missing connection for port 'BusMuxIn'.
 # 
-run 500 ns
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/sub32.v(10): [TFMPC] - Too few port connections. Expected 2, found 1.
+# 
+#         Region: /datapath_add_tb/DUT/alu/subtractor/negate
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/sub32.v(10): [TFMPC] - Missing connection for port 'Rz'.
+# 
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/ALU.v(120): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'rotate_amount'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/ror.v(5).
+# 
+#         Region: /datapath_add_tb/DUT/alu/ror_op
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/ALU.v(121): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'rotate_amount'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/rol.v(5).
+# 
+#         Region: /datapath_add_tb/DUT/alu/rol_op
+run 1000 ns

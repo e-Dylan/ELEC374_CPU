@@ -2,8 +2,13 @@
 
 module not32(
 	input wire [31:0] Ra,
-	output reg [31:0] Rz
+	output wire [31:0] Rz
 	);
-	always @(*)
-		assign Rz = !Ra;
+	
+	genvar i;
+	generate
+		for (i=0; i<32; i=i+1) begin : loop
+			assign Rz[i] = !Ra[i];
+		end
+	endgenerate
 endmodule 

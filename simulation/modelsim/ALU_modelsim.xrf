@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+<<<<<<< HEAD
 source_file = 1, C:/Users/jimmy/Desktop/ELEC374_CPU/bus.v
 source_file = 1, C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v
 source_file = 1, C:/Users/jimmy/Desktop/ELEC374_CPU/register.v
@@ -14,6 +15,32 @@ source_file = 1, C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_add_tb.v
 source_file = 1, C:/Users/jimmy/Desktop/ELEC374_CPU/register64.v
 source_file = 1, C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_tbtemplate.v
 source_file = 1, C:/Users/jimmy/Desktop/ELEC374_CPU/db/ALU.cbx.xml
+=======
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/bus.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/datapath.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/register.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_tb.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/adder.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/MDR.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/ALU.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/not32.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/negate32.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/and32.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_and_tb.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_add_tb.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/register64.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/datapath_tbtemplate.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/or32.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/shiftright32.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/rol.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/shiftleft32.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/shiftrightari32.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/ror.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/sub32.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/div32.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/mul32.v
+source_file = 1, C:/Users/20dds5/Desktop/ELEC374_CPU/db/ALU.cbx.xml
+>>>>>>> 31d05903d217d586f4c6ff0506c47cf1276d70f0
 design_name = datapath
 instance = comp, \clock~input , clock~input, datapath, 1
 instance = comp, \clear~input , clear~input, datapath, 1
