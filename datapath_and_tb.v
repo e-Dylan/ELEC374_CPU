@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module datapath_tbtemplate;	
+module datapath_and_tb;	
 	reg 	Clock, clear, Read, IncPC;
 	reg [4:0] opcode;
 	reg	R0in, R1in, R2in, R3in,
