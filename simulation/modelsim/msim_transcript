@@ -72,6 +72,12 @@
 # 
 # Top level modules:
 # 	register64
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/mul32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mul32
+# 
+# Top level modules:
+# 	mul32
 # vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/or32.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module or32
@@ -120,23 +126,17 @@
 # 
 # Top level modules:
 # 	div32
-# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/mul32.v}
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_mul_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mul32
+# -- Compiling module datapath_mul_tb
 # 
 # Top level modules:
-# 	mul32
+# 	datapath_mul_tb
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_add_tb.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module datapath_add_tb
-# 
-# Top level modules:
-# 	datapath_add_tb
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_add_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_add_tb 
-# Loading work.datapath_add_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_mul_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_mul_tb 
+# Loading work.datapath_mul_tb
 # Loading work.datapath
 # Loading work.register
 # Loading work.register64
@@ -158,25 +158,25 @@
 # Loading work.mul32
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Too few port connections. Expected 5, found 4.
 # 
-#         Region: /datapath_add_tb/DUT/InPort
+#         Region: /datapath_mul_tb/DUT/InPort
 # ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Missing connection for port 'BusMuxIn'.
 # 
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Too few port connections. Expected 5, found 4.
 # 
-#         Region: /datapath_add_tb/DUT/C
+#         Region: /datapath_mul_tb/DUT/C
 # ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Missing connection for port 'BusMuxIn'.
 # 
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/sub32.v(10): [TFMPC] - Too few port connections. Expected 2, found 1.
 # 
-#         Region: /datapath_add_tb/DUT/alu/subtractor/negate
+#         Region: /datapath_mul_tb/DUT/alu/subtractor/negate
 # ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/sub32.v(10): [TFMPC] - Missing connection for port 'Rz'.
 # 
 # ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/ALU.v(120): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'rotate_amount'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/ror.v(5).
 # 
-#         Region: /datapath_add_tb/DUT/alu/ror_op
+#         Region: /datapath_mul_tb/DUT/alu/ror_op
 # ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/ALU.v(121): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'rotate_amount'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/rol.v(5).
 # 
-#         Region: /datapath_add_tb/DUT/alu/rol_op
+#         Region: /datapath_mul_tb/DUT/alu/rol_op
 # 
 # add wave *
 # view structure
@@ -184,29 +184,28 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
-add wave -position insertpoint sim:/datapath_add_tb/DUT/R1/*
-add wave -position insertpoint sim:/datapath_add_tb/DUT/R2/*
-add wave -position insertpoint sim:/datapath_add_tb/DUT/R3/*
+add wave -position insertpoint sim:/datapath_mul_tb/DUT/HI/*
+add wave -position insertpoint sim:/datapath_mul_tb/DUT/LO/*
 restart
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Too few port connections. Expected 5, found 4.
 # 
-#         Region: /datapath_add_tb/DUT/InPort
+#         Region: /datapath_mul_tb/DUT/InPort
 # ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(74): [TFMPC] - Missing connection for port 'BusMuxIn'.
 # 
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Too few port connections. Expected 5, found 4.
 # 
-#         Region: /datapath_add_tb/DUT/C
+#         Region: /datapath_mul_tb/DUT/C
 # ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Missing connection for port 'BusMuxIn'.
 # 
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/sub32.v(10): [TFMPC] - Too few port connections. Expected 2, found 1.
 # 
-#         Region: /datapath_add_tb/DUT/alu/subtractor/negate
+#         Region: /datapath_mul_tb/DUT/alu/subtractor/negate
 # ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/sub32.v(10): [TFMPC] - Missing connection for port 'Rz'.
 # 
 # ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/ALU.v(120): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'rotate_amount'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/ror.v(5).
 # 
-#         Region: /datapath_add_tb/DUT/alu/ror_op
+#         Region: /datapath_mul_tb/DUT/alu/ror_op
 # ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/ALU.v(121): [PCDPC] - Port size (5 or 5) does not match connection size (32) for port 'rotate_amount'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/rol.v(5).
 # 
-#         Region: /datapath_add_tb/DUT/alu/rol_op
+#         Region: /datapath_mul_tb/DUT/alu/rol_op
 run 1000 ns
