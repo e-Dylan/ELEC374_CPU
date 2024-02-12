@@ -7,6 +7,6 @@ module sub32(
 );
 
 	wire [31:0] temp; 
-	negate32 negate(Rb);
+	negate32 negate(Rb, temp);
 	adder add(Ra, temp, sum);
 endmodule
