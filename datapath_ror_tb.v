@@ -86,7 +86,7 @@ module datapath_ror_tb;
 					Read = 0; MDRin = 0; clear = 0;
 				end
 				Reg_load1a : begin
-					Mdatain <= 32'b1000;		// 8, value for R2
+					Mdatain <= 32'b0101;		// 5, value for R2
 					Read <= 1; MDRin <= 1;
 					#25 Read <= 0; MDRin <= 0;
 				end
@@ -95,7 +95,7 @@ module datapath_ror_tb;
 					#25 MDRout <= 0; R2in <= 0;
 				end
 				Reg_load2a : begin
-					Mdatain <= 32'b0010;		// 2, value for R3
+					Mdatain <= 32'b1000;		// 8, value for R3
 					Read <= 1; MDRin <= 1;
 					#25 Read <= 0; MDRin <= 0;
 				end
