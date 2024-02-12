@@ -1,4 +1,3 @@
-// datapath testbench template
 `timescale 1ns/10ps
 module datapath_tbtemplate;	
 	reg 	Clock, clear, Read, IncPC;
@@ -61,17 +60,17 @@ module datapath_tbtemplate;
 		begin
 			case (Present_state)
 				Default		:	Present_state = Reg_load1a;
-				Reg_load1a 	:	Present_state = Reg_load1b;
-				Reg_load1b	:	Present_state = Reg_load2a;
-				Reg_load2a	:	Present_state = Reg_load2b;
-				Reg_load2b	:	Present_state = Reg_load3a;
-				Reg_load3a	:	Present_state = Reg_load3b;
-				Reg_load3b	:	Present_state = T0;
-				T0				:	Present_state = T1;
-				T1				:	Present_state = T2;
-				T2				:	Present_state = T3;
-				T3				:	Present_state = T4;
-				T4				:	Present_state = T5;
+				Reg_load1a 	:	#40 Present_state = Reg_load1b;
+				Reg_load1b	:	#40 Present_state = Reg_load2a;
+				Reg_load2a	:	#40 Present_state = Reg_load2b;
+				Reg_load2b	:	#40 Present_state = Reg_load3a;
+				Reg_load3a	:	#40 Present_state = Reg_load3b;
+				Reg_load3b	:	#40 Present_state = T0;
+				T0				:	#40 Present_state = T1;
+				T1				:	#40 Present_state = T2;
+				T2				:	#40 Present_state = T3;
+				T3				:	#40 Present_state = T4;
+				T4				:	#40 Present_state = T5;
 			endcase
 		end
 		
@@ -79,46 +78,68 @@ module datapath_tbtemplate;
 		begin
 			case (Present_state)
 				Default : begin
-				
+					PCout <= 0; Zlowout <= 0; MDRout <=0;
+					R2out <= 0; R3out <= 0; MARin <= 0; Zin <= 0;
+					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0;
+					IncPC <= 0; Read <= 0; opcode <= 0;
+					R1in <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'b0;
+					Read = 0; MDRin = 0; clear = 0;
 				end
 				Reg_load1a : begin
-				
+					Mdatain <= 32'b0100;		// 4, value for R2
+					Read <= 1; MDRin <= 1;
+					#25 Read <= 0; MDRin <= 0;
 				end
 				Reg_load1b : begin
-				
+					MDRout <= 1; R2in <= 1;
+					#25 MDRout <= 0; R2in <= 0;
 				end
 				Reg_load2a : begin
-				
+					Mdatain <= 32'b0101;		// 5, value for R3
+					Read <= 1; MDRin <= 1;
+					#25 Read <= 0; MDRin <= 0;
 				end
 				Reg_load2b : begin
-				
+					MDRout <= 1; R3in <= 1;
+					#25 MDRout <= 0; R3in <= 0;
 				end
 				Reg_load3a : begin
-				
+					Mdatain <= 32'b1000;		// 8
+					Read <= 1; MDRin <= 1;
+					#25 Read <= 0; MDRin <= 0;
 				end
 				Reg_load3b : begin
-				
+					MDRout <= 1; R1in <= 1;
+					#25 MDRout <= 0; R1in <= 0;
 				end
 				T0 : begin
-				
+					PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
+					#25 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0;
 				end
 				T1 : begin
-				
+					Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
+					Mdatain <= 32'b00011000100100011000000000000000; // opcode for "add R1, R2, R3"
+													 // 00011 0001 0010 0011 000000000000000
+					#25 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
 				end
 				T2 : begin
-				
+					MDRout <= 1; IRin <=1;
+					#25 MDRout <= 0; IRin <=0;
 				end
 				T3 : begin
-				
+					R2out <= 1; Yin <= 1;
+					#25 R2out <= 0; Yin <= 0;
 				end
 				T4 : begin
-				
+					R3out <= 1; opcode <= 5'b00011; Zin <= 1; // opcode for add
+					#25 R3out <= 0; Zin <= 0;
 				end
 				T5 : begin
-				
+					Zlowout <= 1; R1in <= 1;
+					#25 Zlowout <= 0; R1in <= 0;
 				end
 			endcase
 		end
 		
 endmodule
-	
+
