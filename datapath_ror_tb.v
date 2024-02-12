@@ -131,7 +131,7 @@ module datapath_ror_tb;
 					#25 R2out <= 0; Yin <= 0;
 				end
 				T4 : begin
-					R3out <= 1; opcode <= 5'b0100; Zin <= 1; // opcode for ror
+					R3out <= 1; opcode <= 5'b01000; Zin <= 1; // opcode for ror
 					#25 R3out <= 0; Zin <= 0;
 				end
 				T5 : begin
