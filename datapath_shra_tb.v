@@ -86,7 +86,7 @@ module datapath_shra_tb;
 					Read = 0; MDRin = 0; clear = 0;
 				end
 				Reg_load1a : begin
-					Mdatain <= 32'b1100;		// -4, value for R2 1100 -> 1111 = -1
+					Mdatain <= 32'b11111111111111111111111111111100;		// -4, value for R2 1100 -> 1111 = -1
 					Read <= 1; MDRin <= 1;
 					#25 Read <= 0; MDRin <= 0;
 				end

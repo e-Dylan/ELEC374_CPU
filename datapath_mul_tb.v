@@ -87,7 +87,7 @@ module datapath_mul_tb;
 					Read = 0; MDRin = 0; clear = 0;
 				end
 				Reg_load1a : begin
-					Mdatain <= 32'b0100;		// 4, value for R2
+					Mdatain <= -4;		// 4, value for R2
 					Read <= 1; MDRin <= 1;
 					#25 Read <= 0; MDRin <= 0;
 				end
