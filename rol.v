@@ -2,7 +2,7 @@
 
 module rol(
     input [31:0] data_in,
-    input [4:0]  rotate_amount,
+    input [31:0]  rotate_amount,
     output [31:0] data_out
 );
 
