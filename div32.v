@@ -7,6 +7,7 @@ module div32(
 	reg [31:0] A;
 	reg [31:0] Q;
 	reg [31:0] M;
+   reg [31:0] Zo;
 	reg q0;
    reg a;
    reg q;
@@ -16,16 +17,17 @@ module div32(
       Q = RegA;
       M = RegB;
       A = 32'b0;
+      Zo = 32'b0;
       a = 1'b0;
       q = 1'b0;
 
       if(Q[31] == 1'b1) begin
-         negate32(Q, Q);
+         negate32(RegA, Q);
          a <= 1;
       end
 
       else if(M[31] == 1'b1) begin
-         negate32(M, M);
+         negate32(RegB, M);
          q <= 1;
       end
 
@@ -43,7 +45,8 @@ module div32(
    end
 
    if(a != q) begin
-      negate32(Q, Q);
+      Zo = Q;
+      negate32(Zo, Q);
    end
 
    assign Z = {A, Q};
