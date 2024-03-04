@@ -10,7 +10,7 @@ module div32(
    reg signed [31:0] M;
    reg q0;
 
-   always @ (*) begins
+   always @ (*) begin
       Q = RegA;
       M = RegB;
       A = 32'sb0;
@@ -26,6 +26,6 @@ module div32(
                A = A + M;
          end
       end
+	end
    assign Z = {A, Q};
-
 endmodule
