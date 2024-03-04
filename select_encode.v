@@ -1,5 +1,5 @@
 module select_encode(
-	input wire [31:0] BusMuxOut,
+	input wire [31:0] IR,
 	input wire Gra, Grb, Grc, Rin, Rout, BAout,
 	
 	output reg	R0in, R1in, R2in, R3in,
@@ -31,9 +31,7 @@ module select_encode(
 	end
 	
 	always @ (*) begin
-		if (BusMuxOut)
-			C_sign_extended[0:17] <= IR[16:31];
-			C_sign_extended[18:31] <= IR[18] ? 15'b1 : 15'b0;
+		if (IR)
 			Ra <= IR[5:8];
 			Rb <= IR[9:12];
 			Rc <= IR[13:15];

@@ -2,37 +2,41 @@ module datapath(
 	input wire 	clock, clear, Read, IncPC,
 	input wire [4:0] opcode, 
 	
-	input wire	R0in, R1in, R2in, R3in,
-					R4in, R5in, R6in, R7in,
-					R8in, R9in, R10in, R11in,
-					R12in, R13in, R14in, R15in,
-
+	input wire 	Gra, Grb, Grc, Rin, Rout, BAout,
+	
 	input wire 	HIin, LOin,
 					Yin, Zin,
-					PCin, IRin, MARin, MDRin, InPortin, Cin,
-					
-	input wire 	R0out, R1out, R2out, R3out,
-					R4out, R5out, R6out, R7out,
-					R8out, R9out, R10out, R11out,
-					R12out, R13out, R14out, R15out,
+					PCin, IRin, MARin, MDRin, InPortin,
+					CONin,
 					
 	input wire 	HIout, LOout,
 					Yout, Zhighout, Zlowout,
-					PCout, IRout, MARout, MDRout, InPortout, Cout,
+					PCout, MARout, MDRout, InPortout, Cout,
 					
 	input wire [31:0] Mdatain
 );
 
 	wire [63:0] ALUout;
 	wire [31:0] BusMuxOut;
-
+	
+	// control signals
+	wire	R0in, R1in, R2in, R3in,
+			R4in, R5in, R6in, R7in,
+			R8in, R9in, R10in, R11in,
+			R12in, R13in, R14in, R15in;
+					
+	wire 	R0out, R1out, R2out, R3out,
+			R4out, R5out, R6out, R7out,
+			R8out, R9out, R10out, R11out,
+			R12out, R13out, R14out, R15out;
+	
 	// R0-R15 registers
 	wire [31:0] BusMuxIn_R0, BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3,
 					BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7,
 					BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, BusMuxIn_R11,
 					BusMuxIn_R12, BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15;
 	
-	register R0(clear, clock, R0in, BusMuxOut, BusMuxIn_R0);
+	register0 R0(clear, clock, R0in, BusMuxOut, BusMuxIn_R0);
 	register R1(clear, clock, R1in, BusMuxOut, BusMuxIn_R1);
 	register R2(clear, clock, R2in, BusMuxOut, BusMuxIn_R2);
 	register R3(clear, clock, R3in, BusMuxOut, BusMuxIn_R3);
@@ -64,16 +68,29 @@ module datapath(
 	register Y(clear, clock, Yin, BusMuxOut, Yregout);
 	register64 Zhigh(clear, clock, Zin, ALUout, BusMuxIn_Zhigh, BusMuxIn_Zlow);
 
-	// PC, IR, MAR, MDR, Inport, C sign extended
-	wire [31:0] BusMuxIn_PC, BusMuxIn_IR, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort, BusMuxIn_C;
+	// PC, IR, MAR, MDR, Inport
+	wire [31:0] BusMuxIn_PC, IRout, C_sign_extended, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort;
 	
 	register PC(clear, clock, PCin, BusMuxOut, BusMuxIn_PC);
-	register IR(clear, clock, IRin, BusMuxOut, BusMuxIn_IR);
+	IR 		IR(clear, clock, IRin, IRout, C_sign_extended);
 	register MAR(clear, clock, MARin, BusMuxOut, BusMuxIn_MAR);
 	MDR 		MDR(clear, clock, MDRin, BusMuxOut, Mdatain, Read, BusMuxIn_MDR);
 	register InPort(clear, clock, InPortin, BusMuxIn_InPort);
-	register C(clear, clock, Cin, BusMuxIn_C);
 
+	// select and encode
+	select_encode sel(IRout, Gra, Grb, Grc, Rin, Rout, BAout,
+							R0in, R1in, R2in, R3in,
+							R4in, R5in, R6in, R7in,
+							R8in, R9in, R10in, R11in,
+							R12in, R13in, R14in, R15in,
+							R0out, R1out, R2out, R3out,
+							R4out, R5out, R6out, R7out,
+							R8out, R9out, R10out, R11out,
+							R12out, R13out, R14out, R15out)
+							
+	// con ff logic
+	conff_logic conff(IRout, BusMuxOut, CONin, CONout);
+	
 	// bus
 	bus bus( BusMuxIn_R0, BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3,
 				BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7,
@@ -89,8 +106,8 @@ module datapath(
 
 				BusMuxIn_Zhigh, BusMuxIn_Zlow, Zhighout, Zlowout,
 				
-				BusMuxIn_PC, BusMuxIn_IR, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort, BusMuxIn_C,
-				PCout, IRout, MARout, MDRout, InPortout, Cout,
+				BusMuxIn_PC, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort, C_sign_extended,
+				PCout, MARout, MDRout, InPortout, Cout,
 				
 				BusMuxOut); 
 	
