@@ -1,6 +1,7 @@
 `timescale 1ns/10ps
 
 module alu(
+	input branch_flag,
 	input wire [31:0] Y_reg,
 	input wire [31:0] B_reg,
 

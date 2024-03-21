@@ -7,16 +7,16 @@ module datapath(
 	input wire 	HIin, LOin,
 					Yin, Zin,
 					PCin, IRin, MARin, MDRin, InPortin,
-					CONin, IncPC, IRin, Yin, Read, HIin, LOin, 
+					CONin, 
 					
 	input wire 	HIout, LOout,
 					Yout, Zhighout, Zlowout,
-					PCout, MARout, MDRout, Cout,enableCon, enableInputPort, enableOutputPort, InPortout, HIout, LOout, Cout, RAM_write_en, GRA, GRB, GRC,
-					R_out, Baout;
+					PCout, MARout, MDRout, Cout,enableCon, enableInputPort, enableOutputPort, InPortout, RAM_write_en, GRA, GRB, GRC,
+					R_out, Baout,
 					
 	input wire [31:0] Mdatain,
-	input wire [31:0] InPort_input;
-	output wire [31:0] Output_Port_dataout;
+	input wire [31:0] InPort_input,
+	output wire [31:0] Output_Port_dataout
 
 );
 
@@ -74,6 +74,8 @@ module datapath(
 
 	// Input and Output registers
 	wire [31:0] Input_Port_dataout;
+	
+	wire con_out;
 
 	register input_port(clear, clock, enableInputPort, BuxMuxOut, InPortout);
 	register output_port(clear, clock, enableOutputPort, BusMuxOut, Output_Port_dataout);
@@ -96,10 +98,10 @@ module datapath(
 							R0out, R1out, R2out, R3out,
 							R4out, R5out, R6out, R7out,
 							R8out, R9out, R10out, R11out,
-							R12out, R13out, R14out, R15out)
+							R12out, R13out, R14out, R15out);
 							
 	// con ff logic
-	conff_logic conff(IRout, BusMuxOut, CONin, CONout);
+	conff_logic conff(IRout, BusMuxOut, CONin, con_out);
 	
 	// bus
 	bus bus( BusMuxIn_R0, BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3,
@@ -121,5 +123,5 @@ module datapath(
 				
 				BusMuxOut); 
 	
-	alu alu(Yregout, BusMuxOut, opcode, ALUout);
+	alu alu(branch_flag, Yregout, BusMuxOut, opcode, ALUout);
 endmodule
