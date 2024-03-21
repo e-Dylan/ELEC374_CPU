@@ -33,7 +33,7 @@ module datapath(
 					BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, BusMuxIn_R11,
 					BusMuxIn_R12, BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15;
 	
-	register0 R0(clear, clock, R0in, BusMuxOut, BusMuxIn_R0);
+	register0 R0(clear, clock, R0in, BAout, BusMuxOut, BusMuxIn_R0);
 	register R1(clear, clock, R1in, BusMuxOut, BusMuxIn_R1);
 	register R2(clear, clock, R2in, BusMuxOut, BusMuxIn_R2);
 	register R3(clear, clock, R3in, BusMuxOut, BusMuxIn_R3);
@@ -82,7 +82,7 @@ module datapath(
 	MDR 		MDR(clear, clock, MDRin, BusMuxOut, Mdatain, Read, BusMuxIn_MDR);
 	register InPort(clear, clock, InPortin, BusMuxIn_InPort);
 	
-	ram 		ram(BusMuxIn_MDR, MAR_q, Read, Write, clock, Mdatain);
+	ram 		ram(BusMuxIn_MDR, MAR_q, Read, Write, Mdatain);
 	
 	// select and encode
 	select_encode sel(IRout, Gra, Grb, Grc, Rin, Rout, BAout,

@@ -63,7 +63,7 @@ module datapath_ld_tb;
 			case (Present_state)
 				Default : begin
 					PCout <= 0; Zlowout <= 0; MDRout <=0;
-					MARin <= 0; Zin <= 0;
+					MARin <= 0; Zin <= 0; Cout <= 0;
 					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0;
 					IncPC <= 0; Read <= 0; opcode <= 0;
 					LOin <= 0; HIin <= 0; Mdatain <= 32'b0;
@@ -81,14 +81,15 @@ module datapath_ld_tb;
 				T2 : begin
 					MDRout <= 1; IRin <=1;
 					#25 MDRout <= 0; IRin <=0;
+					Yin <= 1; Grb <= 1; BAout <= 0;
 				end
 				T3 : begin
-					Grb <= 1; BAout <= 1; Yin <= 1;
+					// Yin <= 1; Grb <= 1; BAout <= 1;
 					#25 Grb <= 0; BAout <= 0; Yin <= 0;
 				end
 				T4 : begin
 					Cout <= 1; opcode <= 5'b00011; Zin <= 1; // opcode for add
-					#25 Cout <= 0; Zin <= 0;
+					#45 Cout <= 0; Zin <= 0;
 				end
 				T5 : begin
 					Zlowout <= 1; MARin <= 1;

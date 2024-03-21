@@ -115,7 +115,7 @@ module select_encode(
 			R14in = encoder_out[14];
 			R15in = encoder_out[15];
 		if (BAout)
-			R0out = encoder_out[0];
+			R0out = 1;
 		else if (Rout)
 			R0out = encoder_out[0];
 			R1out = encoder_out[1];
