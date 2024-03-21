@@ -1,19 +1,16 @@
 module datapath(
-	input wire 	clock, clear, Read, IncPC,
+	input wire 	clock, clear, Read, Write, IncPC,
 	input wire [4:0] opcode, 
 	
 	input wire 	Gra, Grb, Grc, Rin, Rout, BAout,
 	
 	input wire 	HIin, LOin,
 					Yin, Zin,
-					PCin, IRin, MARin, MDRin, InPortin,
-					CONin,
+					PCin, IRin, MARin, MDRin, InPortin, CONin,
 					
 	input wire 	HIout, LOout,
 					Yout, Zhighout, Zlowout,
-					PCout, MARout, MDRout, InPortout, Cout,
-					
-	input wire [31:0] Mdatain
+					PCout, MARout, MDRout, InPortout, Cout
 );
 
 	wire [63:0] ALUout;
@@ -69,14 +66,16 @@ module datapath(
 	register64 Zhigh(clear, clock, Zin, ALUout, BusMuxIn_Zhigh, BusMuxIn_Zlow);
 
 	// PC, IR, MAR, MDR, Inport
-	wire [31:0] BusMuxIn_PC, IRout, C_sign_extended, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort;
+	wire [31:0] BusMuxIn_PC, IRout, C_sign_extended, MAR_q, BusMuxIn_MDR, BusMuxIn_InPort, Mdatain;
 	
 	register PC(clear, clock, PCin, BusMuxOut, BusMuxIn_PC);
-	IR 		IR(clear, clock, IRin, IRout, C_sign_extended);
-	register MAR(clear, clock, MARin, BusMuxOut, BusMuxIn_MAR);
+	IR 		IR(clear, clock, IRin, BusMuxOut, IRout, C_sign_extended);
+	register MAR(clear, clock, MARin, BusMuxOut, MAR_q);
 	MDR 		MDR(clear, clock, MDRin, BusMuxOut, Mdatain, Read, BusMuxIn_MDR);
 	register InPort(clear, clock, InPortin, BusMuxIn_InPort);
-
+	
+	ram 		ram(BusMuxIn_MDR, MAR_q, Read, Write, clock, Mdatain);
+	
 	// select and encode
 	select_encode sel(IRout, Gra, Grb, Grc, Rin, Rout, BAout,
 							R0in, R1in, R2in, R3in,
@@ -86,7 +85,7 @@ module datapath(
 							R0out, R1out, R2out, R3out,
 							R4out, R5out, R6out, R7out,
 							R8out, R9out, R10out, R11out,
-							R12out, R13out, R14out, R15out)
+							R12out, R13out, R14out, R15out);
 							
 	// con ff logic
 	conff_logic conff(IRout, BusMuxOut, CONin, CONout);
@@ -111,5 +110,5 @@ module datapath(
 				
 				BusMuxOut); 
 	
-	alu alu(Yregout, BusMuxOut, opcode, ALUout);
+	alu alu(Yregout, BusMuxOut, opcode, IncPC, ALUout);
 endmodule

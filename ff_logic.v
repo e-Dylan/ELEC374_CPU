@@ -1,16 +1,16 @@
 module ff_logic(input wire clk, 
-                input wire A, 
-                output reg B, 
-                output reg B_not);	
+                input wire D, 
+                output reg Q, 
+                output reg Q_not);	
 
 	initial begin
-		B <= 0;
-		B_not <= 1;
+		Q <= 0;
+		Q_not <= 1;
     end
 
 	always@(clk) 
 	begin
-		B <= A;
-		B_not <= !A;
+		Q <= D;
+		Q_not <= !D;
     end
 endmodule

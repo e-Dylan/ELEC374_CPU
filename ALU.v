@@ -5,6 +5,7 @@ module alu(
 	input wire [31:0] B_reg,
 
 	input wire [4:0] opcode,
+	input wire IncPC,
 
 	output reg [63:0] C_reg
 );
@@ -16,96 +17,101 @@ module alu(
 
 	wire [31:0] IncPC_out, shr_out, shra_out, shl_out, lor_out, land_out, neg_out, not_out, adder_sum, adder_cout, sub_sum, sub_cout, rol_out, ror_out;
 	wire [63:0] mul_out, div_out;
+	wire branch_flag;
 	
 	always @(*)
 		begin
-			case (opcode)
-				
-				Addition: begin
-					C_reg[31:0] <= adder_sum[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-				
-				Subtraction: begin
-					C_reg[31:0] <= sub_sum[31:0];	
-					C_reg[63:32] <= 32'd0;
-				end
-				
-				Multiplication: begin
-					C_reg[63:32] <= mul_out[63:32];
-					C_reg[31:0] <= mul_out[31:0];
-				end
-				
-				Division: begin
-					C_reg[63:0] <= div_out[63:0];
-				end
-				
-				OR, ori: begin
-					C_reg[31:0] <= lor_out[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-				
-				AND, andi: begin
-					C_reg[31:0] <= land_out[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-				
-				Negate: begin
-					C_reg[31:0] <= neg_out[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-				
-				_Not: begin
-					C_reg[31:0] <= not_out[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-				
-				Shift_right: begin
-					C_reg[31:0] <= shr_out[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-
-				Shift_right_ar: begin
-					C_reg[31:0] <= shra_out[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-				
-				Shift_left: begin
-					C_reg[31:0] <= shl_out[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-				
-				Rotate_right: begin
-					C_reg[31:0] <= ror_out[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-				
-				Rotate_left: begin
-					C_reg[31:0] <= rol_out[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-
-				ld, ldi, st, addi: begin
-					C_reg[31:0] <= adder_sum[31:0];
-					C_reg[63:32] <= 32'd0;
-				end
-				
-				br: begin
-					if(branch_flag==1) begin
-						C_reg[31:0] <=adder_sum[31:0];
+			if (IncPC) begin
+				C_reg[31:0] <= B_reg + 1;
+			end
+			else begin
+				case (opcode)
+					
+					Addition: begin
+						C_reg[31:0] <= adder_sum[31:0];
 						C_reg[63:32] <= 32'd0;
 					end
-					else begin
-						C_reg[31:0] <=Y_reg[31:0];
+					
+					Subtraction: begin
+						C_reg[31:0] <= sub_sum[31:0];	
 						C_reg[63:32] <= 32'd0;
 					end
-				end
-				
-				default: begin
-					C_reg[63:0] <= 64'd0;
-				end
+					
+					Multiplication: begin
+						C_reg[63:32] <= mul_out[63:32];
+						C_reg[31:0] <= mul_out[31:0];
+					end
+					
+					Division: begin
+						C_reg[63:0] <= div_out[63:0];
+					end
+					
+					OR, ori: begin
+						C_reg[31:0] <= lor_out[31:0];
+						C_reg[63:32] <= 32'd0;
+					end
+					
+					AND, andi: begin
+						C_reg[31:0] <= land_out[31:0];
+						C_reg[63:32] <= 32'd0;
+					end
+					
+					Negate: begin
+						C_reg[31:0] <= neg_out[31:0];
+						C_reg[63:32] <= 32'd0;
+					end
+					
+					_Not: begin
+						C_reg[31:0] <= not_out[31:0];
+						C_reg[63:32] <= 32'd0;
+					end
+					
+					Shift_right: begin
+						C_reg[31:0] <= shr_out[31:0];
+						C_reg[63:32] <= 32'd0;
+					end
 
-			endcase
+					Shift_right_ar: begin
+						C_reg[31:0] <= shra_out[31:0];
+						C_reg[63:32] <= 32'd0;
+					end
+					
+					Shift_left: begin
+						C_reg[31:0] <= shl_out[31:0];
+						C_reg[63:32] <= 32'd0;
+					end
+					
+					Rotate_right: begin
+						C_reg[31:0] <= ror_out[31:0];
+						C_reg[63:32] <= 32'd0;
+					end
+					
+					Rotate_left: begin
+						C_reg[31:0] <= rol_out[31:0];
+						C_reg[63:32] <= 32'd0;
+					end
+
+					ld, ldi, st, addi: begin
+						C_reg[31:0] <= adder_sum[31:0];
+						C_reg[63:32] <= 32'd0;
+					end
+					
+					br: begin
+						if(branch_flag==1) begin
+							C_reg[31:0] <= adder_sum[31:0];
+							C_reg[63:32] <= 32'd0;
+						end
+						else begin
+							C_reg[31:0] <= Y_reg[31:0];
+							C_reg[63:32] <= 32'd0;
+						end
+					end
+					
+					default: begin
+						C_reg[63:0] <= 64'd0;
+					end
+				endcase
+			end
 	end
 
 	//ALU Operations

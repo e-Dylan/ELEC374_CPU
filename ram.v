@@ -1,18 +1,19 @@
-`timescale 1ns/10ps
-
-module ram(input [31:0] data_in, input [7:0] address, input we, clk, output [31:0] data_out);
+module ram(input [31:0] data_in, input [31:0] address, input read, input write, input clk, output reg [31:0] data_out);
 	reg [31:0] ram[511:0];
-	reg [31:0] addressReg;
 	
-	initial begin : INIT
-		$readmemh("init.mif", ram); 
+	initial begin
+		// $readmemh("init.hex", ram);
+		ram[0] = 32'b00011_0010_0000_00000000_00000000_000;
+		ram[94] = 32'b1101;
 	end
 	
 	always @(posedge clk)
-	begin
-		if (we)
+		begin
+		if (write)
 			ram[address] <= data_in;
-		addressReg <= address;
+		else if (read)
+			data_out <= ram[address];
+		else
+			data_out <= 32'b0;
 	end
-	assign data_out = ram[addressReg];
 endmodule

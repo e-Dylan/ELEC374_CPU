@@ -9,7 +9,10 @@ module register0(
 			q <= 0;
 		end
 		else if (enable) begin
-			q <= !BAout && d;
+			q <= d;
+		end
+		if (BAout) begin
+			q <= BAout ? 32'b0 : q;
 		end
 	end
 endmodule

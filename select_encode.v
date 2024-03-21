@@ -13,7 +13,6 @@ module select_encode(
 					R12out, R13out, R14out, R15out
 );
 
-	reg [31:0] C_sign_extended;
 	reg [3:0] Ra, Rb, Rc;
 	
 	reg [3:0] encoder_in;
@@ -31,10 +30,10 @@ module select_encode(
 	end
 	
 	always @ (*) begin
-		if (IR)
-			Ra <= IR[5:8];
-			Rb <= IR[9:12];
-			Rc <= IR[13:15];
+		if (IR) begin
+			Ra <= IR[8:5];
+			Rb <= IR[12:9];
+			Rc <= IR[15:13];
 		end
 		
 		// 4 to 16 encoder
@@ -89,11 +88,9 @@ module select_encode(
 			4'b1111 : begin
 				encoder_out <= 16'b1000_0000_0000_0000;
 			end
-			
 			default : 
 				encoder_out <= 16'b0000_0000_0000_0000;
-			end
-		endcase
+			endcase
 		
 		// control signals
 		
@@ -140,5 +137,4 @@ module select_encode(
 			R14out = encoder_out[14];
 			R15out = encoder_out[15];
 	end
-
 endmodule
