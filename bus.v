@@ -16,7 +16,8 @@ module bus (
 	input 			Zhighout, Zlowout,
 	
 	input [31:0]	BusMuxIn_PC, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort, C_sign_extended,
-	input 			PCout, MARout, MDRout, InPortout, Cout,
+	input 			PCout, MARout, MDRout, InPortout, Cout, 
+	//Input_Port_dataout
 	
 	output wire [31:0] BusMuxOut
 );
@@ -55,6 +56,7 @@ module bus (
 		else if (MDRout) 		q = BusMuxIn_MDR;
 		else if (InPortout) 	q = BusMuxIn_InPort;
 		else if (Cout) 		q = C_sign_extended;
+
 		else q = 32'b0;
 	end
 

@@ -10,7 +10,15 @@ module datapath(
 					
 	input wire 	HIout, LOout,
 					Yout, Zhighout, Zlowout,
-					PCout, MARout, MDRout, InPortout, Cout
+					PCout, MARout, MDRout, InPortout, OutPortout Cout
+					PCin, IRin, MARin, MDRin, InPortin, OutPortin,
+					CONin, IncPC, IRin, Yin, Read, HIin, LOin
+);
+					
+	input wire [31:0] Mdatain,
+	input wire [31:0] InPort_input;
+	output wire [31:0] Output_Port_dataout;
+
 );
 
 	wire [63:0] ALUout;
@@ -64,6 +72,12 @@ module datapath(
 	
 	register Y(clear, clock, Yin, BusMuxOut, Yregout);
 	register64 Zhigh(clear, clock, Zin, ALUout, BusMuxIn_Zhigh, BusMuxIn_Zlow);
+
+	// Input and Output registers
+	wire [31:0] Input_Port_dataout;
+
+	register input_port(clear, clock, enableInputPort, BuxMuxOut, InPortout);
+	register output_port(clear, clock, enableOutputPort, BusMuxOut, Output_Port_dataout);
 
 	// PC, IR, MAR, MDR, Inport
 	wire [31:0] BusMuxIn_PC, IRout, C_sign_extended, MAR_q, BusMuxIn_MDR, BusMuxIn_InPort, Mdatain;

@@ -269,3 +269,64 @@ restart
 # 
 #         Region: /datapath_ld_tb/DUT/bus
 run 1000 ns
+add wave -position insertpoint  \
+sim:/datapath_ld_tb/DUT/ram/data_out
+restart
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(36): [TFMPC] - Too few port connections. Expected 6, found 5.
+# 
+#         Region: /datapath_ld_tb/DUT/R0
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(36): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'BAout'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/register0.v(2).
+# 
+#         Region: /datapath_ld_tb/DUT/R0
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(36): [TFMPC] - Missing connection for port 'q'.
+# 
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /datapath_ld_tb/DUT/InPort
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Missing connection for port 'BusMuxIn'.
+# 
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(91): [PCDPC] - Port size (2 or 2) does not match connection size (32) for port 'IR_bits'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(3).
+# 
+#         Region: /datapath_ld_tb/DUT/conff
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(20): [PCDPC] - Port size (2 or 2) does not match connection size (1) for port 'decoder_in'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/decoder_2_to_4.v(1).
+# 
+#         Region: /datapath_ld_tb/DUT/conff/decode
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(22): [TFMPC] - Too few port connections. Expected 4, found 3.
+# 
+#         Region: /datapath_ld_tb/DUT/conff/conff
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(22): [TFMPC] - Missing connection for port 'Q_not'.
+# 
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(111): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'BusMuxIn_MAR'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/bus.v(18).
+# 
+#         Region: /datapath_ld_tb/DUT/bus
+run 1000 ns
+add wave -position insertpoint sim:/datapath_ld_tb/DUT/PC/*
+restart
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(36): [TFMPC] - Too few port connections. Expected 6, found 5.
+# 
+#         Region: /datapath_ld_tb/DUT/R0
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(36): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'BAout'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/register0.v(2).
+# 
+#         Region: /datapath_ld_tb/DUT/R0
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(36): [TFMPC] - Missing connection for port 'q'.
+# 
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Too few port connections. Expected 5, found 4.
+# 
+#         Region: /datapath_ld_tb/DUT/InPort
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(75): [TFMPC] - Missing connection for port 'BusMuxIn'.
+# 
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(91): [PCDPC] - Port size (2 or 2) does not match connection size (32) for port 'IR_bits'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(3).
+# 
+#         Region: /datapath_ld_tb/DUT/conff
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(20): [PCDPC] - Port size (2 or 2) does not match connection size (1) for port 'decoder_in'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/decoder_2_to_4.v(1).
+# 
+#         Region: /datapath_ld_tb/DUT/conff/decode
+# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(22): [TFMPC] - Too few port connections. Expected 4, found 3.
+# 
+#         Region: /datapath_ld_tb/DUT/conff/conff
+# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(22): [TFMPC] - Missing connection for port 'Q_not'.
+# 
+# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(111): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'BusMuxIn_MAR'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/bus.v(18).
+# 
+#         Region: /datapath_ld_tb/DUT/bus
+run 1000 ns
