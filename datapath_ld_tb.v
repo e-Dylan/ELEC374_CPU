@@ -6,11 +6,11 @@ module datapath_ld_tb;
 
 	reg	HIin, LOin,
 			Yin, Zin,
-			PCin, IRin, MARin, MDRin, Inportin, CONin;
+			PCin, IRin, MARin, MDRin, Inportin, Outportin, CONin;
 					
 	reg	HIout, LOout,
 			Yout, Zhighout, Zlowout,
-			PCout, MARout, MDRout, Inportout, Cout;
+			PCout, MARout, MDRout, Inportout, Outportout, Cout;
 			
 	reg [31:0] Mdatain;
 	
@@ -26,11 +26,11 @@ module datapath_ld_tb;
 						
 						HIin, LOin,
 						Yin, Zin,
-						PCin, IRin, MARin, MDRin, Inportin, CONin,
+						PCin, IRin, MARin, MDRin, Inportin, Outportin, CONin,
 					
 						HIout, LOout,
 						Yout, Zhighout, Zlowout,
-						PCout, MARout, MDRout, Inportout, Cout);
+						PCout, MARout, MDRout, Inportout, Outportout, Cout);
 	
 	initial
 		begin
