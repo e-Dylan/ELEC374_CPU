@@ -68,6 +68,7 @@ module datapath_ld_tb;
 					IncPC <= 0; Read <= 0; opcode <= 0;
 					LOin <= 0; HIin <= 0; Mdatain <= 32'b0;
 					Read = 0; MDRin = 0; clear = 0;
+					Gra = 0; Grb = 0; Grc = 0;
 				end
 				T0 : begin
 					PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
@@ -89,7 +90,7 @@ module datapath_ld_tb;
 				end
 				T4 : begin
 					Cout <= 1; opcode <= 5'b00011; Zin <= 1; // opcode for add
-					#45 Cout <= 0; Zin <= 0;
+					#25 Cout <= 0; Zin <= 0;
 				end
 				T5 : begin
 					Zlowout <= 1; MARin <= 1;
