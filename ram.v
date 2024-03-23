@@ -2,9 +2,13 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 	reg [31:0] ram[511:0];
 	
 	initial begin
-		// $readmemh("init.hex", ram);
-		ram[0] = 32'b00011_0010_0000_00000000_00001011_110;
-		ram[94] = 32'b1101;
+		// ld R2, 0x95 		instruction : 32'b00011_0010_0000_0000_0000_0000_1011_110;
+		// ld R2, 0x38(R2) 	instruction : 32'b00011_0010_0010_0000_0000_0000_0100_110;
+		ram[0] = 32'b00011_0010_0000_0000_0000_0000_1011_111;
+		ram[1] = 32'b00011_0000_0010_0000_0000_0000_0100_110;
+		ram[38] = 32'b0101;
+		ram[51] = 32'b0111;
+		ram[95] = 32'b1101;
 	end
 	
 	always @(*)

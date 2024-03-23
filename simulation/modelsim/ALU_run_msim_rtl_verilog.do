@@ -32,11 +32,11 @@ vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC
 vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/or32.v}
 vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/sub32.v}
 
-vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld_tb.v}
+vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld2_tb.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_ld_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_ld2_tb
 
 add wave *
 view structure
 view signals
-run 1000 ns
+run 1500 ns

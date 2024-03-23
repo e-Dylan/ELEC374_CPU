@@ -161,6 +161,25 @@ module select_encode(
 			R13in = 0;
 			R14in = 0;
 			R15in = 0;
+			R0out = 0;
+			R1out = 0;
+			R2out = 0;
+			R3out = 0;
+			
+			R4out = 0;
+			R5out = 0;
+			R6out = 0;
+			R7out = 0;
+		
+			R8out = 0;
+			R9out = 0;
+			R10out = 0;
+			R11out = 0;
+			
+			R12out = 0;
+			R13out = 0;
+			R14out = 0;
+			R15out = 0;
 		end	
 	end
 endmodule

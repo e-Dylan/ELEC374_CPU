@@ -12,280 +12,280 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ff_logic.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ff_logic.v 
 # -- Compiling module ff_logic
 # 
 # Top level modules:
 # 	ff_logic
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/decoder_2_to_4.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/decoder_2_to_4.v 
 # -- Compiling module decoder_2_to_4
 # 
 # Top level modules:
 # 	decoder_2_to_4
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ror.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ror.v 
 # -- Compiling module ror
 # 
 # Top level modules:
 # 	ror
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/shiftrightari32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/shiftrightari32.v 
 # -- Compiling module shiftrightari32
 # 
 # Top level modules:
 # 	shiftrightari32
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/shiftright32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/shiftright32.v 
 # -- Compiling module shiftright32
 # 
 # Top level modules:
 # 	shiftright32
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/shiftleft32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/shiftleft32.v 
 # -- Compiling module shiftleft32
 # 
 # Top level modules:
 # 	shiftleft32
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/bus.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/bus.v 
 # -- Compiling module bus
 # 
 # Top level modules:
 # 	bus
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v 
 # -- Compiling module register
 # 
 # Top level modules:
 # 	register
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/adder.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/adder.v 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/MDR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/MDR.v 
 # -- Compiling module MDR
 # 
 # Top level modules:
 # 	MDR
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ALU.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/not32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/not32.v 
 # -- Compiling module not32
 # 
 # Top level modules:
 # 	not32
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/negate32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/negate32.v 
 # -- Compiling module negate32
 # 
 # Top level modules:
 # 	negate32
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/and32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/and32.v 
 # -- Compiling module and32
 # 
 # Top level modules:
 # 	and32
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register64.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register64.v 
 # -- Compiling module register64
 # 
 # Top level modules:
 # 	register64
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/mul32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/mul32.v 
 # -- Compiling module mul32
 # 
 # Top level modules:
 # 	mul32
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/div32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/div32.v 
 # -- Compiling module div32
 # 
 # Top level modules:
 # 	div32
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/rol.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/rol.v 
 # -- Compiling module rol
 # 
 # Top level modules:
 # 	rol
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register0.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register0.v 
 # -- Compiling module register0
 # 
 # Top level modules:
 # 	register0
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v 
 # -- Compiling module conff_logic
 # 
 # Top level modules:
 # 	conff_logic
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/IR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/IR.v 
 # -- Compiling module IR
 # 
 # Top level modules:
 # 	IR
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/select_encode.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/select_encode.v 
 # -- Compiling module select_encode
 # 
 # Top level modules:
 # 	select_encode
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ram.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ram.v 
 # -- Compiling module ram
 # 
 # Top level modules:
 # 	ram
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/or32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/or32.v 
 # -- Compiling module or32
 # 
 # Top level modules:
 # 	or32
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/sub32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
+# Start time: 19:22:36 on Mar 23,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/sub32.v 
 # -- Compiling module sub32
 # 
 # Top level modules:
 # 	sub32
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld2_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:24:48 on Mar 23,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld_tb.v 
-# -- Compiling module datapath_ld_tb
+# Start time: 19:22:36 on Mar 23,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU" C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld2_tb.v 
+# -- Compiling module datapath_ld2_tb
 # 
 # Top level modules:
-# 	datapath_ld_tb
-# End time: 18:24:48 on Mar 23,2024, Elapsed time: 0:00:00
+# 	datapath_ld2_tb
+# End time: 19:22:36 on Mar 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_ld_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" datapath_ld_tb 
-# Start time: 18:24:49 on Mar 23,2024
-# Loading work.datapath_ld_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_ld2_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" datapath_ld2_tb 
+# Start time: 19:22:36 on Mar 23,2024
+# Loading work.datapath_ld2_tb
 # Loading work.datapath
 # Loading work.register0
 # Loading work.register
@@ -313,50 +313,51 @@
 # Loading work.div32
 # Loading work.mul32
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(73): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxOut'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/input_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/input_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(73): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/input_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/input_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(74): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/output_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/output_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
 # ** Warning: (vsim-3017) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(83): [TFMPC] - Too few port connections. Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/InPort File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/InPort File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
 # ** Warning: (vsim-3722) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(83): [TFMPC] - Missing connection for port 'BusMuxIn'.
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(99): [PCDPC] - Port size (2) does not match connection size (32) for port 'IR_bits'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/conff File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/conff File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v(20): [PCDPC] - Port size (2) does not match connection size (1) for port 'decoder_in'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/decoder_2_to_4.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/conff/decode File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/decoder_2_to_4.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/conff/decode File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/decoder_2_to_4.v
 # ** Warning: (vsim-3017) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v(22): [TFMPC] - Too few port connections. Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/conff/conff File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ff_logic.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/conff/conff File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ff_logic.v
 # ** Warning: (vsim-3722) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v(22): [TFMPC] - Missing connection for port 'Q_not'.
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(102): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn_MAR'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/bus.v(18).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/bus File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/bus.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/bus File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/bus.v
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 1000 ns
-add wave -position insertpoint sim:/datapath_ld_tb/DUT/R2/*
+# run 1500 ns
+add wave -position insertpoint sim:/datapath_ld2_tb/DUT/R0/*
+add wave -position insertpoint sim:/datapath_ld2_tb/DUT/R2/*
 restart
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(73): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxOut'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/input_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/input_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(73): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/input_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/input_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(74): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/output_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/output_port File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
 # ** Warning: (vsim-3017) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(83): [TFMPC] - Too few port connections. Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/InPort File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/InPort File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register.v
 # ** Warning: (vsim-3722) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(83): [TFMPC] - Missing connection for port 'BusMuxIn'.
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(99): [PCDPC] - Port size (2) does not match connection size (32) for port 'IR_bits'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v(3).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/conff File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/conff File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v(20): [PCDPC] - Port size (2) does not match connection size (1) for port 'decoder_in'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/decoder_2_to_4.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/conff/decode File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/decoder_2_to_4.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/conff/decode File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/decoder_2_to_4.v
 # ** Warning: (vsim-3017) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v(22): [TFMPC] - Too few port connections. Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/conff/conff File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ff_logic.v
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/conff/conff File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ff_logic.v
 # ** Warning: (vsim-3722) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v(22): [TFMPC] - Missing connection for port 'Q_not'.
 # ** Warning: (vsim-3015) C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v(102): [PCDPC] - Port size (32) does not match connection size (1) for port 'BusMuxIn_MAR'. The port definition is at: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/bus.v(18).
-#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld_tb/DUT/bus File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/bus.v
-run 1000 ns
-# End time: 18:25:01 on Mar 23,2024, Elapsed time: 0:00:12
+#    Time: 0 ps  Iteration: 0  Instance: /datapath_ld2_tb/DUT/bus File: C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/bus.v
+run 800 ns
+# End time: 19:22:48 on Mar 23,2024, Elapsed time: 0:00:12
 # Errors: 0, Warnings: 20

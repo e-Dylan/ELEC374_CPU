@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/simulation/modelsim
 vadder
-Z1 !s110 1711232688
+Z1 !s110 1711236156
 !i10b 1
 !s100 dQKZ6gVAh_nU0SXT6:e7`3
 I0kMCe@Yh@WN^c2:cQ9bPA3
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1711232688.000000
+Z5 !s108 1711236156.000000
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/adder.v|
 !i113 1
@@ -140,24 +140,24 @@ R5
 R6
 R7
 R8
-vdatapath_ld_tb
+vdatapath_ld2_tb
 R1
 !i10b 1
-!s100 6S^]b5JDRlc`V39GT@9><0
-I1YiH=4?z9Y=kf;m4cELCz3
+!s100 A1^G^2aU5A9Z08o`1<TJ?3
+I_BPY>X>^UDWNlWBQZ[OP]1
 R2
 R0
-w1711231079
-8C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld_tb.v
-FC:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld_tb.v
+w1711235858
+8C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld2_tb.v
+FC:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld2_tb.v
 L0 2
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld_tb.v|
+!s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld2_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ld2_tb.v|
 !i113 1
 R6
 R7
@@ -365,11 +365,11 @@ R8
 vram
 R1
 !i10b 1
-!s100 C9_ziVKJ;f`=HbPec:hSJ0
-I8IzRPH[9WhzM8<5=jBl7X2
+!s100 61B6]_>Z6RCBYd9DM;R_92
+Ii83;b4WgY@2<FYnn5b9043
 R2
 R0
-w1711232678
+w1711236144
 8C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ram.v
 FC:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ram.v
 L0 1
@@ -497,11 +497,11 @@ R8
 vselect_encode
 R1
 !i10b 1
-!s100 Y^<^bUY^7ESz`HlT=5ZnB0
-I4b53Oc4oLj<g>Yaem?86M3
+!s100 9QUMLPb0ZWjZI@mi2LSjd2
+IUAQW[NIjDN@gcV6_@C9`J2
 R2
 R0
-w1711232284
+w1711236012
 8C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/select_encode.v
 FC:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/select_encode.v
 L0 1
