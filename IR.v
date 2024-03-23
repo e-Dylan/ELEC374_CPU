@@ -11,8 +11,7 @@ module IR(
 		end
 		else if (enable) begin
 			IR <= d;	
-			// C_sign_extended[31:0] <= {{13{IR[18]}}, IR[18:0]};
-			C_sign_extended <= 32'b1011_110;
+			C_sign_extended[31:0] <= {{13{d[18]}}, d[18:0]};
 		end
 	end
 endmodule

@@ -30,14 +30,17 @@ module select_encode(
 	end
 	
 	always @ (*) begin
-		if (IR) begin
-			Ra <= IR[8:5];
-			Rb <= IR[12:9];
-			Rc <= IR[15:13];
-		end
+		Ra <= IR[26:23];
+		Rb <= IR[22:19];
+		Rc <= IR[18:15];
 		
 		// 4 to 16 encoder
-		encoder_in <= (Ra && Gra) || (Rb && Grb) || (Rc && Grc);
+		if (Gra)
+			encoder_in <= Ra;
+		else if (Grb)
+			encoder_in <= Rb;
+		else if (Grc)
+			encoder_in <= Rc;
 		
 		case (encoder_in)
 			4'b0000 : begin
@@ -94,7 +97,7 @@ module select_encode(
 		
 		// control signals
 		
-		if (Rin)
+		if (Rin) begin
 			R0in = encoder_out[0];
 			R1in = encoder_out[1];
 			R2in = encoder_out[2];
@@ -114,9 +117,10 @@ module select_encode(
 			R13in = encoder_out[13];
 			R14in = encoder_out[14];
 			R15in = encoder_out[15];
-		if (BAout)
+		end
+		else if (BAout)
 			R0out = 1;
-		else if (Rout)
+		else if (Rout) begin
 			R0out = encoder_out[0];
 			R1out = encoder_out[1];
 			R2out = encoder_out[2];
@@ -136,5 +140,46 @@ module select_encode(
 			R13out = encoder_out[13];
 			R14out = encoder_out[14];
 			R15out = encoder_out[15];
+		end
+		else begin
+			R0in = 0;
+			R1in = 0;
+			R2in = 0;
+			R3in = 0;
+			
+			R4in = 0;
+			R5in = 0;
+			R6in = 0;
+			R7in = 0;
+			
+			R8in = 0;
+			R9in = 0;
+			R10in = 0;
+			R11in = 0;
+			
+			R12in = 0;
+			R13in = 0;
+			R14in = 0;
+			R15in = 0;
+			R0out = 0;
+			R1out = 0;
+			R2out = 0;
+			R3out = 0;
+			
+			R4out = 0;
+			R5out = 0;
+			R6out = 0;
+			R7out = 0;
+		
+			R8out = 0;
+			R9out = 0;
+			R10out = 0;
+			R11out = 0;
+			
+			R12out = 0;
+			R13out = 0;
+			R14out = 0;
+			R15out = 0;
+		end	
 	end
 endmodule

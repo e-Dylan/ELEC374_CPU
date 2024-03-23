@@ -50,7 +50,7 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH datapath_ld_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH datapath_ld2_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME datapath_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id datapath_tb
@@ -130,6 +130,10 @@ set_global_assignment -name EDA_TEST_BENCH_NAME datapath_ld_tb -section_id eda_s
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_ld_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_ld_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_ld_tb -section_id datapath_ld_tb
+set_global_assignment -name VERILOG_FILE ram.v
+set_global_assignment -name MIF_FILE init.mif
+set_global_assignment -name HEX_FILE init.hex
+set_global_assignment -name VERILOG_FILE datapath_ld2_tb.v
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb.v -section_id datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_add_tb.v -section_id datapath_add_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_mul_tb.v -section_id datapath_mul_tb
@@ -139,8 +143,16 @@ set_global_assignment -name EDA_TEST_BENCH_FILE datapath_or_tb.v -section_id dat
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_rol_tb.v -section_id datapath_rol_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_ror_tb.v -section_id datapath_ror_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_ld_tb.v -section_id datapath_ld_tb
+<<<<<<< HEAD
 set_global_assignment -name VERILOG_FILE ram.v
 set_global_assignment -name MIF_FILE init.mif
 set_global_assignment -name HEX_FILE init.hex
 set_global_assignment -name VERILOG_FILE datapath_brzr_tb.v
+=======
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_ld2_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_ld2_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1500 ns" -section_id datapath_ld2_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_ld2_tb -section_id datapath_ld2_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_ld2_tb.v -section_id datapath_ld2_tb
+>>>>>>> 5fd1eb5aab6d46170a378e3815f526c30e7f92f4
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

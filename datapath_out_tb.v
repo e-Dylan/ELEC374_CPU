@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module datapath_ld_tb;	
+module datapath_out_tb;	
 	reg 	Clock, clear, Read, Write, IncPC;
 	reg [4:0] opcode;
 	reg	Gra, Grb, Grc, Rin, Rout, BAout;
@@ -10,9 +10,10 @@ module datapath_ld_tb;
 					
 	reg	HIout, LOout,
 			Yout, Zhighout, Zlowout,
-			PCout, MARout, MDRout, Inportout, Outportout, Cout, InPort_input;
+			PCout, MARout, MDRout, Inportout, Outportout, Cout;
 			
 	reg [31:0] Mdatain;
+	reg [31:0] InPort_input;
 	
 	parameter 	Default=4'b0000, Reg_load1a=4'b0001, Reg_load1b=4'b0010, 
 					Reg_load2a=4'b0011, Reg_load2b=4'b0100,
@@ -58,54 +59,46 @@ module datapath_ld_tb;
 			endcase
 		end
 		
-	always @ (Present_state)
-		begin
-			case (Present_state)
-				Default : begin
-					PCout <= 0; Zlowout <= 0; MDRout <=0;
-					MARin <= 0; Zin <= 0; Cout <= 0;
-					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0;
-					IncPC <= 0; Read <= 0; opcode <= 0;
-					LOin <= 0; HIin <= 0; Mdatain <= 32'b0;
-					Read = 0; MDRin = 0; clear = 0;
-					Gra = 0; Grb = 0; Grc = 0;
-				end
-				T0 : begin
-					PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
-					#25 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0;
-				end
-				T1 : begin
-					Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
-					#25 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
-					// ld instruction : 32'b00011_0010_0000_00000000_00001011_110;
-				end
-				T2 : begin
-					MDRout <= 1; IRin <=1;
-					#25 MDRout <= 0; IRin <=0;
-					Yin <= 1; Grb <= 1; BAout <= 0;
-				end
-				T3 : begin
-					// Yin <= 1; Grb <= 1; BAout <= 1;
-					#25 Grb <= 0; BAout <= 0; Yin <= 0;
-				end
-				T4 : begin
-					Cout <= 1; opcode <= 5'b00011; Zin <= 1; // opcode for add
-					#25 Cout <= 0; Zin <= 0;
-				end
-				T5 : begin
-					Zlowout <= 1; MARin <= 1;
-					#25 Zlowout <= 0; MARin <= 0;
-				end
-				T6 : begin
-					Read <= 1; MDRin <= 1;
-					#25 Read <= 0; MDRin <= 0;
-				end
-				T7 : begin
-					MDRout <= 1; Gra <= 1; Rin <= 1;
-					#25 MDRout <= 0; Gra <= 0; Rin <= 0;
-				end
-			endcase
-		end
+	always @(Present_state) begin
+	#10
+		case (Present_state) //assert the required signals in each clockcycle
+			Default: begin // initialize the signals
+				PCout <= 0; Zlowout <= 0; MDRout <= 0; 
+				MARin <= 0; Zin<= 0; CONin<=0; 
+				Inportin<=0; Outportin<=0;
+				InPort_input<=32'd0;
+				PCin <=0; MDRin <= 0; IRin <= 0; 
+				Yin <= 0;
+				IncPC <= 0; Write<=0;
+				Mdatain <= 32'h00000000; Gra<=0; Grb<=0; Grc<=0;
+				BAout<=0; Cout<=0;
+				Inportout<=0; Zhighout<=0; LOout<=0; HIout<=0; 
+				HIin<=0; LOin<=0;
+				Rout<=0;Rin<=0;Read<=0;
+			end	
+						
+			//(out r1) where r1 is initially 0x08. Instruction is b0800000 
+
+			T0: begin 
+				PCout <= 1; MARin <= 1; 
+			end
+
+			T1: begin //Loads MDR from RAM output
+					PCout <= 0; MARin <= 0;  
+					MDRin <= 1; Read<=1; Zlowout <= 1; 
+			end
+
+			T2: begin
+				MDRin <= 0; Read<=0;Zlowout <= 0; 
+				MDRout <= 1; IRin <= 1; PCin <= 1; IncPC <= 1;			
+			end
+
+			T3: begin
+				MDRout <= 0; IRin <= 0;			
+				Gra<=1;Rout<=1;Yin<=1; Outportin <= 1;
+			end
+		endcase
+	end
 		
 endmodule
 
