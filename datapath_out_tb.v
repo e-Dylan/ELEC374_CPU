@@ -13,6 +13,7 @@ module datapath_out_tb;
 			PCout, MARout, MDRout, Inportout, Outportout, Cout;
 			
 	reg [31:0] Mdatain;
+	
 	reg [31:0] InPort_input;
 	
 	parameter 	Default=4'b0000, Reg_load1a=4'b0001, Reg_load1b=4'b0010, 
