@@ -10,7 +10,7 @@ module datapath(
 					
 	input wire 	HIout, LOout,
 					Yout, Zhighout, Zlowout,
-					PCout, MARout, MDRout, InPortout, OutPortout, Cout
+					PCout, MARout, MDRout, InPortout, OutPortout, Cout, InPort_input
 );
 
 	wire [63:0] ALUout;
