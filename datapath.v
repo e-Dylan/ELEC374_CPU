@@ -118,5 +118,5 @@ module datapath(
 				
 				BusMuxOut); 
 	
-	alu alu(branc_flag, Yregout, BusMuxOut, opcode, IncPC, ALUout);
+	alu alu(con_out, Yregout, BusMuxOut, opcode, IncPC, ALUout);
 endmodule
