@@ -3,7 +3,7 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 	
 	initial begin
 		// $readmemh("init.hex", ram);
-		ram[0] = 32'b00011_0010_0000_00000000_00000000_000;
+		ram[0] = 32'b00011_0010_0000_00000000_00001011_110;
 		ram[94] = 32'b1101;
 	end
 	

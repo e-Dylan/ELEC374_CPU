@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/simulation/modelsim
 vadder
-Z1 !s110 1711232297
+Z1 !s110 1711232688
 !i10b 1
 !s100 dQKZ6gVAh_nU0SXT6:e7`3
 I0kMCe@Yh@WN^c2:cQ9bPA3
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1711232297.000000
+Z5 !s108 1711232688.000000
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/adder.v|
 !i113 1
@@ -121,11 +121,11 @@ R8
 vdatapath
 R1
 !i10b 1
-!s100 6WbVZKbo?=PQ5MzXea<?^3
-IYb:<b56DLbVg;=kij[gPP0
+!s100 N6:lRV0>@oOlF>GlbimQD1
+I>WLZbbKU46zcz[CN2;Ybc1
 R2
 R0
-R9
+w1711232374
 8C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v
 FC:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath.v
 L0 1
@@ -231,11 +231,11 @@ R8
 vIR
 R1
 !i10b 1
-!s100 no==:iGQZlOni^`D0TGRd3
-IK=W;A;izB@17iVFH0^E3n3
+!s100 A`OIh8naiD9:F2Y0hk_K_0
+IM8o2mUoiB83]KjmnhSBHb3
 R2
 R0
-R9
+w1711232592
 8C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/IR.v
 FC:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/IR.v
 L0 1
@@ -365,11 +365,11 @@ R8
 vram
 R1
 !i10b 1
-!s100 9f<zBchWIlAiQ`A]`Y2Rj0
-I6^92RZAgiRC]_aFWPd8Vl3
+!s100 C9_ziVKJ;f`=HbPec:hSJ0
+I8IzRPH[9WhzM8<5=jBl7X2
 R2
 R0
-R9
+w1711232678
 8C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ram.v
 FC:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ram.v
 L0 1
