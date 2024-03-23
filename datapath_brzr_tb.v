@@ -1,5 +1,10 @@
+//brzr r2, 35:  91000023
+//brnz r2, 35:  91080023
+//brpl r2, 35:  91100023
+//brmi r2, 35:  91180023
+
 `timescale 1ns/10ps
-module datapath_out_tb;	
+module datapath_brzr_tb;	
 	reg 	Clock, clear, Read, Write, IncPC;
 	reg [4:0] opcode;
 	reg	Gra, Grb, Grc, Rin, Rout, BAout;
@@ -13,7 +18,6 @@ module datapath_out_tb;
 			PCout, MARout, MDRout, Inportout, Outportout, Cout;
 			
 	reg [31:0] Mdatain;
-	
 	reg [31:0] InPort_input;
 	
 	parameter 	Default=4'b0000, Reg_load1a=4'b0001, Reg_load1b=4'b0010, 
@@ -60,46 +64,70 @@ module datapath_out_tb;
 			endcase
 		end
 		
-	always @(Present_state) begin
-	#10
-		case (Present_state) //assert the required signals in each clockcycle
-			Default: begin // initialize the signals
-				PCout <= 0; Zlowout <= 0; MDRout <= 0; 
-				MARin <= 0; Zin<= 0; CONin<=0; 
-				Inportin<=0; Outportin<=0;
-				InPort_input<=32'd0;
-				PCin <=0; MDRin <= 0; IRin <= 0; 
-				Yin <= 0;
-				IncPC <= 0; Write<=0;
-				Mdatain <= 32'h00000000; Gra<=0; Grb<=0; Grc<=0;
-				BAout<=0; Cout<=0;
-				Inportout<=0; Zhighout<=0; LOout<=0; HIout<=0; 
-				HIin<=0; LOin<=0;
-				Rout<=0;Rin<=0;Read<=0;
-			end	
+	always @(Present_state) 
+		begin
+		#10
+			case (Present_state) //assert the required signals in each clockcycle
+			
+				Default: begin // initialize the signals
+				
+					PCout <= 0; Zlowout <= 0; MDRout <= 0;
+					MARin <= 0; HIin <= 0; LOin <= 0; CONin<=0; 
+					Inportin<=0; Outportin<=0;
+					PCin <=0; MDRin <= 0; IRin <= 0; 
+					Yin <= 0;
+					IncPC <= 0; Write<=0;
+					MDRin <= 32'h00000000; Gra<=0; Grb<=0; Grc<=0;
+					BAout<=0; Cout<=0;
+					Inportout<=0; Zhighout<=0; LOout<=0; HIout<=0; 
+					HIin <=0; LOin <=0;
+					Rout<=0;Rin <=0;Read<=0;
+					
+				end	
 						
-			//(out r1) where r1 is initially 0x08. Instruction is b0800000 
-
-			T0: begin 
-				PCout <= 1; MARin <= 1; 
-			end
-
-			T1: begin //Loads MDR from RAM output
-					PCout <= 0; MARin <= 0;  
-					MDRin <= 1; Read<=1; Zlowout <= 1; 
-			end
-
-			T2: begin
-				MDRin <= 0; Read<=0;Zlowout <= 0; 
-				MDRout <= 1; IRin <= 1; PCin <= 1; IncPC <= 1;			
-			end
-
-			T3: begin
-				MDRout <= 0; IRin <= 0;			
-				Gra<=1;Rout<=1;Yin<=1; Outportin <= 1;
-			end
-		endcase
-	end
 		
-endmodule
+T0: begin 
+	PCout <= 1; MARin <= 1; 
+end
 
+T1: begin //Loads MDR from RAM output
+		PCout <= 0; MARin <= 0;  
+		MDRin <= 1; MDRin <=1; Zlowout <= 1; 
+end
+
+T2: begin
+	MDRin <= 0; Read<=0; Zlowout <= 0; 
+	MDRout <= 1; IRin <= 1; PCin <= 1; IncPC <= 1;			
+end
+			
+			T3: begin
+				MDRout <= 0; IRin <= 0; PCin <= 0;IncPC <= 0;
+				Gra<=1;Rout<=1; CONin<=1;
+			end
+			
+			T4: begin
+				Gra<=0;Rout<=0; CONin<=0;
+				PCout<=1; Yin <= 1;
+				
+			end
+			
+			T5: begin
+					PCout<=0; Yin <= 0;
+			   	Cout <= 1; Zin <= 1;
+			end
+			
+			T6: begin
+					Cout <= 0; Zin <= 1;
+			   	Zlowout<=1; PCin<=1;	
+			end
+			
+			T7: begin
+				Zlowout<=0; PCin<=0;
+				PCout<=1;
+			end
+			
+endcase
+
+end
+
+endmodule
