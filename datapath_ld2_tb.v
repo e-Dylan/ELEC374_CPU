@@ -10,7 +10,7 @@ module datapath_ld2_tb;
 					
 	reg	HIout, LOout,
 			Yout, Zhighout, Zlowout,
-			PCout, MARout, MDRout, Inportout, Outportout, Cout, InPort_input, OutPort_output;
+			PCout, MARout, MDRout, Inportout, Outportout, Cout, InPort_input;
 			
 	reg [31:0] Mdatain;
 	
@@ -31,7 +31,7 @@ module datapath_ld2_tb;
 					
 						HIout, LOout,
 						Yout, Zhighout, Zlowout,
-						PCout, MARout, MDRout, Inportout, Outportout, Cout, InPort_input, OutPort_output);
+						PCout, MARout, MDRout, Inportout, Outportout, Cout, InPort_input);
 	
 	initial
 		begin
