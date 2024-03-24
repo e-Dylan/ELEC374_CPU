@@ -157,6 +157,6 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_ld2_tb -section_
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_ld2_tb.v -section_id datapath_ld2_tb
 set_global_assignment -name VERILOG_FILE datapath_addi_tb.v
 set_global_assignment -name VERILOG_FILE datapath_in_tb.v
-
 set_global_assignment -name VERILOG_FILE datapath_ori_tb.v
+set_global_assignment -name VERILOG_FILE datapath_andi_tb.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
