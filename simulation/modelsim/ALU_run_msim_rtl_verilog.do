@@ -32,9 +32,9 @@ vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU {C:/
 vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/or32.v}
 vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/sub32.v}
 
-vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/datapath_st_tb.v}
+vlog -vlog01compat -work work +incdir+C:/Users/19jz11/Documents/ELEC374_CPU {C:/Users/19jz11/Documents/ELEC374_CPU/datapath_brzr_tb.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_st_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_brzr_tb
 
 add wave *
 view structure

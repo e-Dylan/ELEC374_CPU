@@ -66,67 +66,79 @@ module datapath_brzr_tb;
 		
 	always @(Present_state) 
 		begin
-		#10
 			case (Present_state) //assert the required signals in each clockcycle
-			
 				Default: begin // initialize the signals
-				
 					PCout <= 0; Zlowout <= 0; MDRout <= 0;
 					MARin <= 0; HIin <= 0; LOin <= 0; CONin<=0; 
 					Inportin<=0; Outportin<=0;
 					PCin <=0; MDRin <= 0; IRin <= 0; 
 					Yin <= 0;
 					IncPC <= 0; Write<=0;
-					MDRin <= 32'h00000000; Gra<=0; Grb<=0; Grc<=0;
+					MDRin <= 0; Gra<=0; Grb<=0; Grc<=0;
 					BAout<=0; Cout<=0;
 					Inportout<=0; Zhighout<=0; LOout<=0; HIout<=0; 
 					HIin <=0; LOin <=0;
 					Rout<=0;Rin <=0;Read<=0;
-					
+				end
+				Reg_load1a : begin
+					PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
+					#25 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0;
+				end
+				Reg_load1b : begin
+					Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
+					#25 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0;
+				end
+				Reg_load2a : begin
+					MDRout <= 1; IRin <=1;
+					#25 MDRout <= 0; IRin <=0;
+					Yin <= 1; Grb <= 1; BAout <= 1;
+				end
+				Reg_load2b : begin
+					#25 Grb <= 0; BAout <= 0; Yin <= 0;
+				end
+				Reg_load3a : begin
+					Cout <= 1; opcode <= 5'b00011; Zin <= 1; // opcode for add
+					#25 Cout <= 0; Zin <= 0;
+				end
+				Reg_load3b : begin
+					Zlowout <= 1; Gra <= 1; Rin <= 1;
+					#25 Zlowout <= 0; Gra <= 0; Rin <= 0;
 				end	
-						
-		
-T0: begin 
-	PCout <= 1; MARin <= 1; 
-end
+				T0: begin 
+					PCout <= 1; MARin <= 1; IncPC <= 1; Zin <= 1;
+					#25 PCout <= 0; MARin <= 0; IncPC <= 0; Zin <= 0;
+				end
 
-T1: begin //Loads MDR from RAM output
-		PCout <= 0; MARin <= 0;  
-		MDRin <= 1; MDRin <=1; Zlowout <= 1; 
-end
+				T1: begin
+					Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1;
+					#25 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0; 
+				end
 
-T2: begin
-	MDRin <= 0; Read<=0; Zlowout <= 0; 
-	MDRout <= 1; IRin <= 1; PCin <= 1; IncPC <= 1;			
-end
-			
-			T3: begin
-				MDRout <= 0; IRin <= 0; PCin <= 0;IncPC <= 0;
-				Gra<=1;Rout<=1; CONin<=1;
-			end
-			
-			T4: begin
-				Gra<=0;Rout<=0; CONin<=0;
-				PCout<=1; Yin <= 1;
+				T2: begin
+					MDRout <= 1; IRin <=1;
+					#25 MDRout <= 0; IRin <=0;
+					Gra <= 1; Rout <= 1; CONin <= 1;		
+				end
 				
-			end
-			
-			T5: begin
-					PCout<=0; Yin <= 0;
-			   	Cout <= 1; Zin <= 1;
-			end
-			
-			T6: begin
-					Cout <= 0; Zin <= 1;
-			   	Zlowout<=1; PCin<=1;	
-			end
-			
-			T7: begin
-				Zlowout<=0; PCin<=0;
-				PCout<=1;
-			end
-			
-endcase
+				T3: begin
+					#25 Gra <= 0; Rout <= 0; CONin <= 0;
+				end
+				
+				T4: begin
+					PCout <= 1; Yin <= 1;
+					#25 PCout <= 0; Yin <= 0;
+				end
+				
+				T5: begin
+					Cout <= 1; opcode <= 5'b00011; Zin <= 1;
+					#25 Cout <= 0; opcode <= 5'b0; Zin <= 0;
+				end
+				
+				T6: begin
+					Zlowout <= 1; PCin <= 1;
+					#25 Zlowout <= 0; PCin <= 0;
+				end
+			endcase
 
 end
 

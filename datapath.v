@@ -95,7 +95,7 @@ module datapath(
 							R12out, R13out, R14out, R15out);
 							
 	// con ff logic
-	conff_logic conff(IRout, BusMuxOut, CONin, con_out);
+	conff_logic conff(IRout[20:19], BusMuxOut, CONin, con_out);
 	
 	// bus
 	bus bus( BusMuxIn_R0, BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3,
