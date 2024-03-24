@@ -78,7 +78,7 @@ module datapath_out_tb;
 				Rout<=0;Rin<=0;Read<=0;
 			end	
 						
-			//(in r1) where r1 is initially 0x08 and input reg is loaded with 'd9. Instruction is a8800000
+			//(out r1) where r1 is initially 0x08. Instruction is b0800000 
 
 			T0: begin 
 				PCout <= 1; MARin <= 1; 
@@ -86,19 +86,18 @@ module datapath_out_tb;
 
 			T1: begin //Loads MDR from RAM output
 					PCout <= 0; MARin <= 0;  
-					MDRin <= 1; MDR_read<=1; Zlowout <= 1; 
+					MDRin <= 1; Read<=1; Zlowout <= 1; 
 			end
 
 			T2: begin
-				MDRin <= 0; MDR_read<=0;Zlowout <= 0; 
+				MDRin <= 0; Read<=0;Zlowout <= 0; 
 				MDRout <= 1; IRin <= 1; PCin <= 1; IncPC <= 1;			
 			end
 
 			T3: begin
 				MDRout <= 0; IRin <= 0;			
-				Gra<=1;R_enable<=1; InPortout <= 1;
+				Gra<=1;Rout<=1;Yin<=1; Outportin <= 1;
 			end
-			
 		endcase
 	end
 		
