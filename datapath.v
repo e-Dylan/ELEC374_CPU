@@ -10,10 +10,7 @@ module datapath(
 					
 	input wire 	HIout, LOout,
 					Yout, Zhighout, Zlowout,
-					PCout, MARout, MDRout, InPortout, OutPortout, Cout, 
-	
-	input wire [31:0] InPort_input,
-	output wire [31:0] OutPort_output
+					PCout, MARout, MDRout, InPortout, OutPortout, Cout, InPort_input
 );
 
 	wire [63:0] ALUout;
@@ -68,7 +65,13 @@ module datapath(
 	register Y(clear, clock, Yin, BusMuxOut, Yregout);
 	register64 Zhigh(clear, clock, Zin, ALUout, BusMuxIn_Zhigh, BusMuxIn_Zlow);
 
+	// Input and Output registers
+	wire [31:0] Input_Port_dataout;
+	
 	wire con_out;
+
+	register input_port(clear, clock, InPortin, BuxMuxOut, InPortout);
+	register output_port(clear, clock, OutPortin, BusMuxOut, Output_Port_dataout);
 
 	// PC, IR, MAR, MDR, Inport
 	wire [31:0] BusMuxIn_PC, IRout, C_sign_extended, MAR_q, BusMuxIn_MDR, BusMuxIn_InPort, Mdatain;
@@ -77,9 +80,7 @@ module datapath(
 	IR 		IR(clear, clock, IRin, BusMuxOut, IRout, C_sign_extended);
 	register MAR(clear, clock, MARin, BusMuxOut, MAR_q);
 	MDR 		MDR(clear, clock, MDRin, BusMuxOut, Mdatain, Read, BusMuxIn_MDR);
-	
-	register InPort(clear, clock, 1'd1, InPort_input, BusMuxIn_InPort);
-	register OutPort(clear, clock, OutPortin, BusMuxOut, OutPort_output);
+	register InPort(clear, clock, InPortin, BusMuxIn_InPort);
 	
 	ram 		ram(BusMuxIn_MDR, MAR_q, Read, Write, Mdatain);
 	
