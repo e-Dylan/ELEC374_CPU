@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/simulation/modelsim
 vadder
-Z1 !s110 1711237328
+Z1 !s110 1711237478
 !i10b 1
 !s100 dQKZ6gVAh_nU0SXT6:e7`3
 I0kMCe@Yh@WN^c2:cQ9bPA3
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1711237328.000000
+Z5 !s108 1711237478.000000
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/adder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/adder.v|
 !i113 1
@@ -97,7 +97,7 @@ R6
 R7
 R8
 vconff_logic
-Z10 !s110 1711237329
+R1
 !i10b 1
 !s100 X>eSeekjaX<G]Uhac0M942
 IEP^9h6EOI@=oX`n?z5D880
@@ -111,7 +111,7 @@ R4
 r1
 !s85 0
 31
-Z11 !s108 1711237329.000000
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/conff_logic.v|
 !i113 1
@@ -141,7 +141,7 @@ R6
 R7
 R8
 vdatapath_ldi_tb
-R10
+R1
 !i10b 1
 !s100 d^WZFRzCDUhn`4B5Ij^MF2
 I?183gAoSRiU_9ZlQ`CdEi1
@@ -155,7 +155,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ldi_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/datapath_ldi_tb.v|
 !i113 1
@@ -185,7 +185,7 @@ R6
 R7
 R8
 vdiv32
-R10
+R1
 !i10b 1
 !s100 aZMoI=8e?7?_Wh;F;D0TK3
 Ifilj4SbiRLEYCcDEIT;LB1
@@ -199,7 +199,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/div32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/div32.v|
 !i113 1
@@ -229,7 +229,7 @@ R6
 R7
 R8
 vIR
-R10
+R1
 !i10b 1
 !s100 A`OIh8naiD9:F2Y0hk_K_0
 IM8o2mUoiB83]KjmnhSBHb3
@@ -243,7 +243,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/IR.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/IR.v|
 !i113 1
@@ -275,7 +275,7 @@ R7
 R8
 n@m@d@r
 vmul32
-R10
+R1
 !i10b 1
 !s100 AUlTzl4=PYNG`ZR:h5OkV3
 I<BdfXzHPFKWoUnHZgz7U_0
@@ -289,7 +289,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/mul32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/mul32.v|
 !i113 1
@@ -341,7 +341,7 @@ R6
 R7
 R8
 vor32
-R10
+R1
 !i10b 1
 !s100 J1XC]5d1d@K5NUREnfM<32
 IeOL?N1if_5z4Uj2_GeVa11
@@ -355,7 +355,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/or32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/or32.v|
 !i113 1
@@ -363,7 +363,7 @@ R6
 R7
 R8
 vram
-R10
+R1
 !i10b 1
 !s100 61B6]_>Z6RCBYd9DM;R_92
 Ii83;b4WgY@2<FYnn5b9043
@@ -377,7 +377,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ram.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/ram.v|
 !i113 1
@@ -407,7 +407,7 @@ R6
 R7
 R8
 vregister0
-R10
+R1
 !i10b 1
 !s100 0<0<z<c=Zd5IjR:4:lSEh3
 IRWOPh0c=EToEo400<:ae@3
@@ -421,7 +421,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register0.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/register0.v|
 !i113 1
@@ -429,7 +429,7 @@ R6
 R7
 R8
 vregister64
-R10
+R1
 !i10b 1
 !s100 f[A[=IPa<^2Ma_aW^kf8n1
 I7Lb[_`RN`3d2Uo78;4B[n3
@@ -451,7 +451,7 @@ R6
 R7
 R8
 vrol
-R10
+R1
 !i10b 1
 !s100 DP?>LZDAd;gm`?4C0<Z`j3
 IXlEkOM=2Bi@9]MdOCK7nF3
@@ -465,7 +465,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/rol.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/rol.v|
 !i113 1
@@ -495,7 +495,7 @@ R6
 R7
 R8
 vselect_encode
-R10
+R1
 !i10b 1
 !s100 9QUMLPb0ZWjZI@mi2LSjd2
 IUAQW[NIjDN@gcV6_@C9`J2
@@ -509,7 +509,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/select_encode.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/select_encode.v|
 !i113 1
@@ -583,7 +583,7 @@ R6
 R7
 R8
 vsub32
-R10
+R1
 !i10b 1
 !s100 7g1GONWi6DTk^2jkhMWK=1
 I4mEzL<7M<=fY6?GhdG72W2
@@ -597,7 +597,7 @@ R4
 r1
 !s85 0
 31
-R11
+R5
 !s107 C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/sub32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU|C:/Users/19jz11/Documents/ELEC374_CPU/ELEC374_CPU/sub32.v|
 !i113 1
