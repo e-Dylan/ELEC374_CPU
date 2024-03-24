@@ -36,11 +36,14 @@
 */testbench/
 */*_sim/
 incremental_db/
+<<<<<<< HEAD
 *.qsf
 *.v.bak
 simulation/
 output_files/
+=======
 db/
 _output_files/
 output_files/
 PLLJ_PLLSPE_INFO.txt
+>>>>>>> 31d05903d217d586f4c6ff0506c47cf1276d70f0
