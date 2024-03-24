@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module datapath_out_tb;	
+module datapath_andi_tb;	
 	reg 	Clock, clear, Read, Write, IncPC;
 	reg [4:0] opcode;
 	reg	Gra, Grb, Grc, Rin, Rout, BAout;
@@ -78,27 +78,37 @@ module datapath_out_tb;
 				Rout<=0;Rin<=0;Read<=0;
 			end	
 						
-			//(in r1) where r1 is initially 0x08 and input reg is loaded with 'd9. Instruction is a8800000
-
+			//insruction: andi r2, r1, 5, where r1 is c. This is 61080005
+			
 			T0: begin 
 				PCout <= 1; MARin <= 1; 
 			end
 
 			T1: begin //Loads MDR from RAM output
 					PCout <= 0; MARin <= 0;  
-					MDRin <= 1; MDR_read<=1; Zlowout <= 1; 
+					MDRin <= 1; Read<=1; Zlowout <= 1; 
 			end
 
 			T2: begin
-				MDRin <= 0; MDR_read<=0;Zlowout <= 0; 
+				MDRin <= 0; Read<=0;Zlowout <= 0; 
 				MDRout <= 1; IRin <= 1; PCin <= 1; IncPC <= 1;			
 			end
 
 			T3: begin
 				MDRout <= 0; IRin <= 0;			
-				Gra<=1;R_enable<=1; InPortout <= 1;
+				Grb<=1;Rout<=1;Yin<=1;
 			end
-			
+
+			T4: begin
+				Grb<=0;Rout<=0;Yin<=0;
+				Cout<=1;Zin <= 1;
+			end
+
+			T5: begin
+				Cout<=0; Zin <= 0;
+				Zlowout <= 1;Gra<=1;Rin<=1;
+				#40 Zlowout <= 0;Gra<=1;Rout<=1;Rin<=0;
+			end
 		endcase
 	end
 		
