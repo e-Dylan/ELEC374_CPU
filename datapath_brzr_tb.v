@@ -98,7 +98,7 @@ module datapath_brzr_tb;
 				end
 				Reg_load3a : begin
 					Cout <= 1; opcode <= 5'b00011; Zin <= 1; // opcode for add
-					#25 Cout <= 0; Zin <= 0;
+					#25 Cout <= 0; opcode <= 5'b0; Zin <= 0;
 				end
 				Reg_load3b : begin
 					Zlowout <= 1; Gra <= 1; Rin <= 1;
@@ -117,7 +117,8 @@ module datapath_brzr_tb;
 				T2: begin
 					MDRout <= 1; IRin <=1;
 					#25 MDRout <= 0; IRin <=0;
-					Gra <= 1; Rout <= 1; CONin <= 1;		
+					Gra <= 1; Rout <= 1; 
+					#10 CONin <= 1;		
 				end
 				
 				T3: begin
@@ -130,7 +131,7 @@ module datapath_brzr_tb;
 				end
 				
 				T5: begin
-					Cout <= 1; opcode <= 5'b00011; Zin <= 1;
+					Cout <= 1; opcode <= 5'b10011; Zin <= 1;
 					#25 Cout <= 0; opcode <= 5'b0; Zin <= 0;
 				end
 				

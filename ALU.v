@@ -16,7 +16,7 @@ module alu(
 				 jr = 5'b10100, jal = 5'b10101, in = 5'b10110, out = 5'b10111, mfhi = 5'b11000, mflo = 5'b11001, addi = 5'b01100, andi = 5'b01101, 
 				 ori = 5'b01110;
 
-	wire [31:0] IncPC_out, shr_out, shra_out, shl_out, lor_out, land_out, neg_out, not_out, adder_sum, adder_cout, sub_sum, sub_cout, rol_out, ror_out;
+	wire [31:0] shr_out, shra_out, shl_out, lor_out, land_out, neg_out, not_out, adder_sum, adder_cout, sub_sum, sub_cout, rol_out, ror_out;
 	wire [63:0] mul_out, div_out;
 	
 	always @(*)

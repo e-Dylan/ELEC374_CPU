@@ -12,10 +12,36 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		// st 0x87(R1), R1	instruction : 32'b00010_0001_0001_0000_0000_0000_1010_111;
 		
 		// branch testbenches
+		// branch if zero not taken
 		// ldi R5, 0x43		instruction : 32'b00001_0101_0000_0000_0000_0000_0101_011;
 		// brzr R5, 14			instruction : 32'b10011_0101_0000_0000_0000_0000_0001_110;
-		ram[0] = 32'b00001_0101_0000_0000_0000_0000_0000_000;
-		ram[1] = 32'b10011_0101_0000_0000_0000_0000_0001_110;
+		// branch if zero taken
+		// ldi R5, 0x43		instruction : 32'b00001_0101_0000_0000_0000_0000_0000_000;
+		// brzr R5, 14			instruction : 32'b10011_0101_0000_0000_0000_0000_0001_110;
+		
+		// branch if not zero not taken
+		// ldi R5, 0x43		instruction : 32'b00001_0101_0000_0000_0000_0000_0000_000;
+		// brnz R5, 14			instruction : 32'b10011_0101_0001_0000_0000_0000_0001_110;
+		// branch if not zero taken
+		// ldi R5, 0x43		instruction : 32'b00001_0101_0000_0000_0000_0000_0101_011;
+		// brnz R5, 14			instruction : 32'b10011_0101_0001_0000_0000_0000_0001_110;
+		
+		// branch if positive not taken
+		// ldi R5, 0x43		instruction : 32'b00001_0101_0000_0000_1111_0000_0101_011;
+		// brpl R5, 14			instruction : 32'b10011_0101_0010_0000_0000_0000_0001_110;
+		// branch if positive taken
+		// ldi R5, 0x43		instruction : 32'b00001_0101_0000_0000_0000_0000_0101_011;
+		// brpl R5, 14			instruction : 32'b10011_0101_0010_0000_0000_0000_0001_110;
+		
+		// branch if negative not taken
+		// ldi R5, 0x43		instruction : 32'b00001_0101_0000_0000_0000_0000_0101_011;
+		// brmi R5, 14			instruction : 32'b10011_0101_0011_0000_0000_0000_0001_110;
+		// branch if negative taken
+		// ldi R5, 0x43		instruction : 32'b00001_0101_0000_0000_1000_0000_0101_011;
+		// brmi R5, 14			instruction : 32'b10011_0101_0011_0000_0000_0000_0001_110;
+		
+		ram[0] = 32'b00001_0101_0000_0000_1000_0000_0101_011;
+		ram[1] = 32'b10011_0101_0011_0000_0000_0000_0001_110;
 		ram[43] = 32'b0010;
 		ram[51] = 32'b0111;
 		ram[87] = 32'b0011;
