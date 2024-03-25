@@ -1,8 +1,3 @@
-//brzr r2, 35:  91000023
-//brnz r2, 35:  91080023
-//brpl r2, 35:  91100023
-//brmi r2, 35:  91180023
-
 `timescale 1ns/10ps
 module datapath_brzr_tb;	
 	reg 	Clock, clear, Read, Write, IncPC;
