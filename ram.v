@@ -14,6 +14,12 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		// branch testbenches
 		// ldi R5, 0x43		instruction : 32'b00001_0101_0000_0000_0000_0000_0101_011;
 		// brzr R5, 14			instruction : 32'b10011_0101_0000_0000_0000_0000_0001_110;
+
+		//immediate testbenches
+		//addi r2, r3, 2    instruction: b'32 01100_0010_0011__0000000000000010
+		//andi r2, r3, 2    instruction: b'32 01101_0010_0011__0000000000000010
+		//ori  r2, r3, 2    instruction: b'32 01110_0010_0011__0000000000000010
+
 		ram[0] = 32'b00001_0101_0000_0000_0000_0000_0000_000;
 		ram[1] = 32'b10011_0101_0000_0000_0000_0000_0001_110;
 		ram[43] = 32'b0010;
