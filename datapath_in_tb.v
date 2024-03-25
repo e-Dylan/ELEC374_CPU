@@ -86,17 +86,17 @@ module datapath_in_tb;
 
 			T1: begin //Loads MDR from RAM output
 					PCout <= 0; MARin <= 0;  
-					MDRin <= 1; MDR_read<=1; Zlowout <= 1; 
+					MDRin <= 1; Read<=1; Zlowout <= 1; 
 			end
 
 			T2: begin
-				MDRin <= 0; MDR_read<=0;Zlowout <= 0; 
+				MDRin <= 0; Read<=0;Zlowout <= 0; 
 				MDRout <= 1; IRin <= 1; PCin <= 1; IncPC <= 1;			
 			end
 
 			T3: begin
 				MDRout <= 0; IRin <= 0;			
-				Gra<=1;R_enable<=1; InPortout <= 1;
+				Gra<=1;Rin<=1; Inportout <= 1;
 			end
 			
 		endcase

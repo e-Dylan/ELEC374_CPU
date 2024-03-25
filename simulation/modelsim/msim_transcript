@@ -167,16 +167,16 @@
 # Top level modules:
 # 	sub32
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_jal_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/jimmy/Desktop/ELEC374_CPU {C:/Users/jimmy/Desktop/ELEC374_CPU/datapath_mfhi_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module datapath_jal_tb
+# -- Compiling module datapath_mfhi_tb
 # 
 # Top level modules:
-# 	datapath_jal_tb
+# 	datapath_mfhi_tb
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_jal_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_jal_tb 
-# Loading work.datapath_jal_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  datapath_mfhi_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_mfhi_tb 
+# Loading work.datapath_mfhi_tb
 # Loading work.datapath
 # Loading work.register0
 # Loading work.register
@@ -205,12 +205,12 @@
 # Loading work.mul32
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(39): [TFMPC] - Too few port connections. Expected 4, found 3.
 # 
-#         Region: /datapath_jal_tb/DUT/conff/conff
+#         Region: /datapath_mfhi_tb/DUT/conff/conff
 # ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(39): [TFMPC] - Missing connection for port 'Q_not'.
 # 
 # ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(118): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'BusMuxIn_MAR'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/bus.v(18).
 # 
-#         Region: /datapath_jal_tb/DUT/bus
+#         Region: /datapath_mfhi_tb/DUT/bus
 # 
 # add wave *
 # view structure
@@ -218,27 +218,15 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
-add wave -position insertpoint sim:/datapath_jal_tb/DUT/PC/*
-add wave -position insertpoint sim:/datapath_jal_tb/DUT/R15/*
+add wave -position insertpoint sim:/datapath_mfhi_tb/DUT/R6/*
+add wave -position insertpoint sim:/datapath_mfhi_tb/DUT/HI/*
 restart
 # ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(39): [TFMPC] - Too few port connections. Expected 4, found 3.
 # 
-#         Region: /datapath_jal_tb/DUT/conff/conff
+#         Region: /datapath_mfhi_tb/DUT/conff/conff
 # ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(39): [TFMPC] - Missing connection for port 'Q_not'.
 # 
 # ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(118): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'BusMuxIn_MAR'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/bus.v(18).
 # 
-#         Region: /datapath_jal_tb/DUT/bus
-run 800 ns
-add wave -position insertpoint sim:/datapath_jal_tb/DUT/R6/*
-restart
-# ** Warning: (vsim-3017) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(39): [TFMPC] - Too few port connections. Expected 4, found 3.
-# 
-#         Region: /datapath_jal_tb/DUT/conff/conff
-# ** Warning: (vsim-3722) C:/Users/jimmy/Desktop/ELEC374_CPU/conff_logic.v(39): [TFMPC] - Missing connection for port 'Q_not'.
-# 
-# ** Warning: (vsim-3015) C:/Users/jimmy/Desktop/ELEC374_CPU/datapath.v(118): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'BusMuxIn_MAR'. The port definition is at: C:/Users/jimmy/Desktop/ELEC374_CPU/bus.v(18).
-# 
-#         Region: /datapath_jal_tb/DUT/bus
-
+#         Region: /datapath_mfhi_tb/DUT/bus
 run 800 ns
