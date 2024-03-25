@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module datapath_out_tb;	
+module datapath_in_tb;	
 	reg 	Clock, clear, Read, Write, IncPC;
 	reg [4:0] opcode;
 	reg	Gra, Grb, Grc, Rin, Rout, BAout;

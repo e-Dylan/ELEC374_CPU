@@ -39,9 +39,26 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		// branch if negative taken
 		// ldi R5, 0x43		instruction : 32'b00001_0101_0000_0000_1000_0000_0101_011;
 		// brmi R5, 14			instruction : 32'b10011_0101_0011_0000_0000_0000_0001_110;
+
+		//immediate testbenches
+		//addi r2, r3, 2    instruction: 32'b 01100_0010_0011_0000000000000000010;
+		//andi r2, r3, 2    instruction: 322'b01101_0010_0011_0000000000000000010;
+		//ori  r2, r3, 2    instruction: 32'b 01110_0010_0011_0000000000000000010;
+
+		//jump testbenches
+		//jr R15	instruction: 32'b10100_1111_00000000000000000000000;
+		//jal R4	instruction: 32'b10101_0100_00000000000000000000000;
+
+		// i/o testbenches
+		// out r3				instruction: b'32 10111_0011_0000_0000_0000_0000_0000_0000
+		// in r4					instruction: b'32 10110_0100_0000_0000_0000_0000_0000_0000
 		
-		ram[0] = 32'b00001_0101_0000_0000_1000_0000_0101_011;
-		ram[1] = 32'b10011_0101_0011_0000_0000_0000_0001_110;
+		// special instruction testbenches
+		// mfhi r6				instruction: b'32 11000_0110_0000_0000_0000_0000_0000_0000
+		// mflo r7				instruction: b'32 11001_0111_0000_0000_0000_0000_0000_0000
+		
+		ram[0] = 32'b00001_0101_0000_0000_0000_0000_0000_000;
+		ram[1] = 32'b10011_0101_0000_0000_0000_0000_0001_110;
 		ram[43] = 32'b0010;
 		ram[51] = 32'b0111;
 		ram[87] = 32'b0011;
