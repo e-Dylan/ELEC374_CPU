@@ -84,10 +84,10 @@ module datapath_ldi_tb;
 				Reg_load2a : begin
 					MDRout <= 1; IRin <=1;
 					#25 MDRout <= 0; IRin <=0;
-					Yin <= 1; Grb <= 1; BAout <= 1;
+					Yin <= 1; Grb <= 1; Rout <= 0;
 				end
 				Reg_load2b : begin
-					#25 Grb <= 0; BAout <= 0; Yin <= 0;
+					#25 Grb <= 0; Rout <= 0; Yin <= 0;
 				end
 				Reg_load3a : begin
 					Cout <= 1; opcode <= 5'b00011; Zin <= 1; // opcode for add
