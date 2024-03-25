@@ -16,9 +16,13 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		// brzr R5, 14			instruction : 32'b10011_0101_0000_0000_0000_0000_0001_110;
 
 		//immediate testbenches
-		//addi r2, r3, 2    instruction: b'32 01100_0010_0011__0000000000000010
-		//andi r2, r3, 2    instruction: b'32 01101_0010_0011__0000000000000010
-		//ori  r2, r3, 2    instruction: b'32 01110_0010_0011__0000000000000010
+		//addi r2, r3, 2    instruction: 32'b 01100_0010_0011_0000000000000000010;
+		//andi r2, r3, 2    instruction: 322'b01101_0010_0011_0000000000000000010;
+		//ori  r2, r3, 2    instruction: 32'b 01110_0010_0011_0000000000000000010;
+
+		//jump testbenches
+		//jr R15	instruction: 32'b10100_1111_00000000000000000000000;
+		//jal R4	instruction: 32'b10101_0100_00000000000000000000000;
 
 		// i/o testbenches
 		// out r3				instruction: b'32 10111_0011_0000_0000_0000_0000_0000_0000
