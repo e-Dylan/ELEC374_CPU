@@ -20,6 +20,14 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		//andi r2, r3, 2    instruction: b'32 01101_0010_0011__0000000000000010
 		//ori  r2, r3, 2    instruction: b'32 01110_0010_0011__0000000000000010
 
+		// i/o testbenches
+		// out r3				instruction: b'32 10111_0011_0000_0000_0000_0000_0000_0000
+		// in r4					instruction: b'32 10110_0100_0000_0000_0000_0000_0000_0000
+		
+		// special instruction testbenches
+		// mfhi r6				instruction: b'32 10111_0110_0000_0000_0000_0000_0000_0000
+		// mflo r7				instruction: b'32 10111_0111_0000_0000_0000_0000_0000_0000
+		
 		ram[0] = 32'b00001_0101_0000_0000_0000_0000_0000_000;
 		ram[1] = 32'b10011_0101_0000_0000_0000_0000_0001_110;
 		ram[43] = 32'b0010;
