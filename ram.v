@@ -3,8 +3,11 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 	
 	initial begin
 		// load testbenches
-		// ld R2, 0x95 		instruction : 32'b00000_0010_0000_0000_0000_0000_1011_110;
+		// ld R2, 0x95 		instruction : 32'b00000_0010_0000_0000_0000_0000_1011_111;
 		// ld R2, 0x38(R2) 	instruction : 32'b00000_0010_0010_0000_0000_0000_0100_110;
+		
+		// ldi R2, 0x95		instruction : 32'b00001_0010_0000_0000_0000_0000_1011_111;
+		// ldi R2, 0x38(R2)	instruction : 32'b00001_0010_0010_0000_0000_0000_0100_110;
 		
 		// store testbenches
 		// ldi R1, 0x43		instruction : 32'b00001_0001_0000_0000_0000_0000_0101_011;
@@ -41,7 +44,9 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		// brmi R5, 14			instruction : 32'b10011_0101_0011_0000_0000_0000_0001_110;
 
 		//immediate testbenches
+		// ldi r4, 3			instruction : 32'b00001_0100_0000_0000_0000_0000_0000_011;
 		//addi r3, r4, -5    instruction: 32'b01100_0011_0100_1111_1111_1111_1111_011;
+		
 		//andi r3, r4, 83    instruction: 32'b01101_0011_0100_0000_0000_0000_1010_011;
 												
 		//ori  r3, r4, 83     instruction: 32'b01110_0011_0100_0000_0000_0000_1010_011;
@@ -64,8 +69,8 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		// ldi R6, 0x43		instruction: 32'b00001_0110_0000_0000_0000_0000_0101_011;
 		// jr R6					instruction: 32'b10100_0110_1111_0000_0000_0000_0000_000;
 		
-		ram[0] = 32'b10110_0100_0000_0000_0000_0000_0000_000;
-		ram[1] = 32'b10111_0011_0000_0000_0000_0000_0000_000;
+		ram[0] = 32'b00001_0010_0000_0000_0000_0000_1011_111;
+		ram[1] = 32'b00001_0010_0010_0000_0000_0000_0100_110;
 		ram[43] = 32'b0010;
 		ram[51] = 32'b0111;
 		ram[87] = 32'b0011;

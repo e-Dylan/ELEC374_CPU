@@ -84,7 +84,7 @@ module datapath_ld2_tb;
 				Reg_load2a : begin
 					MDRout <= 1; IRin <=1;
 					#25 MDRout <= 0; IRin <=0;
-					Yin <= 1; Grb <= 1; BAout <= 0;
+					Yin <= 1; Grb <= 1; BAout <= 1;
 				end
 				Reg_load2b : begin
 					#25 Grb <= 0; BAout <= 0; Yin <= 0;
