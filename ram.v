@@ -29,8 +29,8 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		// in r4					instruction: b'32 10110_0100_0000_0000_0000_0000_0000_0000
 		
 		// special instruction testbenches
-		// mfhi r6				instruction: b'32 10111_0110_0000_0000_0000_0000_0000_0000
-		// mflo r7				instruction: b'32 10111_0111_0000_0000_0000_0000_0000_0000
+		// mfhi r6				instruction: b'32 11000_0110_0000_0000_0000_0000_0000_0000
+		// mflo r7				instruction: b'32 11001_0111_0000_0000_0000_0000_0000_0000
 		
 		ram[0] = 32'b00001_0101_0000_0000_0000_0000_0000_000;
 		ram[1] = 32'b10011_0101_0000_0000_0000_0000_0001_110;
