@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module controlUnit (
+module control_unit (
 	output reg	PCout, Zhighout, Zlowout, MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, 
 					HIin, LOin, HIout, LOout, ZhighIn, ZlowIn, Cout, Write, Gra, Grb, Grc, Rin, Rout, BAout, CONin,
 					Inportin, Outportin, Inportout, 

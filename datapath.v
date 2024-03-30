@@ -1,5 +1,5 @@
 module datapath(
-	input wire 	clock, clear, Read, Write, IncPC,
+	input wire 	clock, clear, Read, Write, IncPC, stop
 	input wire [4:0] opcode, 
 	
 	input wire 	Gra, Grb, Grc, Rin, Rout, BAout,
@@ -118,4 +118,44 @@ module datapath(
 				BusMuxOut); 
 	
 	alu alu(con_out, Yregout, BusMuxOut, opcode, IncPC, ALUout);
+	
+		
+	//instantiate the control unit
+	control_unit ControlUnit(
+		.PCout(PCout),
+		.Zhighout(Zhighout),
+		.Zlowout(Zlowout),
+		.MDRout(MDRout),
+		.MARin(MARin),
+		.PCin(PCin),
+		.MDRin(MDRin),
+		.IRin(IRin),
+		.Yin(Yin),
+		.IncPC(IncPC),
+		.Read(Read),
+		.HIin(HIin),
+		.LOin(LOin),
+		.HIout(HIout),
+		.LOout(LOout),
+		.ZhighIn(ZHighIn),
+		.ZlowIn(ZLowIn),
+		.Cout(Cout),
+		.Write(Write),
+		.Gra(GRA),
+		.Grb(GRB),
+		.Grc(GRC),
+		.Rin(Rin),
+		.Rout(Rout),
+		.BAout(Baout),
+		.CONin(Conin),
+		.InPortin(inPortin),
+		.OutPortin(OutPortin),
+		.InPortout(InPortout),
+		.Run(Run),
+		.IRout(IRout),
+		.clock(clock),
+		.clear(clear),
+		.stop(stop)
+	);
+	
 endmodule
