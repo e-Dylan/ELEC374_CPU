@@ -80,7 +80,7 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		//and 0x8E with 0x34
 		ram[142] = 32'b00110100;
 
-					
+		//Demo Instructions:			
 		ram[0] = 32'b00001_0010_0000_0000_0000_0000_1101_001;// ldi R2, 0x69 ; R2 = 0x69
 		ram[1] = 32'b00001_0010_0010_0000_0000_0000_0000_010;// ldi R2, 2(R2) ; R2 = 0x6B
 		ram[2] = 32'b00000_0001_0000_0000_0000_0000_1000_111;// ld R1, 0x47 ; R1 = (0x47) = 0x94
@@ -125,6 +125,19 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		ram[41] = 32'b11011_0000_0000_0000_0000_0000_0000_000; // halt
 	end
 		
+
+
+		
+		//subA:
+		ram[162] = 32'b00011_1001_1010_1100_0000_0000_0000_000;// add R9, R10, R12 ; R8 and R9 are return value registers
+		ram[163] = 32'b00100_1000_1011_1101_0000_0000_0000_000;// sub R8, R11, R13 ; R9 = 0xA9, R8 = 0x16
+		ram[164] = 32'b00100_1001_1001_1000_0000_0000_0000_000;// sub R9, R9, R8 ; R9 = 0x93
+		ram[165] = 32'b10100_1111_0000_0000_0000_0000_0000_000;// jr R15 ; return from procedure
+
+		
+	
+	
+
 	always @(*)
 		begin
 		if (write)
