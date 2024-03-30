@@ -85,7 +85,7 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		ram[1] = 32'b00001_0010_0010_0000_0000_0000_0000_010;// ldi R2, 2(R2) ; R2 = 0x6B
 		ram[2] = 32'b00000_0001_0000_0000_0000_000o_1000_111;// ld R1, 0x47 ; R1 = (0x47) = 0x94
 		ram[3] = 32'b00001_0001_0001_0000_0000_0000_0000_001;// ldi R1, 1(R1) ; R1 = 0x95
-		ram[5] = 32'b00000_0000_0000_1111_1111_1111_1111_001;// ld R0, -7(R1) ; R0 = (0x8E) = 0x34
+		ram[5] = 32'b00000_0000_0001_1111_1111_1111_1111_001;// ld R0, -7(R1) ; R0 = (0x8E) = 0x34
 		ram[6] = 32'b00001_0011_0000_0000_0000_0000_0000_011;// ldi R3, 3 ; R3 = 3
 		ram[7] = 32'b00001_0010_0000_0000_0000_0000_1000_011;// ldi R2, 0x43 ; R2 = 0x43
 		ram[8] = 32'b10011_0010_0000_0000_0000_0000_0000_011;// brmi R2, 3 ; continue with the next instruction (will not branch)
@@ -93,7 +93,7 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		ram[10] = 32'b00000_0111_0010_1111_1111_1111_1111_110;// ld R7, -2(R2) ; R7 = (0x49 - 2) = 0x94
 		ram[11] = 32'b11010_0000_0000_0000_0000_0000_0000_000;// nop
 		ram[12] = 32'b10011_0111_0000_0000_0000_0000_0000_010;// brpl R7, 2 ; continue with the instruction at “target” (will branch)
-		ram[13] = 32'b00001_0010_0010_0000_0000_0000_0000_100;// ldi R5, 4(R2) ; this instruction will not execute
+		ram[13] = 32'b00001_0101_0010_0000_0000_0000_0000_100;// ldi R5, 4(R2) ; this instruction will not execute
 		ram[15] = 32'b00001_0100_0101_1111_1111_1111_1111_101;// ldi R4, -3(R5) ; this instruction will not execute
 		ram[16] = 32'b00011_0010_0010_0011_0000_0000_0000_000;// target: add R2, R2, R3 ; R2 = 0x4C
 		ram[17] = 32'b01100_0111_0111_0000_0000_0000_0000_011;// addi R7, R7, 3 ; R7 = 0x97
