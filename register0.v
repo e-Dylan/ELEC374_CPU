@@ -3,6 +3,7 @@ module register0(
 	input wire [31:0] d,
 	output reg [31:0] q
 );
+	initial q = 32'b0;
 
 	always @ (posedge clk) begin
 		if (clr) begin

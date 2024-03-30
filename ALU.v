@@ -19,9 +19,6 @@ module alu(
 	wire [31:0] shr_out, shra_out, shl_out, lor_out, land_out, neg_out, not_out, adder_sum, adder_cout, sub_sum, sub_cout, rol_out, ror_out;
 	wire [63:0] mul_out, div_out;
 	
-	// wire [4:0] opcode;
-	// assign opcode = IR[31:27];
-	
 	always @(*)
 		begin
 			if (IncPC) begin

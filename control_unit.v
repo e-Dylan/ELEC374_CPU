@@ -138,8 +138,7 @@ module control_unit (
 			st3				: 	#40 Present_state = st4;
 			st4				: 	#40 Present_state = st5;
 			st5				: 	#40 Present_state = st6;
-			st6				: 	#40 Present_state = st7;
-			st7 				:	#40 Present_state = fetch0;
+			st6				: 	#40 Present_state = fetch0;
 			
 			andi3				: 	#40 Present_state = andi4;
 			andi4				: 	#40 Present_state = andi5;
@@ -322,8 +321,8 @@ module control_unit (
 			-------------------------*/
 
 			st3: begin
-				Grb <= 1; BAout <= 1; Yin <= 1;
-				#25 Grb <= 0; BAout <= 0; Yin <= 0;
+				Grb <= 1; Rout <= 1; Yin <= 1;
+				#25 Grb <= 0; Rout <= 0; Yin <= 0;
 			end
 
 			st4: begin
@@ -335,12 +334,7 @@ module control_unit (
 				MARin <= 1; Zlowout <= 1;
 				#25 MARin <= 0; Zlowout <= 0;
 			end
-
 			st6: begin
-				MARin <= 1; Zlowout <= 1;
-				#25 MARin <= 0; Zlowout <= 0;
-			end
-			st7: begin
 				Gra <= 1; Rout <= 1; MDRin <= 1; Write <= 1;
 				#25 Gra <= 0; Rout <= 0; MDRin <= 0; Write <= 0;
 			end
