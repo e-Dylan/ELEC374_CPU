@@ -119,27 +119,29 @@ module select_encode(
 			R15in = encoder_out[15];
 		end
 		else if (BAout || Rout) begin
-			R0out = encoder_out[0];
-			R1out = encoder_out[1];
-			R2out = encoder_out[2];
-			R3out = encoder_out[3];
-			
-			R4out = encoder_out[4];
-			R5out = encoder_out[5];
-			R6out = encoder_out[6];
-			R7out = encoder_out[7];
-		
-			R8out = encoder_out[8];
-			R9out = encoder_out[9];
-			R10out = encoder_out[10];
-			R11out = encoder_out[11];
-			
-			R12out = encoder_out[12];
-			R13out = encoder_out[13];
-			R14out = encoder_out[14];
-			R15out = encoder_out[15];
 			if (BAout) begin
 				R0out = 1;
+			end
+			else begin
+				R0out = encoder_out[0];
+				R1out = encoder_out[1];
+				R2out = encoder_out[2];
+				R3out = encoder_out[3];
+				
+				R4out = encoder_out[4];
+				R5out = encoder_out[5];
+				R6out = encoder_out[6];
+				R7out = encoder_out[7];
+			
+				R8out = encoder_out[8];
+				R9out = encoder_out[9];
+				R10out = encoder_out[10];
+				R11out = encoder_out[11];
+				
+				R12out = encoder_out[12];
+				R13out = encoder_out[13];
+				R14out = encoder_out[14];
+				R15out = encoder_out[15];
 			end
 		end
 		else begin

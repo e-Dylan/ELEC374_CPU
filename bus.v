@@ -15,7 +15,7 @@ module bus (
 	input [31:0]	BusMuxIn_Zhigh, BusMuxIn_Zlow,
 	input 			Zhighout, Zlowout,
 	
-	input [31:0]	BusMuxIn_PC, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort, C_sign_extended,
+	input [31:0]	BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_InPort, C_sign_extended,
 	input 			PCout, MARout, MDRout, InPortout, Cout, 
 	//Input_Port_dataout
 	
@@ -52,7 +52,6 @@ module bus (
 		else if (Zlowout) 	q = BusMuxIn_Zlow;
 		
 		else if (PCout) 		q = BusMuxIn_PC;
-		else if (MARout)		q = BusMuxIn_MAR;
 		else if (MDRout) 		q = BusMuxIn_MDR;
 		else if (InPortout) 	q = BusMuxIn_InPort;
 		else if (Cout) 		q = C_sign_extended;

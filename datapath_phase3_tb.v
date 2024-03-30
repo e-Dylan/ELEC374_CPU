@@ -1,27 +1,20 @@
 `timescale 1ns/10ps
+module datapath_phase3_tb;
+	reg clock, clear, stop;
+	wire[31:0] InPort_input, OutPort_output;
+	
+	datapath DUT(
+		.clock(clock),
+		.clear(clear),
+		.stop(stop),
+		.InPort_input(InPort_input),
+		.OutPort_output(OutPort_output)
+	);
 
-module phase3_tb;
-	reg clk, rst, stop;
-	wire[31:0] InPort_input, OutPort_output, bus_contents;
-	wire [4:0] operation;
-
-CPUproject DUT(
-	.clk(clk),
-	.rst(rst),
-	.stop(stop),
-	.InPort_input(InPort_input), 
-	.OutPort_output(OutPort_output),
-	.bus_contents(bus_contents),
-	.operation(operation)
-);
-
-initial
-	begin
-		clk = 0;
-		rst = 0;
-end
-
-always
-		#10 clk <= ~clk;
-
+	initial
+		begin
+			clock = 0;
+			clear = 0;
+			forever #10 clock = ~clock;
+	end
 endmodule

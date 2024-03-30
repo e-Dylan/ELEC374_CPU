@@ -111,12 +111,12 @@ module datapath(
 
 				BusMuxIn_Zhigh, BusMuxIn_Zlow, Zhighout, Zlowout,
 				
-				BusMuxIn_PC, BusMuxIn_MAR, BusMuxIn_MDR, BusMuxIn_InPort, C_sign_extended,
+				BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_InPort, C_sign_extended,
 				PCout, MARout, MDRout, InPortout, Cout,
 				
 				BusMuxOut); 
 	
-	alu alu(con_out, Yregout, BusMuxOut, IR[31:27], IncPC, ALUout);
+	alu alu(con_out, Yregout, BusMuxOut, IRout[31:27], IncPC, ALUout);
 	
 		
 	//instantiate the control unit
@@ -150,6 +150,7 @@ module datapath(
 		.OutPortin(OutPortin),
 		.InPortout(InPortout),
 		.Run(Run),
+		.IR(IRout),
 		.clock(clock),
 		.clear(clear),
 		.stop(stop)

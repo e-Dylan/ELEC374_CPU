@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 module control_unit (
-	input			[31:0] IR,
+	input	[31:0] IR,
 	input			clock, clear, stop,
 	
 	output reg	PCout, Zhighout, Zlowout, MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, 
@@ -41,6 +41,7 @@ module control_unit (
 											5'b01111		:		Present_state=mul3;
 											5'b10000		:		Present_state=div3;
 											5'b00101		:		Present_state=shr3;
+											5'b00110		: 		Present_state=shr3;
 											5'b00111		:		Present_state=shl3;
 											5'b01000		:		Present_state=ror3;
 											5'b01001		:		Present_state=rol3;
@@ -72,101 +73,101 @@ module control_unit (
 				 //jr = 5'b10100, jal = 5'b10101, in = 5'b10110, out = 5'b10111, mfhi = 5'b11000, mflo = 5'b11001, addi = 5'b01100, andi = 5'b01101, 
 				 //ori = 5'b01110;
 				 
-			add3				: 	Present_state = add4;
-			add4				:	Present_state = add5;
-			add5 				:	Present_state = fetch0;
+			add3				: 	#40 Present_state = add4;
+			add4				:	#40 Present_state = add5;
+			add5 				:	#40 Present_state = fetch0;
 			
-			addi3				: 	Present_state = addi4;
-			addi4				:	Present_state = addi5;
-			addi5 			:	Present_state = fetch0;
+			addi3				: 	#40 Present_state = addi4;
+			addi4				:	#40 Present_state = addi5;
+			addi5 			:	#40 Present_state = fetch0;
 			
-			sub3				: 	Present_state = sub4;
-			sub4				: 	Present_state = sub5;
-			sub5				:	Present_state = fetch0;
+			sub3				: 	#40 Present_state = sub4;
+			sub4				: 	#40 Present_state = sub5;
+			sub5				:	#40 Present_state = fetch0;
 			
-			mul3				: 	Present_state = mul4;
-			mul4				: 	Present_state = mul5;
-			mul5				: 	Present_state = mul6;
-			mul6           :	Present_state = fetch0; 
+			mul3				: 	#40 Present_state = mul4;
+			mul4				: 	#40 Present_state = mul5;
+			mul5				: 	#40 Present_state = mul6;
+			mul6           :	#40 Present_state = fetch0; 
 			
-			div3				: 	Present_state = div4;
-			div4				: 	Present_state = div5;
-			div5				: 	Present_state = div6;
-			div6				:	Present_state = fetch0;
+			div3				: 	#40 Present_state = div4;
+			div4				: 	#40 Present_state = div5;
+			div5				: 	#40 Present_state = div6;
+			div6				:	#40 Present_state = fetch0;
 			
-			or3				: 	Present_state = or4;
-			or4				: 	Present_state = or5;
-			or5				:	Present_state = fetch0;
+			or3				: 	#40 Present_state = or4;
+			or4				: 	#40 Present_state = or5;
+			or5				:	#40 Present_state = fetch0;
 			
-			and3				: 	Present_state = and4;
-			and4				: 	Present_state = and5;
-			and5   			:	Present_state = fetch0;
+			and3				: 	#40 Present_state = and4;
+			and4				: 	#40 Present_state = and5;
+			and5   			:	#40 Present_state = fetch0;
 			
-			shl3				: 	Present_state = shl4;
-			shl4				: 	Present_state = shl5;
-			shl5 				:	Present_state = fetch0;
+			shl3				: 	#40 Present_state = shl4;
+			shl4				: 	#40 Present_state = shl5;
+			shl5 				:	#40 Present_state = fetch0;
 			
-			shr3				: 	Present_state = shr4;
-			shr4				: 	Present_state = shr5;
-			shr5 				:	Present_state = fetch0;
+			shr3				: 	#40 Present_state = shr4;
+			shr4				: 	#40 Present_state = shr5;
+			shr5 				:	#40 Present_state = fetch0;
 			
-			rol3				: 	Present_state = rol4;
-			rol4				: 	Present_state = rol5;
-			rol5 				:	Present_state = fetch0;
+			rol3				: 	#40 Present_state = rol4;
+			rol4				: 	#40 Present_state = rol5;
+			rol5 				:	#40 Present_state = fetch0;
 			
-			ror3				: 	Present_state = ror4;
-			ror4				: 	Present_state = ror5;
-			ror5 				:	Present_state = fetch0;
+			ror3				: 	#40 Present_state = ror4;
+			ror4				: 	#40 Present_state = ror5;
+			ror5 				:	#40 Present_state = fetch0;
 			
-			neg3				: 	Present_state = neg4;
-			neg4				: 	Present_state = fetch0;
+			neg3				: 	#40 Present_state = neg4;
+			neg4				: 	#40 Present_state = fetch0;
 			
-			not3				: 	Present_state = not4;
-			not4				: 	Present_state = fetch0;
+			not3				: 	#40 Present_state = not4;
+			not4				: 	#40 Present_state = fetch0;
 			
-			ld3				: 	Present_state = ld4;
-			ld4				: 	Present_state = ld5;
-			ld5				: 	Present_state = ld6;
-			ld6				: 	Present_state = ld7;
-			ld7				:  Present_state = fetch0;
+			ld3				: 	#40 Present_state = ld4;
+			ld4				: 	#40 Present_state = ld5;
+			ld5				: 	#40 Present_state = ld6;
+			ld6				: 	#40 Present_state = ld7;
+			ld7				:  #40 Present_state = fetch0;
 			
-			ldi3				: 	Present_state = ldi4;
-			ldi4				: 	Present_state = ldi5;
-			ldi5 				:	Present_state = fetch0;
+			ldi3				: 	#40 Present_state = ldi4;
+			ldi4				: 	#40 Present_state = ldi5;
+			ldi5 				:	#40 Present_state = fetch0;
 			
-			st3				: 	Present_state = st4;
-			st4				: 	Present_state = st5;
-			st5				: 	Present_state = st6;
-			st6				: 	Present_state = st7;
-			st7 				:	Present_state = fetch0;
+			st3				: 	#40 Present_state = st4;
+			st4				: 	#40 Present_state = st5;
+			st5				: 	#40 Present_state = st6;
+			st6				: 	#40 Present_state = st7;
+			st7 				:	#40 Present_state = fetch0;
 			
-			andi3				: 	Present_state = andi4;
-			andi4				: 	Present_state = andi5;
-			andi5 			:	Present_state = fetch0;
+			andi3				: 	#40 Present_state = andi4;
+			andi4				: 	#40 Present_state = andi5;
+			andi5 			:	#40 Present_state = fetch0;
 			
-			ori3				: 	Present_state = ori4;
-			ori4				: 	Present_state = ori5;
-			ori5 				:	Present_state = fetch0;
+			ori3				: 	#40 Present_state = ori4;
+			ori4				: 	#40 Present_state = ori5;
+			ori5 				:	#40 Present_state = fetch0;
 			
-			jal3				: 	Present_state = jal4;
-			jal4 				:	Present_state = fetch0;
+			jal3				: 	#40 Present_state = jal4;
+			jal4 				:	#40 Present_state = fetch0;
 			
-			jr3 				:	Present_state = fetch0;
+			jr3 				:	#40 Present_state = fetch0;
 			
-			br3				: 	Present_state = br4;
-			br4				: 	Present_state = br5;
-			br5				: 	Present_state = br6;
-			br6  				:	Present_state = fetch0;
+			br3				: 	#40 Present_state = br4;
+			br4				: 	#40 Present_state = br5;
+			br5				: 	#40 Present_state = br6;
+			br6  				:	#40 Present_state = fetch0;
 			
-			out3 				:	Present_state = fetch0;
+			out3 				:	#40 Present_state = fetch0;
 			
-			in3 				:	Present_state = fetch0;
+			in3 				:	#40 Present_state = fetch0;
 			
-			mflo3 			:	Present_state = fetch0;
+			mflo3 			:	#40 Present_state = fetch0;
 			
-			mfhi3 			:	Present_state = fetch0;
+			mfhi3 			:	#40 Present_state = fetch0;
 			
-			nop3 				:	Present_state = fetch0;
+			nop3 				:	#40 Present_state = fetch0;
 			
 			endcase
 		end
@@ -175,7 +176,7 @@ module control_unit (
 		case(Present_state)
 		
 			reset_state: begin 
-				Run <= 1; // clear <= 1;
+				Run <= 1;
 				Gra <= 0; Grb <= 0; Grc <= 0; Yin <= 0;	
 				PCout <=  0; Zhighout <= 0; Zlowout <= 0; MDRout <= 0; MARin <= 0; PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0; IncPC <= 0; Read <= 0;
 				HIin <= 0; LOin <= 0; HIout <= 0; LOout <= 0; Zin <= 0; Cout <= 0; Write <= 0; 
