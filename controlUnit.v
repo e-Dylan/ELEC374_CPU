@@ -1,8 +1,10 @@
 `timescale 1ns/10ps
-module control_unit (
-	output reg	PCout, ZHighout, ZLowout, MDRout, MAR_enable, PC_enable, MDR_enable, IR_enable, Y_enable, IncPC, MDR_read, 
-					HIin, LOin, HIout, LOout, ZHighIn, ZLowIn, Cout, RAM_write, Gra, Grb, Grc, R_enable, Rout, BAout, CON_enable,
-					enableInputPort, OutPort_enable, InPortout, Run,
+module controlUnit (
+	output reg	PCout, Zhighout, Zlowout, MDRout, MARin, PCin, MDRin, IRin, Yin, IncPC, Read, 
+					HIin, LOin, HIout, LOout, ZhighIn, ZlowIn, Cout, Write, Gra, Grb, Grc, Rin, Rout, BAout, CONin,
+					Inportin, Outportin, Inportout, 
+					//Run,
+					
 	output reg	[15:0] R_enableIn, 
 	input		[31:0] IR,
 	input		Clock, Reset, Stop);
