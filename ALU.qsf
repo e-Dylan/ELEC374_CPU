@@ -40,7 +40,6 @@ set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CEBA4F23C7
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:05:51  JANUARY 29, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 STANDARD EDITION"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -51,7 +50,12 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH datapath_rol_tb -section_id eda_simulation
+
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH datapath_ori_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH datapath_ld2_tb -section_id eda_simulation
+
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH datapath_ldi_tb -section_id eda_simulation
+
 set_global_assignment -name EDA_TEST_BENCH_NAME datapath_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id datapath_tb
@@ -63,7 +67,7 @@ set_global_assignment -name EDA_TEST_BENCH_NAME datapath_add_tb -section_id eda_
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_add_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_add_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_add_tb -section_id datapath_add_tb
-set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Standard Edition"
 set_global_assignment -name TOP_LEVEL_ENTITY datapath
 set_global_assignment -name EDA_TEST_BENCH_NAME datapath_mul_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_mul_tb
@@ -81,7 +85,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME datapath_or_tb -section_id eda_s
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_or_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_or_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_or_tb -section_id datapath_or_tb
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_NAME datapath_rol_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_rol_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_rol_tb
@@ -90,6 +93,8 @@ set_global_assignment -name EDA_TEST_BENCH_NAME datapath_ror_tb -section_id eda_
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_ror_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_ror_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_ror_tb -section_id datapath_ror_tb
+set_global_assignment -name VERILOG_FILE ff_logic.v
+set_global_assignment -name VERILOG_FILE decoder_2_to_4.v
 set_global_assignment -name VERILOG_FILE ror.v
 set_global_assignment -name VERILOG_FILE shiftrightari32.v
 set_global_assignment -name VERILOG_FILE shiftright32.v
@@ -121,6 +126,85 @@ set_global_assignment -name VERILOG_FILE mul32.v
 set_global_assignment -name VERILOG_FILE datapath_div_tb.v
 set_global_assignment -name VERILOG_FILE div32.v
 set_global_assignment -name VERILOG_FILE rol.v
+set_global_assignment -name VERILOG_FILE register0.v
+set_global_assignment -name VERILOG_FILE conff_logic.v
+set_global_assignment -name VERILOG_FILE IR.v
+set_global_assignment -name VERILOG_FILE datapath_ld_tb.v
+set_global_assignment -name VERILOG_FILE select_encode.v
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_ld_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_ld_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_ld_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_ld_tb -section_id datapath_ld_tb
+set_global_assignment -name VERILOG_FILE datapath_ld2_tb.v
+set_global_assignment -name VERILOG_FILE datapath_ldi_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_ldi_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_ldi_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1500 ns" -section_id datapath_ldi_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_ldi_tb -section_id datapath_ldi_tb
+set_global_assignment -name VERILOG_FILE ram.v
+set_global_assignment -name MIF_FILE init.mif
+set_global_assignment -name HEX_FILE init.hex
+set_global_assignment -name VERILOG_FILE datapath_brzr_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_ld2_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_ld2_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1500 ns" -section_id datapath_ld2_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_ld2_tb -section_id datapath_ld2_tb
+
+set_global_assignment -name VERILOG_FILE datapath_st_tb.v
+
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_st_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_st_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_st_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_st_tb -section_id datapath_st_tb
+
+set_global_assignment -name VERILOG_FILE datapath_addi_tb.v
+set_global_assignment -name VERILOG_FILE datapath_in_tb.v
+set_global_assignment -name VERILOG_FILE datapath_ori_tb.v
+set_global_assignment -name VERILOG_FILE datapath_andi_tb.v
+
+
+
+
+
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_brzr_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_brzr_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_brzr_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_brzr_tb -section_id datapath_brzr_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_addi_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_addi_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_addi_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_addi_tb -section_id datapath_addi_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_andi_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_andi_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_andi_tb -section_id datapath_andi_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_andi_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_ori_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_ori_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_ori_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_ori_tb -section_id datapath_ori_tb
+set_global_assignment -name VERILOG_FILE datapath_jr_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_jr_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_jr_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_jr_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_jr_tb -section_id datapath_jr_tb
+set_global_assignment -name VERILOG_FILE datapath_jal_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_jal_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_jal_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_jal_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_jal_tb -section_id datapath_jal_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_mfhi_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_mfhi_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_mfhi_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_mfhi_tb -section_id datapath_mfhi_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_out_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_out_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_out_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_out_tb -section_id datapath_out_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME datapath_in_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_in_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id datapath_in_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_in_tb -section_id datapath_in_tb
+
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb.v -section_id datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_add_tb.v -section_id datapath_add_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_mul_tb.v -section_id datapath_mul_tb
@@ -129,3 +213,17 @@ set_global_assignment -name EDA_TEST_BENCH_FILE datapath_not_tb.v -section_id da
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_or_tb.v -section_id datapath_or_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_rol_tb.v -section_id datapath_rol_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_ror_tb.v -section_id datapath_ror_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_ld_tb.v -section_id datapath_ld_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_ldi_tb.v -section_id datapath_ldi_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_ld2_tb.v -section_id datapath_ld2_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_st_tb.v -section_id datapath_st_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_brzr_tb.v -section_id datapath_brzr_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_addi_tb.v -section_id datapath_addi_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_andi_tb.v -section_id datapath_andi_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_ori_tb.v -section_id datapath_ori_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_jr_tb.v -section_id datapath_jr_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_jal_tb.v -section_id datapath_jal_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_mfhi_tb.v -section_id datapath_mfhi_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_out_tb.v -section_id datapath_out_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE datapath_in_tb.v -section_id datapath_in_tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
