@@ -118,9 +118,7 @@ module select_encode(
 			R14in = encoder_out[14];
 			R15in = encoder_out[15];
 		end
-		else if (BAout)
-			R0out = 1;
-		else if (Rout) begin
+		else if (BAout || Rout) begin
 			R0out = encoder_out[0];
 			R1out = encoder_out[1];
 			R2out = encoder_out[2];
@@ -140,6 +138,9 @@ module select_encode(
 			R13out = encoder_out[13];
 			R14out = encoder_out[14];
 			R15out = encoder_out[15];
+			if (BAout) begin
+				R0out = 1;
+			end
 		end
 		else begin
 			R0in = 0;

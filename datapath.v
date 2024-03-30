@@ -1,19 +1,19 @@
 module datapath(
-	input wire 	clock, clear, Read, Write, IncPC, stop
-	input wire [4:0] opcode, 
-	
-	input wire 	Gra, Grb, Grc, Rin, Rout, BAout,
-	
-	input wire 	HIin, LOin,
-					Yin, Zin,
-					PCin, IRin, MARin, MDRin, InPortin, OutPortin, CONin,
-					
-	input wire 	HIout, LOout,
-					Yout, Zhighout, Zlowout,
-					PCout, MARout, MDRout, InPortout, OutPortout, Cout, 
-	
-	input wire [31:0] InPort_input
+	input wire 	clock, clear, stop,
+	input wire [31:0] InPort_input,
+	output wire [31:0] OutPort_output
 );
+	
+	wire 	Gra, Grb, Grc, Rin, Rout, BAout;
+	
+	wire 	HIin, LOin,
+			Yin, Zin,
+			PCin, IRin, MARin, MDRin, InPortin, OutPortin, CONin;
+					
+	wire 	HIout, LOout,
+			Yout, Zhighout, Zlowout,
+			PCout, MARout, MDRout, InPortout, OutPortout, Cout;
+
 
 	wire [63:0] ALUout;
 	wire [31:0] BusMuxOut;
@@ -71,7 +71,6 @@ module datapath(
 
 	// PC, IR, MAR, MDR, Inport, Outport
 	wire [31:0] BusMuxIn_PC, IRout, C_sign_extended, MAR_q, BusMuxIn_MDR, BusMuxIn_InPort, Mdatain;
-	wire [31:0] OutPort_output;
 	
 	register PC(clear, clock, PCin, BusMuxOut, BusMuxIn_PC);
 	IR 		IR(clear, clock, IRin, BusMuxOut, IRout, C_sign_extended);
@@ -117,7 +116,7 @@ module datapath(
 				
 				BusMuxOut); 
 	
-	alu alu(con_out, Yregout, BusMuxOut, opcode, IncPC, ALUout);
+	alu alu(con_out, Yregout, BusMuxOut, IR[31:27], IncPC, ALUout);
 	
 		
 	//instantiate the control unit
@@ -137,22 +136,20 @@ module datapath(
 		.LOin(LOin),
 		.HIout(HIout),
 		.LOout(LOout),
-		.ZhighIn(ZHighIn),
-		.ZlowIn(ZLowIn),
+		.Zin(Zin),
 		.Cout(Cout),
 		.Write(Write),
-		.Gra(GRA),
-		.Grb(GRB),
-		.Grc(GRC),
+		.Gra(Gra),
+		.Grb(Grb),
+		.Grc(Grc),
 		.Rin(Rin),
 		.Rout(Rout),
-		.BAout(Baout),
-		.CONin(Conin),
-		.InPortin(inPortin),
+		.BAout(BAout),
+		.CONin(CONin),
+		.InPortin(InPortin),
 		.OutPortin(OutPortin),
 		.InPortout(InPortout),
 		.Run(Run),
-		.IRout(IRout),
 		.clock(clock),
 		.clear(clear),
 		.stop(stop)
