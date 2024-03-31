@@ -117,10 +117,10 @@ module datapath_ld2_tb;
 				T2 : begin
 					MDRout <= 1; IRin <=1;
 					#25 MDRout <= 0; IRin <=0;
-					Yin <= 1; Grb <= 1; Rout <= 1;
+					Yin <= 1; Grb <= 1; BAout <= 1;
 				end
 				T3 : begin
-					#25 Grb <= 0; Rout <= 0; Yin <= 0;
+					#25 Grb <= 0; BAout <= 0; Yin <= 0;
 				end
 				T4 : begin
 					Cout <= 1; opcode <= 5'b00011; Zin <= 1; // opcode for add

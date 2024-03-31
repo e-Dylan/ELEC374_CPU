@@ -52,7 +52,7 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
 
 
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH datapath_ld2_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH datapath_st_tb -section_id eda_simulation
 
 set_global_assignment -name EDA_TEST_BENCH_NAME datapath_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id datapath_tb
