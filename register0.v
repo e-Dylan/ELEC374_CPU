@@ -3,17 +3,26 @@ module register0(
 	input wire [31:0] d,
 	output reg [31:0] q
 );
-	initial q = 32'b0;
-
+	reg [31:0] value;
+	
+	initial begin
+		q = 32'b0;
+		value = 32'b0;
+	end
+	
 	always @ (posedge clk) begin
 		if (clr) begin
-			q <= 0;
+			value <= 0;
 		end
 		else if (enable) begin
-			q <= d;
+			value <= d;
+			q <= value;
 		end
 		if (BAout) begin
-			q <= BAout ? 32'b0 : q;
+			q <= 32'b0;
+		end
+		else begin
+			q <= value;
 		end
 	end
 endmodule

@@ -303,10 +303,10 @@ module control_unit (
 
 			ldi3: begin
 				Grb <= 1; BAout <= 1; Yin <= 1;
-				#25 Grb <= 0; BAout <= 0; Yin <= 0;
 			end
 
 			ldi4: begin
+				Grb <= 0; BAout <= 0; Yin <= 0;
 				Cout <= 1; Zin <= 1;
 				#25 Cout <= 0; Zin <= 0;
 			end
@@ -321,11 +321,11 @@ module control_unit (
 			-------------------------*/
 
 			st3: begin
-				Grb <= 1; Rout <= 1; Yin <= 1;
-				#25 Grb <= 0; Rout <= 0; Yin <= 0;
+				Grb <= 1; BAout <= 1; Yin <= 1;
 			end
 
 			st4: begin
+				Grb <= 0; BAout <= 0; Yin <= 0;
 				Cout <= 1; Zin <= 1;
 				#25 Cout <= 0; Zin <= 0;
 			end
