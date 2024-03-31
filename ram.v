@@ -7,7 +7,7 @@ module ram(input [31:0] data_in, input [31:0] address, input read, input write, 
 		// ld R2, 0x38(R2) 	instruction : 32'b00000_0010_0010_0000_0000_0000_0110_101; 
 		
 		// ldi R2, 0x95		instruction : 32'b00001_0010_0000_0000_0000_0001_0010_101;
-		// ldi R2, 0x38(R2)	instruction : 32'b00001_0010_0010_0000_0000_0000_0110_101;
+		// ldi R2, 0x38(R2)	instruction : 32'b00001_0010_0010_0000_0000_0000_0111_000;
 		
 	// store testbenches
 		// ldi R1, 0x43		instruction : 32'b00001_0001_0000_0000_0000_0000_1000_011;
