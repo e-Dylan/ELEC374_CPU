@@ -9,6 +9,7 @@ module register0(
 	initial begin
 		q = 32'b0;
 		value = 32'b0;
+	end
 
 	always @ (posedge clk) begin
 		if (clr) begin
